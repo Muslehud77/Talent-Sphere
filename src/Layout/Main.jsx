@@ -4,6 +4,7 @@ import Navbar from "../Shared/Navbar/Navbar";
 import Footer from "../Shared/Footer/Footer";
 import { useEffect, useState } from "react";
 import PreLoader from "../Components/Preloader/PreLoader";
+import { ModalContainer } from "reoverlay";
 
 const Main = () => {
      const [preloader, setPreloader] = useState(true);
@@ -27,6 +28,7 @@ const Main = () => {
             <Outlet></Outlet>
           </div>
           <Footer></Footer>
+          <ModalContainer />
         </div>
       )}
     </>

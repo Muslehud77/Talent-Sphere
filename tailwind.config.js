@@ -10,5 +10,9 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [require("daisyui"), require("tw-elements/dist/plugin.cjs")],
+  plugins: [
+    require("daisyui"),
+    require("tw-elements/dist/plugin.cjs"),
+    require("@sira-ui/tailwind"),
+  ],
 };

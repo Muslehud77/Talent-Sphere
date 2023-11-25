@@ -4,6 +4,8 @@ import logo from '../../Assets/Logo/TS-white-2-removebg-preview.png'
 import { Sling as Hamburger } from "hamburger-react";
 import { motion } from 'framer-motion';
 import { Link, NavLink } from "react-router-dom";
+import { Reoverlay } from "reoverlay";
+import Login from "../../Pages/Login/Login";
 
 const Navbar = () => {
 
@@ -11,6 +13,10 @@ const Navbar = () => {
        initTE({ Collapse, Dropdown });
      }, []);
 
+
+     const openLogin = () => {
+       Reoverlay.showModal(Login);
+     };
 
      const active =
        "relative text-white  text-black uppercase text-xs  py-1 px-2 hover:tracking-[0.25em] hover:text-white hover:bg-black border-b duration-300 tracking-[0.1em]";
@@ -111,11 +117,11 @@ const Navbar = () => {
               </ul>
             </div>
 
-            <div className="flex justify-center items-center w-40">
-              <Link
-                to={"/login"}
+            <div className="flex  justify-center items-center w-40">
+              <Link 
+                onClick={openLogin}
                 className="flex  p-2 items-center gap-x-2 font-medium   md:border-l md:border-gray-300 md:my-6 md:pl-6 dark:border-gray-700 text-white "
-                href="#"
+                
               >
                 <svg
                   className="w-4 h-4"

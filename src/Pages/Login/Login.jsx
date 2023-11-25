@@ -6,11 +6,11 @@ import {SiFacebook} from 'react-icons/si'
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
-import welcome from '../../Assets/loginAnimation.json'
-import Lottie from 'react-lottie-player';
-import logo from '../../Assets/logo.png';
-import Transition from '../../Transition/Transition';
 
+import Lottie from 'react-lottie-player';
+
+import { ModalWrapper, Reoverlay } from "reoverlay";
+import "reoverlay/lib/ModalWrapper.css";
 
 const Login = () => {
     const { state } = useLocation();
@@ -81,27 +81,14 @@ const Login = () => {
 
 
     return (
-      <div className="pt-20 bg-patternLight dark:bg-patternDark ">
-        {/* <button onClick={logout} className='btn' >logout test</button> */}
-        <div className="flex justify-center items-center w-full max-w-sm mx-auto overflow-hidden  rounded-lg shadow-lg  lg:max-w-4xl">
-          <div className="hidden p-2 lg:flex flex-col items-center justify-center lg:w-1/2">
-            <img src={logo} className="w-28" alt="" />
-            <Lottie
-              loop={false}
-              animationData={welcome}
-              play
-              style={{ width: 300, height: 300 }}
-            />
-          </div>
-
-          <div className="w-full px-6 py-8 md:px-8 lg:w-1/2">
+      <ModalWrapper animation='door'>
+        <div className="flex justify-center items-center w-[50vw]  mx-auto overflow-hidden  rounded-lg shadow-lg  ">
+          <div className=" p-2">
             <div className="flex justify-center mx-auto">
               <img className="w-20" src="" alt="" />
             </div>
 
-            <p className="mt-3 text-xl text-center  ">
-              Welcome back!!
-            </p>
+            <p className="mt-3 text-xl text-center  ">Welcome back!!</p>
 
             <a
               onClick={() => handleSocialLogin(googleLogin)}
@@ -214,8 +201,7 @@ const Login = () => {
             </div>
           </div>
         </div>
-        <Transition />
-      </div>
+      </ModalWrapper>
     );
 };
 
