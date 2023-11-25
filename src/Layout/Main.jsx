@@ -12,7 +12,7 @@ const Main = () => {
        const preload = () => {
          setTimeout(() => {
            setPreloader(false);
-         }, 3000);
+         }, 1000);
        };
        return preload();
      }, []);

@@ -2,6 +2,7 @@ import Marquee from "react-fast-marquee";
 import { motion } from 'framer-motion';
 import logo2 from '../../../Assets/Logo/TS-white-2-removebg-preview.png'
 import ParticleImage, { forces } from "react-particle-image";
+import Search from "./Search";
 
 const particleOptions = {
   filter: ({ x, y, image }) => {
@@ -100,18 +101,20 @@ const Banner = () => {
           </div>
         </div>
       </Marquee>
-      <div className="absolute h-full w-full flex justify-center items-center z-10 bg-black/70">
+      <div className="absolute h-full w-full flex flex-col justify-center items-center z-10 bg-black/70 pb-40 md:pb-0 lg:pb-40">
         <ParticleImage
-        
           src={logo2}
           scale={0.75}
           entropy={10}
-          maxParticles={4200}
+          maxParticles={8000}
           particleOptions={particleOptions}
           mouseMoveForce={motionForce}
           touchMoveForce={motionForce}
           backgroundColor="transparent"
         />
+        <div>
+         <Search></Search>
+        </div>
       </div>
     </div>
   );
