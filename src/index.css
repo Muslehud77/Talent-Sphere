@@ -1,3 +1,14 @@
+*{
+    color: rgba(0, 0, 0, 0.548)
+}
+
+::-webkit-scrollbar {
+    display: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+   
+}
+
 
 @tailwind base;
 @tailwind components;

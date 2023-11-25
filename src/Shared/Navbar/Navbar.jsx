@@ -1,8 +1,14 @@
+import { useEffect } from "react";
 import { Collapse, Dropdown, initTE } from "tw-elements";
 
-initTE({ Collapse, Dropdown });
+
 
 const Navbar = () => {
+
+     useEffect(() => {
+       initTE({ Collapse, Dropdown });
+     }, []);
+
   return (
     <div>
         {/* <!-- Main navigation container --> */}
