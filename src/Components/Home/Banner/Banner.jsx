@@ -1,12 +1,24 @@
 import Marquee from "react-fast-marquee";
 import { motion } from 'framer-motion';
+import logo2 from '../../../Assets/Logo/TS-white-2-removebg-preview.png'
+import ParticleImage, { forces } from "react-particle-image";
 
-
-
+const particleOptions = {
+  filter: ({ x, y, image }) => {
+    // Get pixel
+    const pixel = image.get(x, y);
+    // Make a particle for this pixel if blue > 50 (range 0-255)
+    return pixel.b > 50;
+  },
+  color: ({ x, y, image }) => "#fff",
+};
+const motionForce = (x, y) => {
+  return forces.disturbance(x, y, 5);
+};
 
 const Banner = () => {
   return (
-    <div className="w-full">
+    <div className="w-full bg-black min-h-screen relative flex justify-center items-center">
       <Marquee
         autoFill={true}
         gradient
@@ -40,7 +52,7 @@ const Banner = () => {
               </motion.div>
               <motion.div
                 animate={{ scale: [0.5, 1] }}
-                transition={{ type: "spring", stiffness: 100}}
+                transition={{ type: "spring", stiffness: 100 }}
                 className="w-full p-1 md:p-2"
               >
                 <img
@@ -53,7 +65,7 @@ const Banner = () => {
             <div className="flex w-1/2 flex-wrap">
               <motion.div
                 animate={{ scale: [0.5, 1] }}
-                transition={{ type: "spring", stiffness: 100}}
+                transition={{ type: "spring", stiffness: 100 }}
                 className="w-full p-1 md:p-2"
               >
                 <img
@@ -88,6 +100,19 @@ const Banner = () => {
           </div>
         </div>
       </Marquee>
+      <div className="absolute h-full w-full flex justify-center items-center z-10 bg-black/70">
+        <ParticleImage
+        
+          src={logo2}
+          scale={0.75}
+          entropy={10}
+          maxParticles={4200}
+          particleOptions={particleOptions}
+          mouseMoveForce={motionForce}
+          touchMoveForce={motionForce}
+          backgroundColor="transparent"
+        />
+      </div>
     </div>
   );
 };

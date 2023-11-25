@@ -5,11 +5,11 @@ import ReactPlayer from 'react-player';
 const PreLoader = () => {
      
     return (
-      <div className="fixed h-screen z-50 w-screen top-0">
+      <div className="fixed bg-black h-screen z-50 w-screen top-0">
         <ReactPlayer
           url={video}
-          width="640"
-          height="360"
+          width="100%"
+          height="100%"
           loop={true}
           playing={true}
           muted={true}

@@ -16,6 +16,7 @@
     "axios": "^1.6.2",
     "firebase": "^10.4.0",
     "framer-motion": "^10.16.5",
+    "hamburger-react": "^2.5.0",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "preline": "^2.0.2",
