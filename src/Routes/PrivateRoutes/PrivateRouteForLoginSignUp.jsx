@@ -1,10 +1,13 @@
-import { useContext } from "react";
-import { AuthContext } from "../ContextProvider/AuthContext";
+/* eslint-disable react/prop-types */
+
+
 import { Navigate, useLocation } from "react-router-dom";
+
+import useContextInfo from "../../Hooks/useContextInfo";
 
 
 const PrivateRouteForLoginSignUp = ({children}) => {
-const {user,loading} = useContext(AuthContext)
+const {user,loading} = useContextInfo()
 const {state,pathname} = useLocation()
 
 

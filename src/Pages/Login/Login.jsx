@@ -1,16 +1,18 @@
 
-import { useContext, useState } from 'react';
-import { AuthContext } from '../../ContextProvider/AuthContext';
+import {  useState } from 'react';
+
 import {FcGoogle} from 'react-icons/fc'
 import {SiFacebook} from 'react-icons/si'
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
-
+import animation from '../../Assets/Lotties/hovering.json'
 import Lottie from 'react-lottie-player';
-
+import logo from '../../Assets/Logo/TS-black-removebg-preview.png'
 import { ModalWrapper, Reoverlay } from "reoverlay";
 import "reoverlay/lib/ModalWrapper.css";
+import useContextInfo from '../../Hooks/useContextInfo';
+import Transition from '../../Transition/Transition';
 
 const Login = () => {
     const { state } = useLocation();
@@ -18,9 +20,10 @@ const Login = () => {
 
     const [errMsg,setErrMsg] = useState(null) 
     const [showPass,setShowPass] = useState(false)
-    const { googleLogin, facebookLogin, login, dark} =
-      useContext(AuthContext);
-
+    const { googleLogin, facebookLogin, login, dark} = useContextInfo()
+const closeModal = () => {
+  Reoverlay.hideModal();
+};
     const handleSocialLogin = (social) =>{
         setErrMsg(null)
         social()
@@ -81,127 +84,135 @@ const Login = () => {
 
 
     return (
-      <ModalWrapper animation='door'>
-        <div className="flex justify-center items-center w-[50vw]  mx-auto overflow-hidden  rounded-lg shadow-lg  ">
-          <div className=" p-2">
-            <div className="flex justify-center mx-auto">
-              <img className="w-20" src="" alt="" />
+      <>
+        <ModalWrapper animation="door">
+          <div className="w-full py-10">
+            <img src={logo} className="w-32 mx-auto" alt="" />
+            <div className="h-[0.5px] w-32 mx-auto mt-2 bg-black"></div>
+            <p className="text-center font-serif mt-2 uppercase tracking-[0.05em] xl:tracking-[0.25em]">
+              Your Gateway to Recognition
+            </p>
+          </div>
+          <div className="flex justify-center items-center mx-auto overflow-hidden xl:w-[55vw]  rounded-lg shadow-lg pt-0  p-10">
+            <div className="hidden md:flex">
+              <Lottie
+                loop
+                animationData={animation}
+                play
+                style={{ width: 400, height: 400 }}
+              />
             </div>
-
-            <p className="mt-3 text-xl text-center  ">Welcome back!!</p>
-
-            <a
-              onClick={() => handleSocialLogin(googleLogin)}
-              className="flex hover:cursor-pointer items-center justify-center mt-4  transition-colors duration-300 transform border rounded-lg   hover:bg-gray-50 "
-            >
-              <div className="px-4 text-2xl py-2">
-                <FcGoogle />
-              </div>
-
-              <span className="w-5/6 px-4 py-3 font-bold text-center">
-                Sign in with Google
-              </span>
-            </a>
-            <a
-              onClick={() => handleSocialLogin(facebookLogin)}
-              className="flex hover:cursor-pointer items-center justify-center mt-4  transition-colors duration-300 transform border rounded-lg   hover:bg-gray-50 -600"
-            >
-              <div className="px-4 text-2xl py-2">
-                <SiFacebook />
-              </div>
-
-              <span className="w-5/6 px-4 py-3 font-bold text-center">
-                Sign in with Facebook
-              </span>
-            </a>
-
-            <div className="flex items-center justify-between mt-4">
-              <span className="w-1/5 border-b  lg:w-1/4"></span>
-
-              <a
-                href="#"
-                className="text-xs text-center text-gray-500 uppercase  hover:underline"
-              >
-                or login with email
-              </a>
-
-              <span className="w-1/5 border-b  lg:w-1/4"></span>
-            </div>
-
-            <form onSubmit={handleSubmit}>
-              <div className="mt-4">
-                <label className="block mb-2 text-sm font-medium  ">
-                  Email Address
-                </label>
-                <input
-                  required
-                  id="LoggingEmailAddress"
-                  name="email"
-                  className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg    focus:border-blue-400 focus:ring-opacity-40 -300 focus:outline-none focus:ring focus:ring-blue-300"
-                  type="email"
-                />
-              </div>
-
-              <div className="mt-4">
-                <div className="flex justify-between">
+            <div className="w-full p-2">
+              <form onSubmit={handleSubmit}>
+                <div className="">
                   <label className="block mb-2 text-sm font-medium  ">
-                    Password
+                    Email Address
                   </label>
-                  <a
-                    href="#"
-                    className="text-xs text-gray-500  hover:underline"
-                  >
-                    Forget Password?
-                  </a>
-                </div>
-
-                <div className="relative">
                   <input
                     required
-                    id="loggingPassword"
-                    name="password"
+                    id="LoggingEmailAddress"
+                    name="email"
                     className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg    focus:border-blue-400 focus:ring-opacity-40 -300 focus:outline-none focus:ring focus:ring-blue-300"
-                    type={showPass ? "Text" : "password"}
+                    type="email"
                   />
-                  <span
-                    onClick={() => setShowPass(!showPass)}
-                    className="absolute right-2 top-2 hover:cursor-pointer text-2xl"
-                  >
-                    {!showPass ? <AiFillEyeInvisible /> : <AiFillEye />}
-                  </span>
                 </div>
-              </div>
-              <div className="h-4 my-3">
+
+                <div className="mt-4">
+                  <div className="flex justify-between">
+                    <label className="block mb-2 text-sm font-medium  ">
+                      Password
+                    </label>
+                    <a
+                      href="#"
+                      className="text-xs text-gray-500  hover:underline"
+                    >
+                      Forget Password?
+                    </a>
+                  </div>
+
+                  <div className="relative">
+                    <input
+                      required
+                      id="loggingPassword"
+                      name="password"
+                      className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg    focus:border-blue-400 focus:ring-opacity-40 -300 focus:outline-none focus:ring focus:ring-blue-300"
+                      type={showPass ? "Text" : "password"}
+                    />
+                    <span
+                      onClick={() => setShowPass(!showPass)}
+                      className="absolute right-2 top-2 hover:cursor-pointer text-2xl"
+                    >
+                      {!showPass ? <AiFillEyeInvisible /> : <AiFillEye />}
+                    </span>
+                  </div>
+                </div>
                 {errMsg && (
-                  <div className="my-1 text-center text-red-600 font-serif bg-gray-100 rounded-lg">
-                    <span>{errMsg}</span>
+                  <div className="h-4 my-3">
+                    <div className="my-1 text-center text-red-600 font-serif bg-gray-100 rounded-lg">
+                      <span>{errMsg}</span>
+                    </div>
                   </div>
                 )}
-              </div>
-              <div className="mt-6">
-                <input
-                  value="Login"
-                  type="submit"
-                  className="w-full hover:cursor-pointer text-center px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-gray-800 rounded-lg hover:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50"
-                />
-              </div>
-            </form>
+                <div className="mt-6">
+                  <input
+                    value="Login"
+                    type="submit"
+                    className="w-full hover:cursor-pointer text-center px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-gray-800 rounded-lg hover:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50"
+                  />
+                </div>
+              </form>
+              <div className="flex items-center justify-between mt-4">
+                <span className="w-1/5 border-b  lg:w-1/4"></span>
 
-            <div className="flex items-center justify-between mt-4">
-              <span className="w-1/5 border-b  md:w-1/4"></span>
+                <span className="text-xs text-center text-gray-500 uppercase ">
+                  or login with Social
+                </span>
 
-              <Link
-                to={"/register"}
-                className="text-xs text-gray-500 uppercase  hover:underline"
+                <span className="w-1/5 border-b  lg:w-1/4"></span>
+              </div>
+              <a
+                onClick={() => handleSocialLogin(googleLogin)}
+                className="flex hover:cursor-pointer items-center justify-center mt-4  transition-colors duration-300 transform border rounded-lg   hover:bg-gray-50 "
               >
-                or sign up
-              </Link>
+                <div className="px-4 text-2xl py-2">
+                  <FcGoogle />
+                </div>
 
-              <span className="w-1/5 border-b  md:w-1/4"></span>
+                <span className="w-5/6 px-4 py-3 font-bold text-center">
+                  Sign in with Google
+                </span>
+              </a>
+              <a
+                onClick={() => handleSocialLogin(facebookLogin)}
+                className="flex hover:cursor-pointer items-center justify-center mt-4  transition-colors duration-300 transform border rounded-lg   hover:bg-gray-50 -600"
+              >
+                <div className="px-4 text-2xl py-2">
+                  <SiFacebook />
+                </div>
+
+                <span className="w-5/6 px-4 py-3 font-bold text-center">
+                  Sign in with Facebook
+                </span>
+              </a>
+
+              <div className="flex items-center justify-between mt-4">
+                <span className="w-1/5 border-b  md:w-1/4"></span>
+
+                <Link
+                  onClick={closeModal}
+                  to={"/register"}
+                  className="text-xs text-gray-500 uppercase  hover:underline"
+                >
+                  or sign up
+                </Link>
+
+                <span className="w-1/5 border-b  md:w-1/4"></span>
+              </div>
             </div>
           </div>
-        </div>
-      </ModalWrapper>
+        </ModalWrapper>
+       
+      </>
     );
 };
 

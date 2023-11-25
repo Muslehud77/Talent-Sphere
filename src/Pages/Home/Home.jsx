@@ -1,5 +1,6 @@
 
 import Banner from "../../Components/Home/Banner/Banner";
+import Transition from "../../Transition/Transition";
 
 
 
@@ -24,6 +25,7 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <Transition></Transition>
       </div>
     );
 };
