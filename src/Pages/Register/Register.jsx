@@ -4,7 +4,7 @@ import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import welcome from "../../Assets/Lotties/solving.json";
 import logo from "../../Assets/Logo/TS-black-removebg-preview.png";
 import { updateProfile } from "firebase/auth";
-
+import { FaCircleArrowLeft } from "react-icons/fa6";
 import toast from "react-hot-toast";
 import Transition from "../../Transition/Transition";
 import Lottie from "react-lottie-player";
@@ -139,8 +139,12 @@ const Register =  () => {
 
   return (
     <div className="mt-10">
+      <div className="pl-20 -pb-44">
+        <button onClick={() => navigate(-1)} className="text-2xl">
+          <FaCircleArrowLeft />
+        </button>
+      </div>
       <Link to={"/"}>
-       
         <div className="flex justify-center items-center">
           <img src={logo} className="w-36" alt="" />
         </div>

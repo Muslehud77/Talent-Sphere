@@ -1,192 +1,877 @@
+
+
+
 [
   {
-    "ContestName": "BizGenius Challenge",
-    "ShortDescription": "Unleash your entrepreneurial prowess in this innovative business contest.",
-    "DetailedDescription": "The BizGenius Challenge seeks visionary minds ready to shape the future of commerce. Submit a comprehensive business plan outlining your unique strategy, target market analysis, and scalability potential, encompassing at least 60 words.",
-    "ContestPrice": "Free",
-    "PrizeMoney": "$15,000",
-    "TaskSubmissionInstructions": [
+    "contestName": "BizGenius Challenge",
+    "shortDescription": "Unleash your entrepreneurial prowess in this innovative business contest.",
+    "detailedDescription": "The BizGenius Challenge seeks visionary minds ready to shape the future of commerce. Submit a comprehensive business plan outlining your unique strategy, target market analysis, and scalability potential, encompassing at least 60 words.",
+    "contestPrice": 23,
+    "prizeMoney": 15000,
+    "attempt": 40,
+    "isPending":false,
+    "taskSubmissionInstructions": [
       "Prepare a detailed business plan (PDF format) not exceeding 20 pages.",
       "Create a 5-minute pitch video presenting your business proposal."
     ],
-    "ContestCategory": "Business",
-    "BusinessContestHashtags": ["#BizGenius", "#FutureCommerce", "#EntrepreneurialSpirit"],
-    "ContestDeadline": "2028-07-30",
-    "CreatorInfo": {
-      "CreatorName": "Amanda",
-      "CreatorImage": "https://i.postimg.cc/HnwffqBP/creator-1-Amanda-amanda@creator-com.jpg",
-      "Email": "amanda@creator.com"
+    "contestCategory": "Business",
+    "contestImg": "https://i.postimg.cc/xCPsF6VV/business.jpg",
+    "tags": ["#BizGenius", "#FutureCommerce", "#EntrepreneurialSpirit"],
+    "contestDeadline": "2028-07-30",
+    "creatorInfo": {
+      "creatorName": "Amanda",
+      "creatorImage": "https://i.postimg.cc/HnwffqBP/creator-1-Amanda-amanda-creator-com.jpg",
+      "email": "amanda@creator.com"
     }
   },
   {
-    "ContestName": "VentureCraft Challenge",
-    "ShortDescription": "Craft your vision into a viable business venture and win big!",
-    "DetailedDescription": "VentureCraft Challenge is for aspiring entrepreneurs. Describe your groundbreaking business concept in a detailed manner, covering market analysis, revenue models, and social impact within 60 words or more.",
-    "ContestPrice": "$50 Entry Fee",
-    "PrizeMoney": "$20,000",
-    "TaskSubmissionInstructions": [
+    "contestName": "VentureCraft Challenge",
+    "shortDescription": "Craft your vision into a viable business venture and win big!",
+    "detailedDescription": "VentureCraft Challenge is for aspiring entrepreneurs. Describe your groundbreaking business concept in a detailed manner, covering market analysis, revenue models, and social impact within 60 words or more.",
+    "contestPrice": 20,
+    "prizeMoney": 20000,
+    "attempt": 30,
+    "isPending":false,
+    "taskSubmissionInstructions": [
       "Develop a detailed business proposal in PDF format.",
       "Prepare a 7-minute presentation video showcasing the viability of your business idea."
     ],
-    "ContestCategory": "Business",
-    "BusinessContestHashtags": ["#VentureCraft", "#FutureVentures", "#InnovativeIdeas"],
-    "ContestDeadline": "2028-08-22",
-    "CreatorInfo": {
-      "CreatorName": "Julie",
-      "CreatorImage": "https://i.postimg.cc/2jnRbWrF/creator-2-Julie-julie@creator-com.jpg",
-      "Email": "julie@creator.com"
+    "contestCategory": "Business",
+    "contestImg": "https://i.postimg.cc/HWBZwvtQ/business10.png",
+    "tags": ["#VentureCraft", "#FutureVentures", "#InnovativeIdeas"],
+    "contestDeadline": "2028-08-22",
+    "creatorInfo": {
+      "creatorName": "Julie",
+      "creatorImage": "https://i.postimg.cc/2jnRbWrF/creator-2-Julie-julie-creator-com.jpg",
+      "email": "julie@creator.com"
     }
   },
   {
-    "ContestName": "InnoVisionary Challenge",
-    "ShortDescription": "Pioneer the future of business with your innovative ideas.",
-    "DetailedDescription": "The InnoVisionary Challenge invites groundbreaking business concepts that redefine industries. Present your innovative idea in a detailed submission, covering market analysis, scalability, and social impact within 60 words or more.",
-    "ContestPrice": "Free",
-    "PrizeMoney": "$12,500",
-    "TaskSubmissionInstructions": [
+    "contestName": "InnoVisionary Challenge",
+    "shortDescription": "Pioneer the future of business with your innovative ideas.",
+    "detailedDescription": "The InnoVisionary Challenge invites groundbreaking business concepts that redefine industries. Present your innovative idea in a detailed submission, covering market analysis, scalability, and social impact within 60 words or more.",
+    "contestPrice": 20,
+    "prizeMoney": 12500,
+    "attempt": 80,
+    "isPending":false,
+    "taskSubmissionInstructions": [
       "Prepare a detailed business proposal (PDF format).",
       "Create a 4-minute video pitching your business concept."
     ],
-    "ContestCategory": "Business",
-    "BusinessContestHashtags": ["#InnoVisionary", "#FutureBusinessIdeas", "#IndustryRevolution"],
-    "ContestDeadline": "2028-09-10",
-    "CreatorInfo": {
-      "CreatorName": "Boby",
-      "CreatorImage": "https://i.postimg.cc/ZRdkLB3m/creator-3-Boby-boby@creator-com.jpg",
-      "Email": "boby@creator.com"
+    "contestCategory": "Business",
+    "contestImg": "https://i.postimg.cc/63Kj0DSh/business2.jpg",
+    "tags": ["#InnoVisionary", "#FutureBusinessIdeas", "#IndustryRevolution"],
+    "contestDeadline": "2028-09-10",
+    "creatorInfo": {
+      "creatorName": "Boby",
+      "creatorImage": "https://i.postimg.cc/ZRdkLB3m/creator-3-Boby-boby-creator-com.jpg",
+      "email": "boby@creator.com"
     }
   },
   {
-    "ContestName": "CommerceCraze Challenge",
-    "ShortDescription": "Explore innovative approaches to transform commerce for tomorrow.",
-    "DetailedDescription": "CommerceCraze Challenge is a platform for innovative commerce solutions. Share your revolutionary business approach, highlighting market disruptiveness, scalability, and futuristic vision in a detailed description of at least 60 words.",
-    "ContestPrice": "Free",
-    "PrizeMoney": "$18,000",
-    "TaskSubmissionInstructions": [
+    "contestName": "CommerceCraze Challenge",
+    "shortDescription": "Explore innovative approaches to transform commerce for tomorrow.",
+    "detailedDescription": "CommerceCraze Challenge is a platform for innovative commerce solutions. Share your revolutionary business approach, highlighting market disruptiveness, scalability, and futuristic vision in a detailed description of at least 60 words.",
+    "contestPrice": 27,
+    "prizeMoney": 18000,
+    "attempt": 118,
+    "isPending":false,
+    "taskSubmissionInstructions": [
       "Submit a detailed business strategy (PDF format).",
       "Create a 6-minute video showcasing your innovative business concept."
     ],
-    "ContestCategory": "Business",
-    "BusinessContestHashtags": ["#CommerceCraze", "#FutureCommerceSolutions", "#InnovateCommerce"],
-    "ContestDeadline": "2028-10-05",
-    "CreatorInfo": {
-      "CreatorName": "Amanda",
-      "CreatorImage": "https://i.postimg.cc/HnwffqBP/creator-1-Amanda-amanda@creator-com.jpg",
-      "Email": "amanda@creator.com"
+    "contestCategory": "Business",
+    "contestImg": "https://i.postimg.cc/Z59MKPp6/business3.jpg",
+    "tags": ["#CommerceCraze", "#FutureCommerceSolutions", "#InnovateCommerce"],
+    "contestDeadline": "2028-10-05",
+    "creatorInfo": {
+      "creatorName": "Amanda",
+      "creatorImage": "https://i.postimg.cc/HnwffqBP/creator-1-Amanda-amanda-creator-com.jpg",
+      "email": "amanda@creator.com"
     }
   },
    {
-    "ContestName": "BizImpact Challenge",
-    "ShortDescription": "Make a lasting impact with your innovative business model.",
-    "DetailedDescription": "The BizImpact Challenge is calling for transformative business models that prioritize social impact. Detail your business plan, emphasizing sustainability, social responsibility, and scalability in a description of at least 60 words.",
-    "ContestPrice": "Free",
-    "PrizeMoney": "$25,000",
-    "TaskSubmissionInstructions": [
+    "contestName": "BizImpact Challenge",
+    "shortDescription": "Make a lasting impact with your innovative business model.",
+    "detailedDescription": "The BizImpact Challenge is calling for transformative business models that prioritize social impact. Detail your business plan, emphasizing sustainability, social responsibility, and scalability in a description of at least 60 words.",
+    "contestPrice": 22,
+    "prizeMoney": 25000,
+    "attempt": 25,
+    "isPending":false,
+    "taskSubmissionInstructions": [
       "Submit a comprehensive business plan (PDF format).",
       "Prepare a 8-minute video presentation highlighting the social impact of your business model."
     ],
-    "ContestCategory": "Business",
-    "BusinessContestHashtags": ["#BizImpact", "#SociallyResponsibleBusiness", "#SustainableBusinessModel"],
-    "ContestDeadline": "2028-11-18",
-    "CreatorInfo": {
-      "CreatorName": "Julie",
-      "CreatorImage": "https://i.postimg.cc/2jnRbWrF/creator-2-Julie-julie@creator-com.jpg",
-      "Email": "julie@creator.com"
+    "contestCategory": "Business",
+    "contestImg": "https://i.postimg.cc/jjP3ys85/business4.jpg",
+    "tags": ["#BizImpact", "#SociallyResponsibleBusiness", "#SustainableBusinessModel"],
+    "contestDeadline": "2028-11-18",
+    "creatorInfo": {
+      "creatorName": "Julie",
+      "creatorImage": "https://i.postimg.cc/2jnRbWrF/creator-2-Julie-julie-creator-com.jpg",
+      "email": "julie@creator.com"
     }
   },
   {
-    "ContestName": "StartupInnovate Challenge",
-    "ShortDescription": "Foster innovation and entrepreneurship with your startup vision.",
-    "DetailedDescription": "The StartupInnovate Challenge is open to startups with groundbreaking ideas. Describe your startup vision, outlining its uniqueness, market potential, and scalability in a detailed description of 60 words or more.",
-    "ContestPrice": "$30 Entry Fee",
-    "PrizeMoney": "$14,000",
-    "TaskSubmissionInstructions": [
+    "contestName": "StartupInnovate Challenge",
+    "shortDescription": "Foster innovation and entrepreneurship with your startup vision.",
+    "detailedDescription": "The StartupInnovate Challenge is open to startups with groundbreaking ideas. Describe your startup vision, outlining its uniqueness, market potential, and scalability in a detailed description of 60 words or more.",
+    "contestPrice": 28,
+    "prizeMoney": 14000,
+    "attempt": 60,
+    "isPending":false,
+    "taskSubmissionInstructions": [
       "Submit a comprehensive business proposal (PDF format).",
       "Create a 5-minute video pitch showcasing your startup's potential."
     ],
-    "ContestCategory": "Business",
-    "BusinessContestHashtags": ["#StartupInnovate", "#StartupVisionaries", "#EntrepreneurialIdeas"],
-    "ContestDeadline": "2028-12-03",
-    "CreatorInfo": {
-      "CreatorName": "Boby",
-      "CreatorImage": "https://i.postimg.cc/ZRdkLB3m/creator-3-Boby-boby@creator-com.jpg",
-      "Email": "boby@creator.com"
+    "contestCategory": "Business",
+    "contestImg": "https://i.postimg.cc/7ZpQCCnd/business5.jpg",
+    "tags": ["#StartupInnovate", "#StartupVisionaries", "#EntrepreneurialIdeas"],
+    "contestDeadline": "2028-12-03",
+    "creatorInfo": {
+      "creatorName": "Boby",
+      "creatorImage": "https://i.postimg.cc/ZRdkLB3m/creator-3-Boby-boby-creator-com.jpg",
+      "email": "boby@creator.com"
     }
   },
   {
-    "ContestName": "EntrePreneurial Vision Challenge",
-    "ShortDescription": "Unleash your entrepreneurial vision for a transformative future.",
-    "DetailedDescription": "The EntrePreneurial Vision Challenge seeks visionary entrepreneurs ready to redefine industries. Present your groundbreaking business concept, emphasizing innovation, scalability, and societal impact in a detailed description of at least 60 words.",
-    "ContestPrice": "Free",
-    "PrizeMoney": "$20,000",
-    "TaskSubmissionInstructions": [
+    "contestName": "EntrePreneurial Vision Challenge",
+    "shortDescription": "Unleash your entrepreneurial vision for a transformative future.",
+    "detailedDescription": "The EntrePreneurial Vision Challenge seeks visionary entrepreneurs ready to redefine industries. Present your groundbreaking business concept, emphasizing innovation, scalability, and societal impact in a detailed description of at least 60 words.",
+    "contestPrice": 20,
+    "prizeMoney": 20000,
+    "attempt": 75,
+    "isPending":false,
+    "taskSubmissionInstructions": [
       "Develop a comprehensive business proposal in PDF format.",
       "Create a 6-minute video presentation showcasing your entrepreneurial vision."
     ],
-    "ContestCategory": "Business",
-    "BusinessContestHashtags": ["#EntrePreneurialVision", "#FutureEntrepreneurship", "#InnovativeBusinessIdeas"],
-    "ContestDeadline": "2028-12-20",
-    "CreatorInfo": {
-      "CreatorName": "Amanda",
-      "CreatorImage": "https://i.postimg.cc/HnwffqBP/creator-1-Amanda-amanda@creator-com.jpg",
-      "Email": "amanda@creator.com"
+    "contestCategory": "Business",
+    "contestImg": "https://i.postimg.cc/GhgfCg8c/business6.png",
+    "tags": ["#EntrePreneurialVision", "#FutureEntrepreneurship", "#InnovativeBusinessIdeas"],
+    "contestDeadline": "2028-12-20",
+    "creatorInfo": {
+      "creatorName": "Amanda",
+      "creatorImage": "https://i.postimg.cc/HnwffqBP/creator-1-Amanda-amanda-creator-com.jpg",
+      "email": "amanda@creator.com"
     }
   },
   {
-    "ContestName": "SustainBiz Challenge",
-    "ShortDescription": "Elevate sustainability in business for a greener future.",
-    "DetailedDescription": "SustainBiz Challenge invites sustainable business solutions. Describe your eco-friendly business model, highlighting its environmental impact, scalability, and profitability in a description of at least 60 words.",
-    "ContestPrice": "Free",
-    "PrizeMoney": "$17,500",
-    "TaskSubmissionInstructions": [
+    "contestName": "SustainBiz Challenge",
+    "shortDescription": "Elevate sustainability in business for a greener future.",
+    "detailedDescription": "SustainBiz Challenge invites sustainable business solutions. Describe your eco-friendly business model, highlighting its environmental impact, scalability, and profitability in a description of at least 60 words.",
+    "contestPrice": 20,
+    "prizeMoney": 17500,
+    "attempt": 55,
+    "isPending":false,
+    "taskSubmissionInstructions": [
       "Submit a detailed sustainable business plan (PDF format).",
       "Create a 5-minute video presentation focusing on the environmental impact of your business model."
     ],
-    "ContestCategory": "Business",
-    "BusinessContestHashtags": ["#SustainBiz", "#GreenBusinessIdeas", "#SustainableFuture"],
-    "ContestDeadline": "2028-11-25",
-    "CreatorInfo": {
-      "CreatorName": "Julie",
-      "CreatorImage": "https://i.postimg.cc/2jnRbWrF/creator-2-Julie-julie@creator-com.jpg",
-      "Email": "julie@creator.com"
+    "contestCategory": "Business",
+    "contestImg": "https://i.postimg.cc/CMNtvxwn/business7.png",
+    "tags": ["#SustainBiz", "#GreenBusinessIdeas", "#SustainableFuture"],
+    "contestDeadline": "2028-11-25",
+    "creatorInfo": {
+      "creatorName": "Julie",
+      "creatorImage": "https://i.postimg.cc/2jnRbWrF/creator-2-Julie-julie-creator-com.jpg",
+      "email": "julie@creator.com"
     }
   },
   {
-    "ContestName": "Futurepreneur Challenge",
-    "ShortDescription": "Shape the future of entrepreneurship with your innovative ideas.",
-    "DetailedDescription": "Futurepreneur Challenge is for aspiring entrepreneurs with futuristic visions. Share your innovative business concept, addressing market trends, scalability, and societal impact in a detailed description of 60 words or more.",
-    "ContestPrice": "Free",
-    "PrizeMoney": "$22,000",
-    "TaskSubmissionInstructions": [
+    "contestName": "Futurepreneur Challenge",
+    "shortDescription": "Shape the future of entrepreneurship with your innovative ideas.",
+    "detailedDescription": "Futurepreneur Challenge is for aspiring entrepreneurs with futuristic visions. Share your innovative business concept, addressing market trends, scalability, and societal impact in a detailed description of 60 words or more.",
+    "contestPrice": 30,
+    "prizeMoney": 22000,
+    "attempt": 69,
+    "isPending":false,
+    "taskSubmissionInstructions": [
       "Submit a comprehensive business proposal (PDF format).",
       "Create a 7-minute video showcasing your entrepreneurial idea's potential."
     ],
-    "ContestCategory": "Business",
-    "BusinessContestHashtags": ["#Futurepreneur", "#InnovativeEntrepreneurship", "#FutureBusinessLeaders"],
-    "ContestDeadline": "2028-12-08",
-    "CreatorInfo": {
-      "CreatorName": "Boby",
-      "CreatorImage": "https://i.postimg.cc/ZRdkLB3m/creator-3-Boby-boby@creator-com.jpg",
-      "Email": "boby@creator.com"
+    "contestCategory": "Business",
+    "contestImg": "https://i.postimg.cc/HskNF1LZ/business8.png",
+    "tags": ["#Futurepreneur", "#InnovativeEntrepreneurship", "#FutureBusinessLeaders"],
+    "contestDeadline": "2028-12-08",
+    "creatorInfo": {
+      "creatorName": "Boby",
+      "creatorImage": "https://i.postimg.cc/ZRdkLB3m/creator-3-Boby-boby-creator-com.jpg",
+      "email": "boby@creator.com"
     }
   },
   {
-    "ContestName": "EcoBiz Innovate Challenge",
-    "ShortDescription": "Drive innovation for a sustainable and profitable business landscape.",
-    "DetailedDescription": "EcoBiz Innovate Challenge calls for innovative yet sustainable business models. Present your eco-conscious business plan, emphasizing innovation, environmental impact, and financial feasibility in a description of at least 60 words.",
-    "ContestPrice": "Free",
-    "PrizeMoney": "$19,500",
-    "TaskSubmissionInstructions": [
+    "contestName": "EcoBiz Innovate Challenge",
+    "shortDescription": "Drive innovation for a sustainable and profitable business landscape.",
+    "detailedDescription": "EcoBiz Innovate Challenge calls for innovative yet sustainable business models. Present your eco-conscious business plan, emphasizing innovation, environmental impact, and financial feasibility in a description of at least 60 words.",
+    "contestPrice": 25,
+    "prizeMoney": 19500,
+    "attempt": 86,
+    "isPending":false,
+    "taskSubmissionInstructions": [
       "Submit a detailed eco-friendly business plan (PDF format).",
       "Create a 6-minute video presentation focusing on the innovation and sustainability of your business model."
     ],
-    "ContestCategory": "Business",
-    "BusinessContestHashtags": ["#EcoBizInnovate", "#SustainableInnovation", "#GreenBusinessSolutions"],
-    "ContestDeadline": "2028-12-15",
-    "CreatorInfo": {
-      "CreatorName": "Amanda",
-      "CreatorImage": "https://i.postimg.cc/HnwffqBP/creator-1-Amanda-amanda@creator-com.jpg",
-      "Email": "amanda@creator.com"
+    "contestCategory": "Business",
+    "contestImg": "https://i.postimg.cc/4yN8CpX7/business9.png",
+    "tags": ["#EcoBizInnovate", "#SustainableInnovation", "#GreenBusinessSolutions"],
+    "contestDeadline": "2028-12-15",
+    "creatorInfo": {
+      "creatorName": "Amanda",
+      "creatorImage": "https://i.postimg.cc/HnwffqBP/creator-1-Amanda-amanda-creator-com.jpg",
+      "email": "amanda@creator.com"
+    }
+  },
+  {
+    "contestName": "MediInnovate Challenge",
+    "shortDescription": "Drive innovation in healthcare for a healthier world.",
+    "detailedDescription": "The MediInnovate Challenge calls for groundbreaking healthcare solutions. Present your innovative medical concept, emphasizing technological advancements, patient care, and scalability in a detailed description of at least 60 words.",
+    "contestPrice": 25,
+    "prizeMoney": 18000,
+    "attempt": 42,
+    "isPending":false,
+    "taskSubmissionInstructions": [
+      "Submit a detailed medical innovation proposal (PDF format).",
+      "Create a 6-minute video presentation showcasing the innovation and impact of your medical concept."
+    ],
+    "contestCategory": "Medical",
+    "contestImg": "https://i.postimg.cc/vHjggK0q/medical-1.jpg",
+    "tags": ["#MediInnovate", "#HealthcareInnovation", "#MedicalTechnology"],
+    "contestDeadline": "2029-01-10",
+    "creatorInfo": {
+      "creatorName": "Amanda",
+      "creatorImage": "https://i.postimg.cc/HnwffqBP/creator-1-Amanda-amanda-creator-com.jpg",
+      "email": "amanda@creator.com"
+    }
+  },
+  {
+    "contestName": "MedTechVision Challenge",
+    "shortDescription": "Envision the future of medical technology for enhanced healthcare.",
+    "detailedDescription": "MedTechVision Challenge seeks futuristic medical tech solutions. Share your innovative medical technology concept, addressing advancements, patient outcomes, and market potential in a detailed description of 60 words or more.",
+    "contestPrice": 30,
+    "prizeMoney": 22000,
+    "attempt": 78,
+    "isPending":false,
+    "taskSubmissionInstructions": [
+      "Submit a comprehensive medical technology proposal (PDF format).",
+      "Create a 7-minute video showcasing the potential impact of your medical tech idea."
+    ],
+    "contestCategory": "Medical",
+    "contestImg": "https://i.postimg.cc/1XXX40w1/medical-1.webp",
+    "tags": ["#MedTechVision", "#FutureHealthTech", "#MedicalInnovation"],
+    "contestDeadline": "2029-02-15",
+    "creatorInfo": {
+      "creatorName": "Boby",
+      "creatorImage": "https://i.postimg.cc/ZRdkLB3m/creator-3-Boby-boby-creator-com.jpg",
+      "email": "boby@creator.com"
+    }
+  },
+  {
+    "contestName": "HealthcareRevolution Challenge",
+    "shortDescription": "Revolutionize healthcare with innovative solutions.",
+    "detailedDescription": "The HealthcareRevolution Challenge invites transformative healthcare concepts. Detail your innovative medical solution, emphasizing accessibility, affordability, and patient-centric care in a description of at least 60 words.",
+    "contestPrice": 22,
+    "prizeMoney": 15000,
+    "attempt": 15,
+    "isPending":false,
+    "taskSubmissionInstructions": [
+      "Prepare a comprehensive healthcare proposal (PDF format).",
+      "Create an 8-minute video presentation highlighting the transformative aspects of your medical solution."
+    ],
+    "contestCategory": "Medical",
+    "contestImg": "https://i.postimg.cc/X7ZXb8nw/medical-1.png",
+    "tags": ["#HealthcareRevolution", "#InnovativeHealthSolutions", "#PatientCentricCare"],
+    "contestDeadline": "2029-03-20",
+    "creatorInfo": {
+      "creatorName": "Julie",
+      "creatorImage": "https://i.postimg.cc/2jnRbWrF/creator-2-Julie-julie-creator-com.jpg",
+      "email": "julie@creator.com"
+    }
+  },
+  {
+    "contestName": "MediCareFuture Challenge",
+    "shortDescription": "Shape the future of healthcare with visionary medical concepts.",
+    "detailedDescription": "MediCareFuture Challenge is for visionary medical concepts. Share your innovative healthcare model, addressing technological advancements, patient outcomes, and societal impact in a detailed description of at least 60 words.",
+    "contestPrice": 28,
+    "prizeMoney": 19000,
+    "attempt": 120,
+    "isPending":false,
+    "taskSubmissionInstructions": [
+      "Submit a detailed healthcare model proposal (PDF format).",
+      "Create a 5-minute video showcasing the potential impact of your medical concept."
+    ],
+    "contestCategory": "Medical",
+    "contestImg": "https://i.postimg.cc/ZK1nKdqX/medical-2.png",
+    "tags": ["#MediCareFuture", "#FutureHealthcareVisions", "#InnovativeHealthModels"],
+    "contestDeadline": "2029-04-25",
+    "creatorInfo": {
+      "creatorName": "Amanda",
+      "creatorImage": "https://i.postimg.cc/HnwffqBP/creator-1-Amanda-amanda-creator-com.jpg",
+      "email": "amanda@creator.com"
+    }
+  },
+  {
+    "contestName": "MediTechInnovate Challenge",
+    "shortDescription": "Drive innovation in medical technology for better healthcare.",
+    "detailedDescription": "MediTechInnovate Challenge is open to innovative medical tech ideas. Present your groundbreaking medical technology, emphasizing advancements, patient care, and market viability in a detailed description of 60 words or more.",
+    "contestPrice": 25,
+    "prizeMoney": 17000,
+    "attempt": 89,
+    "isPending":false,
+    "taskSubmissionInstructions": [
+      "Submit a comprehensive medical technology proposal (PDF format).",
+      "Create a 6-minute video showcasing the transformative impact of your medical tech idea."
+    ],
+    "contestCategory": "Medical",
+    "contestImg": "https://i.postimg.cc/bv0s5wpW/medical-2.jpg",
+    "tags": ["#MediTechInnovate", "#HealthTechInnovation", "#MedicalTechRevolution"],
+    "contestDeadline": "2029-05-30",
+    "creatorInfo": {
+      "creatorName": "Boby",
+      "creatorImage": "https://i.postimg.cc/ZRdkLB3m/creator-3-Boby-boby-creator-com.jpg",
+      "email": "boby@creator.com"
+    }
+  },
+ {
+    "contestName": "FutureMedTech Challenge",
+    "shortDescription": "Pioneer the future of medical technology for enhanced healthcare.",
+    "detailedDescription": "FutureMedTech Challenge seeks innovative medical technology solutions. Share your futuristic medical tech concept, emphasizing advancements, patient outcomes, and market potential in a detailed description.",
+    "contestPrice": 27,
+    "prizeMoney": 20000,
+    "attempt": 72,
+    "isPending":false,
+    "taskSubmissionInstructions": [
+      "Submit a comprehensive medical technology proposal in PDF format.",
+      "Create a 7-minute video showcasing the potential impact of your medical tech innovation."
+    ],
+    "contestCategory": "Medical",
+    "contestImg": "https://i.postimg.cc/DwLZWwJ0/medical-3.png",
+    "tags": ["#FutureMedTech", "#MedicalTechnologyInnovation", "#FutureHealthcare"],
+    "contestDeadline": "2029-06-15",
+    "creatorInfo": {
+      "creatorName": "Amanda",
+      "creatorImage": "https://i.postimg.cc/HnwffqBP/creator-1-Amanda-amanda-creator-com.jpg",
+      "email": "amanda@creator.com"
+    }
+  },
+  {
+    "contestName": "BioTechInnovate Challenge",
+    "shortDescription": "Drive innovation in biotechnology for transformative healthcare solutions.",
+    "detailedDescription": "BioTechInnovate Challenge calls for revolutionary biotech ideas. Present your groundbreaking biotechnology concept, emphasizing advancements, patient care, and market scalability.",
+    "contestPrice": 23,
+    "prizeMoney": 17500,
+    "attempt": 60,
+    "isPending":false,
+    "taskSubmissionInstructions": [
+      "Submit a detailed biotechnology proposal in PDF format.",
+      "Create a 6-minute video showcasing the transformative potential of your biotech innovation."
+    ],
+    "contestCategory": "Medical",
+    "contestImg": "https://i.postimg.cc/zGgLnkMJ/medical-3.jpg",
+    "tags": ["#BioTechInnovate", "#BiotechnologySolutions", "#HealthcareInnovation"],
+    "contestDeadline": "2029-07-20",
+    "creatorInfo": {
+      "creatorName": "Boby",
+      "creatorImage": "https://i.postimg.cc/ZRdkLB3m/creator-3-Boby-boby-creator-com.jpg",
+      "email": "boby@creator.com"
+    }
+  },
+  {
+    "contestName": "MediCareTech Challenge",
+    "shortDescription": "Innovate in healthcare technology for improved patient care.",
+    "detailedDescription": "MediCareTech Challenge is for visionary healthcare technology solutions. Share your innovative healthcare tech concept, focusing on advancements, patient-centric care, and scalability.",
+    "contestPrice": 28,
+    "prizeMoney": 19500,
+    "attempt": 80,
+    "isPending":false,
+    "taskSubmissionInstructions": [
+      "Submit a comprehensive healthcare tech proposal in PDF format.",
+      "Create a 5-minute video showcasing the potential impact of your healthcare tech idea."
+    ],
+    "contestCategory": "Medical",
+    "contestImg": "https://i.postimg.cc/MTdXW3cY/medical-4.png",
+    "tags": ["#MediCareTech", "#HealthcareTechInnovation", "#PatientCare"],
+    "contestDeadline": "2029-08-25",
+    "creatorInfo": {
+      "creatorName": "Julie",
+      "creatorImage": "https://i.postimg.cc/2jnRbWrF/creator-2-Julie-julie-creator-com.jpg",
+      "email": "julie@creator.com"
+    }
+  },
+  {
+    "contestName": "MedGenius Innovation Challenge",
+    "shortDescription": "Unleash your genius in medical innovations for better healthcare.",
+    "detailedDescription": "MedGenius Innovation Challenge seeks groundbreaking medical innovations. Present your ingenious medical concept, emphasizing technological advancements, patient care, and market potential.",
+    "contestPrice": 26,
+    "prizeMoney": 18500,
+    "attempt": 110,
+    "isPending":false,
+    "taskSubmissionInstructions": [
+      "Submit a detailed medical innovation proposal in PDF format.",
+      "Create a 6-minute video showcasing the potential impact of your medical innovation."
+    ],
+    "contestCategory": "Medical",
+    "contestImg": "https://i.postimg.cc/Y9phBBS9/medical-4.jpg",
+    "tags": ["#MedGeniusInnovation", "#MedicalInnovations", "#HealthcareInnovation"],
+    "contestDeadline": "2029-09-30",
+    "creatorInfo": {
+      "creatorName": "Amanda",
+      "creatorImage": "https://i.postimg.cc/HnwffqBP/creator-1-Amanda-amanda-creator-com.jpg",
+      "email": "amanda@creator.com"
+    }
+  },
+  {
+    "contestName": "HealthTechVision Challenge",
+    "shortDescription": "Shape the future of healthcare through innovative technology.",
+    "detailedDescription": "HealthTechVision Challenge is for revolutionary healthcare technology ideas. Share your visionary healthcare tech concept, addressing advancements, patient outcomes, and societal impact.",
+    "contestPrice": 30,
+    "prizeMoney": 21000,
+    "attempt": 75,
+    "isPending":false,
+    "taskSubmissionInstructions": [
+      "Submit a comprehensive healthcare technology proposal in PDF format.",
+      "Create a 7-minute video showcasing the transformative impact of your healthcare tech concept."
+    ],
+    "contestCategory": "Medical",
+    "contestImg": "https://i.postimg.cc/J7YtvgCr/medical-5.png",
+    "tags": ["#HealthTechVision", "#HealthcareTechnology", "#FutureHealthcare"],
+    "contestDeadline": "2029-10-15",
+    "creatorInfo": {
+      "creatorName": "Boby",
+      "creatorImage": "https://i.postimg.cc/ZRdkLB3m/creator-3-Boby-boby-creator-com.jpg",
+      "email": "boby@creator.com"
     }
   }
+  ,
+  {
+    "contestName": "WriteMasters Challenge",
+    "shortDescription": "Showcase your writing prowess in this article writing contest.",
+    "detailedDescription": "The WriteMasters Challenge calls for exceptional articles. Submit an engaging and informative article on any topic of your choice, focusing on creativity, originality, and depth of content.",
+    "contestPrice": 20,
+    "prizeMoney": 1500,
+    "attempt": 35,
+    "isPending":false,
+    "taskSubmissionInstructions": [
+      "Submit a well-crafted article of at least 1000 words (PDF or Word format)."
+    ],
+    "contestCategory": "Article Writing",
+    "contestImg": "https://i.postimg.cc/TYw9rZfn/4465573.webp",
+    "tags": ["#WriteMasters", "#ArticleWritingContest", "#CreativeWriting"],
+    "contestDeadline": "2029-06-15",
+    "creatorInfo": {
+      "creatorName": "Amanda",
+      "creatorImage": "https://i.postimg.cc/HnwffqBP/creator-1-Amanda-amanda-creator-com.jpg",
+      "email": "amanda@creator.com"
+    }
+  },
+  {
+    "contestName": "Wordsmith's Vision Challenge",
+    "shortDescription": "Express your unique perspective through captivating articles.",
+    "detailedDescription": "Wordsmith's Vision Challenge invites thought-provoking articles. Share your insightful article on any subject, emphasizing eloquence, depth, and originality in conveying your perspective.",
+    "contestPrice": 25,
+    "prizeMoney": 2000,
+    "attempt": 68,
+    "isPending":false,
+    "taskSubmissionInstructions": [
+      "Submit an impactful article between 800 to 1200 words (PDF or Word format)."
+    ],
+    "contestCategory": "Article Writing",
+    "contestImg": "https://i.postimg.cc/PJ6QgMzL/article-content-marketing-agency-dubai.webp",
+    "tags": ["#WordsmithsVision", "#PerspectiveArticles", "#ThoughtfulWriting"],
+    "contestDeadline": "2029-07-20",
+    "creatorInfo": {
+      "creatorName": "Boby",
+      "creatorImage": "https://i.postimg.cc/ZRdkLB3m/creator-3-Boby-boby-creator-com.jpg",
+      "email": "boby@creator.com"
+    }
+  },
+  {
+    "contestName": "Articulate Minds Challenge",
+    "shortDescription": "Let your words paint pictures in this article writing challenge.",
+    "detailedDescription": "Articulate Minds Challenge is for expressive articles. Submit an evocative article showcasing your descriptive writing prowess, focusing on engaging language and vivid imagery.",
+    "contestPrice": 18,
+    "prizeMoney": 1800,
+    "attempt": 45,
+    "isPending":false,
+    "taskSubmissionInstructions": [
+      "Submit a descriptive article of at least 1200 words (PDF or Word format)."
+    ],
+    "contestCategory": "Article Writing",
+    "contestImg": "https://i.postimg.cc/RFLRRmWL/blog-writing-4490945-3723237.png",
+    "tags": ["#ArticulateMinds", "#ExpressiveWriting", "#DescriptiveArticles"],
+    "contestDeadline": "2029-08-25",
+    "creatorInfo": {
+      "creatorName": "Julie",
+      "creatorImage": "https://i.postimg.cc/2jnRbWrF/creator-2-Julie-julie-creator-com.jpg",
+      "email": "julie@creator.com"
+    }
+  },
+  {
+    "contestName": "InkCraft Challenge",
+    "shortDescription": "Craft compelling stories and informative pieces through your writing.",
+    "detailedDescription": "InkCraft Challenge welcomes diverse articles. Submit an engaging article, whether a narrative, informative piece, or opinion article, showcasing your ability to captivate readers.",
+    "contestPrice": 22,
+    "prizeMoney": 1700,
+    "attempt": 50,
+    "isPending":false,
+    "taskSubmissionInstructions": [
+      "Submit a compelling article of at least 900 words (PDF or Word format)."
+    ],
+    "contestCategory": "Article Writing",
+    "contestImg": "https://i.postimg.cc/vHq0kG3P/c1fb0e569d29727caf6cbbda7ddd8ada.jpg",
+    "tags": ["#InkCraft", "#CompellingArticles", "#DiverseWriting"],
+    "contestDeadline": "2029-09-30",
+    "creatorInfo": {
+      "creatorName": "Amanda",
+      "creatorImage": "https://i.postimg.cc/HnwffqBP/creator-1-Amanda-amanda-creator-com.jpg",
+      "email": "amanda@creator.com"
+    }
+  },
+  {
+    "contestName": "ExpressiveProse Challenge",
+    "shortDescription": "Weave your emotions and thoughts into compelling prose.",
+    "detailedDescription": "ExpressiveProse Challenge seeks emotionally charged articles. Share an article that embodies your feelings, thoughts, or experiences, focusing on emotive language and authentic expression.",
+    "contestPrice": 30,
+    "prizeMoney": 2500,
+    "attempt": 75,
+    "isPending":false,
+    "taskSubmissionInstructions": [
+      "Submit an emotive article of at least 1000 words (PDF or Word format)."
+    ],
+    "contestCategory": "Article Writing",
+    "contestImg": "https://i.postimg.cc/Gm4X16fb/content-writing-on-paper-sheet-with-hand-holding-a-pen-writer-journalist-author-and-copywriter-conce.jpg",
+    "tags": ["#ExpressiveProse", "#EmotiveArticles", "#AuthenticExpression"],
+    "contestDeadline": "2029-10-15",
+    "creatorInfo": {
+      "creatorName": "Boby",
+      "creatorImage": "https://i.postimg.cc/ZRdkLB3m/creator-3-Boby-boby-creator-com.jpg",
+      "email": "boby@creator.com"
+    }
+  },
+   {
+    "contestName": "CreativeInk Challenge",
+    "shortDescription": "Unleash your creativity through captivating articles.",
+    "detailedDescription": "CreativeInk Challenge is for imaginative articles. Submit an article that explores creativity, be it fiction, non-fiction, or a blend, showcasing your unique perspective and storytelling ability.",
+    "contestPrice": 26,
+    "prizeMoney": 1800,
+    "attempt": 60,
+    "isPending":false,
+    "taskSubmissionInstructions": [
+      "Submit a creative article of at least 800 words (PDF or Word format)."
+    ],
+    "contestCategory": "Article Writing",
+    "contestImg": "https://i.postimg.cc/t482R20W/flat-design-objects-work-desk-office-desk-books-computer-and-vector-id532666883.jpg",
+    "tags": ["#CreativeInk", "#ImaginativeArticles", "#CreativePerspectives"],
+    "contestDeadline": "2030-01-05",
+    "creatorInfo": {
+      "creatorName": "Amanda",
+      "creatorImage": "https://i.postimg.cc/HnwffqBP/creator-1-Amanda-amanda-creator-com.jpg",
+      "email": "amanda@creator.com"
+    }
+  },
+  {
+    "contestName": "Wordsmith's Journey Challenge",
+    "shortDescription": "Embark on a literary journey with your compelling articles.",
+    "detailedDescription": "Wordsmith's Journey Challenge invites captivating articles. Share an article that takes readers on a literary journey, whether through travel, experiences, or imagination, with engaging writing.",
+    "contestPrice": 28,
+    "prizeMoney": 2100,
+    "attempt": 80,
+    "isPending":false,
+    "taskSubmissionInstructions": [
+      "Submit an engaging article of at least 1100 words (PDF or Word format)."
+    ],
+    "contestCategory": "Article Writing",
+    "contestImg": "https://i.postimg.cc/15jKMJ32/How-to-offer-secure-online-exams-with-integrity-2.png",
+    "tags": ["#WordsmithsJourney", "#CaptivatingArticles", "#LiteraryAdventures"],
+    "contestDeadline": "2030-02-10",
+    "creatorInfo": {
+      "creatorName": "Boby",
+      "creatorImage": "https://i.postimg.cc/ZRdkLB3m/creator-3-Boby-boby-creator-com.jpg",
+      "email": "boby@creator.com"
+    }
+  },
+  {
+    "contestName": "WriteImpact Challenge",
+    "shortDescription": "Make an impact through your powerful articles.",
+    "detailedDescription": "WriteImpact Challenge calls for impactful articles. Submit an article that addresses pressing issues, advocates change, or inspires action, demonstrating the power of your words.",
+    "contestPrice": 24,
+    "prizeMoney": 1900,
+    "attempt": 109,
+    "isPending":false,
+    "taskSubmissionInstructions": [
+      "Submit a powerful article of at least 900 words (PDF or Word format)."
+    ],
+    "contestCategory": "Article Writing",
+    "contestImg": "https://i.postimg.cc/BbZC7zD9/pngtree-author-write-article-writer-workplace-png-image-6354675.png",
+    "tags": ["#WriteImpact", "#ImpactfulArticles", "#AdvocacyThroughWords"],
+    "contestDeadline": "2030-03-20",
+    "creatorInfo": {
+      "creatorName": "Julie",
+      "creatorImage": "https://i.postimg.cc/2jnRbWrF/creator-2-Julie-julie-creator-com.jpg",
+      "email": "julie@creator.com"
+    }
+  },
+  {
+    "contestName": "NarrativeVerse Challenge",
+    "shortDescription": "Craft compelling narratives through your articles.",
+    "detailedDescription": "NarrativeVerse Challenge is for compelling narratives. Submit an article that weaves intricate narratives, whether fiction or non-fiction, showcasing your storytelling finesse and literary craftsmanship.",
+    "contestPrice": 21,
+    "prizeMoney": 1600,
+    "attempt": 55,
+    "isPending":false,
+    "taskSubmissionInstructions": [
+      "Submit a narrative article of at least 1000 words (PDF or Word format)."
+    ],
+    "contestCategory": "Article Writing",
+    "contestImg": "https://i.postimg.cc/PxjyYJ5q/stock-vector-writing-an-article.jpg",
+    "tags": ["#NarrativeVerse", "#CompellingNarratives", "#StorytellingCraft"],
+    "contestDeadline": "2030-04-25",
+    "creatorInfo": {
+      "creatorName": "Amanda",
+      "creatorImage": "https://i.postimg.cc/HnwffqBP/creator-1-Amanda-amanda-creator-com.jpg",
+      "email": "amanda@creator.com"
+    }
+  },
+  {
+    "contestName": "PerspectiveCraft Challenge",
+    "shortDescription": "Craft unique perspectives through your articles.",
+    "detailedDescription": "PerspectiveCraft Challenge invites diverse perspectives. Submit an article that explores unique viewpoints, delving into opinions, analysis, or personal reflections with clarity and depth.",
+    "contestPrice": 23,
+    "prizeMoney": 1750,
+    "attempt": 45,
+    "isPending":false,
+    "taskSubmissionInstructions": [
+      "Submit a perspective-driven article of at least 1200 words (PDF or Word format)."
+    ],
+    "contestCategory": "Article Writing",
+    "contestImg": "https://i.postimg.cc/TPmQKgGS/wordpress-svg.jpg",
+    "tags": ["#PerspectiveCraft", "#DiversePerspectives", "#UniqueViewpoints"],
+    "contestDeadline": "2030-05-30",
+    "creatorInfo": {
+      "creatorName": "Boby",
+      "creatorImage": "https://i.postimg.cc/ZRdkLB3m/creator-3-Boby-boby-creator-com.jpg",
+      "email": "boby@creator.com"
+    }
+  },
+  {
+    "contestName": "GameMaster's Quest",
+    "shortDescription": "Showcase your gaming skills in this thrilling contest.",
+    "detailedDescription": "GameMaster's Quest is a platform for gamers to demonstrate their skills. Participate in this gaming challenge and compete against others in a series of thrilling gaming quests and challenges.",
+    "contestPrice": 15,
+    "prizeMoney": 3000,
+    "attempt": 50,
+    "isPending":false,
+    "taskSubmissionInstructions": [
+      "Participate in the specified gaming quests and challenges.",
+      "Record your gameplay and submit it for evaluation."
+    ],
+    "contestCategory": "Gaming",
+    "contestImg": "https://i.postimg.cc/rFs1d3L3/4206783.webp",
+    "tags": ["#GameMastersQuest", "#GamingChallenge", "#ThrillingGaming"],
+    "contestDeadline": "2030-06-15",
+    "creatorInfo": {
+      "creatorName": "Amanda",
+      "creatorImage": "https://i.postimg.cc/HnwffqBP/creator-1-Amanda-amanda-creator-com.jpg",
+      "email": "amanda@creator.com"
+    }
+  },
+  {
+    "contestName": "Virtual Combat League",
+    "shortDescription": "Engage in virtual battles and emerge victorious.",
+    "detailedDescription": "Virtual Combat League invites gamers to showcase their combat skills. Join this gaming league and compete in adrenaline-pumping virtual battles across various gaming platforms.",
+    "contestPrice": 20,
+    "prizeMoney": 5000,
+    "attempt": 70,
+    "isPending":false,
+    "taskSubmissionInstructions": [
+      "Participate in virtual battles within the specified gaming platforms.",
+      "Capture and submit gameplay highlights for evaluation."
+    ],
+    "contestCategory": "Gaming",
+    "contestImg": "https://i.postimg.cc/k4CNB5nv/4206792.webp",
+    "tags": ["#VirtualCombatLeague", "#CombatGaming", "#AdrenalineRush"],
+    "contestDeadline": "2030-07-20",
+    "creatorInfo": {
+      "creatorName": "Boby",
+      "creatorImage": "https://i.postimg.cc/ZRdkLB3m/creator-3-Boby-boby-creator-com.jpg",
+      "email": "boby@creator.com"
+    }
+  },
+  {
+    "contestName": "Speedrunner's Sprint",
+    "shortDescription": "Demonstrate your speedrunning prowess in this challenge.",
+    "detailedDescription": "Speedrunner's Sprint challenges gamers to exhibit their speedrunning abilities. Compete in various speedrunning events and showcase your proficiency in completing games with record times.",
+    "contestPrice": 18,
+    "prizeMoney": 4000,
+    "attempt": 60,
+    "isPending":false,
+    "taskSubmissionInstructions": [
+      "Participate in specified speedrunning events across various games.",
+      "Submit recordings displaying your speedrunning skills."
+    ],
+    "contestCategory": "Gaming",
+    "contestImg": "https://i.postimg.cc/9fZtm9jf/4206798.webp",
+    "tags": ["#SpeedrunnersSprint", "#SpeedrunningChallenge", "#RecordTimeGaming"],
+    "contestDeadline": "2030-08-25",
+    "creatorInfo": {
+      "creatorName": "Julie",
+      "creatorImage": "https://i.postimg.cc/2jnRbWrF/creator-2-Julie-julie-creator-com.jpg",
+      "email": "julie@creator.com"
+    }
+  },
+  {
+    "contestName": "Strategic Showdown",
+    "shortDescription": "Engage in strategic battles and conquer the gaming arena.",
+    "detailedDescription": "Strategic Showdown tests gamers' strategic abilities. Participate in strategic gaming battles across different genres and prove your prowess in tactical decision-making and game domination.",
+    "contestPrice": 25,
+    "prizeMoney": 6000,
+    "attempt": 80,
+    "isPending":false,
+    "taskSubmissionInstructions": [
+      "Compete in specified strategic gaming battles and challenges.",
+      "Submit gameplay recordings showcasing your strategic skills."
+    ],
+    "contestCategory": "Gaming",
+    "contestImg": "https://i.postimg.cc/WzbMwfqD/90769453.webp",
+    "tags": ["#StrategicShowdown", "#TacticalGaming", "#StrategicDomination"],
+    "contestDeadline": "2030-09-30",
+    "creatorInfo": {
+      "creatorName": "Amanda",
+      "creatorImage": "https://i.postimg.cc/HnwffqBP/creator-1-Amanda-amanda-creator-com.jpg",
+      "email": "amanda@creator.com"
+    }
+  },
+  {
+    "contestName": "Arcade Duel Masters",
+    "shortDescription": "Show your mastery in arcade games through intense duels.",
+    "detailedDescription": "Arcade Duel Masters is for enthusiasts of classic arcade games. Engage in head-to-head duels in various arcade games and demonstrate your mastery and high-score achievements.",
+    "contestPrice": 22,
+    "prizeMoney": 4500,
+    "attempt": 75,
+    "isPending":false,
+    "taskSubmissionInstructions": [
+      "Compete in head-to-head duels in specified arcade games.",
+      "Submit gameplay recordings showcasing your high-score achievements."
+    ],
+    "contestCategory": "Gaming",
+    "contestImg": "https://i.postimg.cc/tgQWMgVG/istockphoto-1127694407-612x612.jpg",
+    "tags": ["#ArcadeDuelMasters", "#ArcadeGaming", "#HighScoreAchievements"],
+    "contestDeadline": "2030-10-15",
+    "creatorInfo": {
+      "creatorName": "Boby",
+      "creatorImage": "https://i.postimg.cc/ZRdkLB3m/creator-3-Boby-boby-creator-com.jpg",
+      "email": "boby@creator.com"
+    }
+  },
+  {
+    "contestName": "E-Sports Clash",
+    "shortDescription": "Compete in the ultimate e-sports showdown.",
+    "detailedDescription": "E-Sports Clash is an intense e-sports tournament. Battle against top players across multiple gaming genres and platforms, showcasing your expertise and strategies to claim victory.",
+    "contestPrice": 30,
+    "prizeMoney": 10000,
+    "attempt": 90,
+    "isPending":false,
+    "taskSubmissionInstructions": [
+      "Participate in competitive matches across various e-sports games.",
+      "Submit recordings displaying your competitive gameplay skills."
+    ],
+    "contestCategory": "Gaming",
+    "contestImg": "https://i.postimg.cc/5tBLdMwY/lovepik-online-games-png-image-401708276-wh1200.png",
+    "tags": ["#ESportsClash", "#CompetitiveGaming", "#ESportsTournament"],
+    "contestDeadline": "2031-01-20",
+    "creatorInfo": {
+      "creatorName": "Amanda",
+      "creatorImage": "https://i.postimg.cc/HnwffqBP/creator-1-Amanda-amanda-creator-com.jpg",
+      "email": "amanda@creator.com"
+    }
+  },
+  {
+    "contestName": "Racing Rivals Championship",
+    "shortDescription": "Zoom past your rivals in thrilling racing challenges.",
+    "detailedDescription": "Racing Rivals Championship is for racing enthusiasts. Compete in adrenaline-fueled races across different racing games and tracks, showcasing your speed and skills to claim victory.",
+    "contestPrice": 18,
+    "prizeMoney": 5500,
+    "attempt": 108,
+    "isPending":false,
+    "taskSubmissionInstructions": [
+      "Participate in thrilling races across specified racing games and tracks.",
+      "Submit recordings showcasing your racing prowess."
+    ],
+    "contestCategory": "Gaming",
+    "contestImg": "https://i.postimg.cc/x1W3VRh7/man-winning-video-games-competition-6494413-5394239.png",
+    "tags": ["#RacingRivalsChampionship", "#RacingGames", "#AdrenalineRaces"],
+    "contestDeadline": "2031-02-25",
+    "creatorInfo": {
+      "creatorName": "Boby",
+      "creatorImage": "https://i.postimg.cc/ZRdkLB3m/creator-3-Boby-boby-creator-com.jpg",
+      "email": "boby@creator.com"
+    }
+  },
+  {
+    "contestName": "Platformer Prodigies Challenge",
+    "shortDescription": "Master the art of platformer games and emerge victorious.",
+    "detailedDescription": "Platformer Prodigies Challenge is for platformer game enthusiasts. Show your skills in navigating through challenging levels and puzzles, demonstrating your expertise in platformer games.",
+    "contestPrice": 20,
+    "prizeMoney": 4800,
+    "attempt": 55,
+    "isPending":false,
+    "taskSubmissionInstructions": [
+      "Participate in platformer game challenges and complete specified levels.",
+      "Submit recordings displaying your platformer gaming skills."
+    ],
+    "contestCategory": "Gaming",
+    "contestImg": "https://i.postimg.cc/GhfkvKL2/pngtree-d-vector-isolated-spot-illustration-of-a-pro-esports-gamer-competing-png-image-12900424.png",
+    "tags": ["#PlatformerProdigies", "#PlatformerGames", "#LevelChallenges"],
+    "contestDeadline": "2031-03-30",
+    "creatorInfo": {
+      "creatorName": "Julie",
+      "creatorImage": "https://i.postimg.cc/2jnRbWrF/creator-2-Julie-julie-creator-com.jpg",
+      "email": "julie@creator.com"
+    }
+  },
+  {
+    "contestName": "Puzzle Masters Showdown",
+    "shortDescription": "Solve puzzles and demonstrate your mastery.",
+    "detailedDescription": "Puzzle Masters Showdown challenges puzzle-solving skills. Engage in mind-bending puzzles from various genres, displaying your aptitude and problem-solving techniques.",
+    "contestPrice": 22,
+    "prizeMoney": 5200,
+    "attempt": 70,
+    "isPending":false,
+    "taskSubmissionInstructions": [
+      "Participate in mind-bending puzzles across different gaming platforms.",
+      "Submit recordings displaying your puzzle-solving mastery."
+    ],
+    "contestCategory": "Gaming",
+    "contestImg": "https://i.postimg.cc/j2gygQyM/pngtree-gamers-using-different-devices-and-playing-on-mobile-phone-png-image-6335444.png",
+    "tags": ["#PuzzleMastersShowdown", "#PuzzleGames", "#MindBendingPuzzles"],
+    "contestDeadline": "2031-04-15",
+    "creatorInfo": {
+      "creatorName": "Amanda",
+      "creatorImage": "https://i.postimg.cc/HnwffqBP/creator-1-Amanda-amanda-creator-com.jpg",
+      "email": "amanda@creator.com"
+    }
+  },
+  {
+    "contestName": "Survival Champions Challenge",
+    "shortDescription": "Survive and conquer challenges in thrilling survival games.",
+    "detailedDescription": "Survival Champions Challenge tests survival instincts. Participate in intense survival challenges across various games, showcasing your ability to thrive and survive in harsh conditions.",
+    "contestPrice": 25,
+    "prizeMoney": 6000,
+    "attempt": 102,
+    "isPending":false,
+    "taskSubmissionInstructions": [
+      "Participate in survival challenges within specified survival games.",
+      "Submit recordings displaying your survival skills and strategies."
+    ],
+    "contestCategory": "Gaming",
+    "contestImg": "https://i.postimg.cc/3rnjx7z2/pngtree-the-e-sports-competition-trophies-and-prize-money-await-esports-athletes-png-image-7258832.png",
+    "tags": ["#SurvivalChampionsChallenge", "#SurvivalGames", "#ThrillingSurvival"],
+    "contestDeadline": "2031-05-20",
+    "creatorInfo": {
+      "creatorName": "Boby",
+      "creatorImage": "https://i.postimg.cc/ZRdkLB3m/creator-3-Boby-boby-creator-com.jpg",
+      "email": "boby@creator.com"
+    }
+  }
+
 ]

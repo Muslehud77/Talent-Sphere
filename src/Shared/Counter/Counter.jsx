@@ -47,7 +47,7 @@ const Counter = ({date}) => {
     }, 1000);
 
     return () => clearInterval(countdown);
-  }, []);
+  }, [date]);
 
 
 

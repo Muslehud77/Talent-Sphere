@@ -2,8 +2,7 @@ import { FacebookAuthProvider, GoogleAuthProvider, createUserWithEmailAndPasswor
 import { createContext, useEffect, useState } from "react";
 import auth from "../Firebase/firebase.config";
 
-
-import axios from "axios";
+import { Reoverlay } from "reoverlay";
 
 export const AuthContext = createContext(null)
 
@@ -15,7 +14,7 @@ const AuthProvider = ({children}) => {
 const [user,setUser] = useState(null)
 const [loading,setLoading] = useState(true)
 
-const [cart,setCart] = useState([])
+
 const [name,setName] = useState('')
 
 
@@ -26,7 +25,9 @@ const goToTop = ()=>{
    });
 }
 
-
+const closeModal = () => {
+  Reoverlay.hideModal();
+};
 
 
 
@@ -84,12 +85,12 @@ useEffect(()=>{
     const info = {
        
       goToTop,
-   cart,setCart,
+  
       name,
       setName,
     
       user,
-      
+      closeModal,
       loading,
       register,
       login,

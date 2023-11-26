@@ -7,8 +7,8 @@ import useContextInfo from "../../Hooks/useContextInfo";
 
 
 const PrivateRouteForLoginSignUp = ({children}) => {
-const {user,loading} = useContextInfo()
-const {state,pathname} = useLocation()
+const { user, loading, closeModal } = useContextInfo();
+const {state} = useLocation()
 
 
 
@@ -28,7 +28,7 @@ const {state,pathname} = useLocation()
         );
     }
 
-
+    closeModal()
 
     return <Navigate to={`${state? state : '/'}`}></Navigate>;
 };

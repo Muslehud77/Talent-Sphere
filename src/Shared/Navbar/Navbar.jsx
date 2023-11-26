@@ -66,6 +66,7 @@ const Navbar = () => {
              isActive ? active : isPending ? pending : idle
            }
            to={"/blog"}
+         
          >
            Blog
          </NavLink>

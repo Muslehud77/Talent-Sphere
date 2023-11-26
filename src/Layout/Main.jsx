@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 import PreLoader from "../Components/Preloader/PreLoader";
 import { ModalContainer } from "reoverlay";
 import { Toaster } from "react-hot-toast";
+import ContestDetail from "../Shared/ContestDetail/ContestDetail";
+
 
 const Main = () => {
      const [preloader, setPreloader] = useState(true);
@@ -27,9 +29,11 @@ const Main = () => {
           <Navbar></Navbar>
           <div className="flex-grow">
             <Outlet></Outlet>
+            <ContestDetail />
           </div>
           <Footer></Footer>
           <ModalContainer />
+
           <div>
             <Toaster />
           </div>
