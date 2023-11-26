@@ -3,6 +3,7 @@ import { createContext, useEffect, useState } from "react";
 import auth from "../Firebase/firebase.config";
 
 import { Reoverlay } from "reoverlay";
+import Login from "../Pages/Login/Login";
 
 export const AuthContext = createContext(null)
 
@@ -13,7 +14,7 @@ const facebookProvider = new FacebookAuthProvider()
 const AuthProvider = ({children}) => {
 const [user,setUser] = useState(null)
 const [loading,setLoading] = useState(true)
-
+const [selected,setSelected] = useState(null)
 
 const [name,setName] = useState('')
 
@@ -28,6 +29,10 @@ const goToTop = ()=>{
 const closeModal = () => {
   Reoverlay.hideModal();
 };
+
+ const openLogin = () => {
+   Reoverlay.showModal(Login);
+ };
 
 
 
@@ -83,12 +88,12 @@ useEffect(()=>{
     return ()=> unsubscribe()
 },[])
     const info = {
-       
+       selected,setSelected,
       goToTop,
   
       name,
       setName,
-    
+    openLogin,
       user,
       closeModal,
       loading,

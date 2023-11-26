@@ -11,7 +11,7 @@ import User from "../User/User";
 
 const Navbar = () => {
   const {pathname} = useLocation()
-  const {logout,user} = useContextInfo()
+  const { logout, user, openLogin } = useContextInfo();
 
 
 
@@ -20,9 +20,7 @@ const Navbar = () => {
      }, []);
 
 
-     const openLogin = () => {
-       Reoverlay.showModal(Login);
-     };
+    
 
      const active =
        "relative text-white  text-black uppercase text-xs  py-1 px-2 hover:tracking-[0.25em] hover:text-white hover:bg-black border-b duration-300 tracking-[0.1em]";
