@@ -50,7 +50,7 @@ const User = () => {
 
           <li>
             <Link
-              className="block uppercase transition-all tracking-[0.1em] duration-500 w-full whitespace-nowrap bg-transparent px-4 py-2 hover:tracking-[0.20em] text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+              className="block uppercase transition-all tracking-[0.1em] duration-500 w-full whitespace-nowrap bg-transparent px-4 py-2 hover:tracking-[0.20em] text-xs font-semibold text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
               to={"/dashboard/home"}
               data-te-dropdown-item-ref
             >
@@ -59,8 +59,8 @@ const User = () => {
           </li>
           <li>
             <button
-            onClick={logout}
-              className="text-left flex justify-between items-center transition-all tracking-[0.1em] duration-500   hover:tracking-[0.20em] uppercase  w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+              onClick={logout}
+              className="text-left flex justify-between items-center transition-all tracking-[0.1em] duration-500   hover:tracking-[0.20em] uppercase  w-full whitespace-nowrap bg-transparent px-4 py-2 text-xs font-semibold text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
               data-te-dropdown-item-ref
             >
               Logout <CiLogout size={20} />

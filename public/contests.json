@@ -1,0 +1,192 @@
+[
+  {
+    "ContestName": "BizGenius Challenge",
+    "ShortDescription": "Unleash your entrepreneurial prowess in this innovative business contest.",
+    "DetailedDescription": "The BizGenius Challenge seeks visionary minds ready to shape the future of commerce. Submit a comprehensive business plan outlining your unique strategy, target market analysis, and scalability potential, encompassing at least 60 words.",
+    "ContestPrice": "Free",
+    "PrizeMoney": "$15,000",
+    "TaskSubmissionInstructions": [
+      "Prepare a detailed business plan (PDF format) not exceeding 20 pages.",
+      "Create a 5-minute pitch video presenting your business proposal."
+    ],
+    "ContestCategory": "Business",
+    "BusinessContestHashtags": ["#BizGenius", "#FutureCommerce", "#EntrepreneurialSpirit"],
+    "ContestDeadline": "2028-07-30",
+    "CreatorInfo": {
+      "CreatorName": "Amanda",
+      "CreatorImage": "https://i.postimg.cc/HnwffqBP/creator-1-Amanda-amanda@creator-com.jpg",
+      "Email": "amanda@creator.com"
+    }
+  },
+  {
+    "ContestName": "VentureCraft Challenge",
+    "ShortDescription": "Craft your vision into a viable business venture and win big!",
+    "DetailedDescription": "VentureCraft Challenge is for aspiring entrepreneurs. Describe your groundbreaking business concept in a detailed manner, covering market analysis, revenue models, and social impact within 60 words or more.",
+    "ContestPrice": "$50 Entry Fee",
+    "PrizeMoney": "$20,000",
+    "TaskSubmissionInstructions": [
+      "Develop a detailed business proposal in PDF format.",
+      "Prepare a 7-minute presentation video showcasing the viability of your business idea."
+    ],
+    "ContestCategory": "Business",
+    "BusinessContestHashtags": ["#VentureCraft", "#FutureVentures", "#InnovativeIdeas"],
+    "ContestDeadline": "2028-08-22",
+    "CreatorInfo": {
+      "CreatorName": "Julie",
+      "CreatorImage": "https://i.postimg.cc/2jnRbWrF/creator-2-Julie-julie@creator-com.jpg",
+      "Email": "julie@creator.com"
+    }
+  },
+  {
+    "ContestName": "InnoVisionary Challenge",
+    "ShortDescription": "Pioneer the future of business with your innovative ideas.",
+    "DetailedDescription": "The InnoVisionary Challenge invites groundbreaking business concepts that redefine industries. Present your innovative idea in a detailed submission, covering market analysis, scalability, and social impact within 60 words or more.",
+    "ContestPrice": "Free",
+    "PrizeMoney": "$12,500",
+    "TaskSubmissionInstructions": [
+      "Prepare a detailed business proposal (PDF format).",
+      "Create a 4-minute video pitching your business concept."
+    ],
+    "ContestCategory": "Business",
+    "BusinessContestHashtags": ["#InnoVisionary", "#FutureBusinessIdeas", "#IndustryRevolution"],
+    "ContestDeadline": "2028-09-10",
+    "CreatorInfo": {
+      "CreatorName": "Boby",
+      "CreatorImage": "https://i.postimg.cc/ZRdkLB3m/creator-3-Boby-boby@creator-com.jpg",
+      "Email": "boby@creator.com"
+    }
+  },
+  {
+    "ContestName": "CommerceCraze Challenge",
+    "ShortDescription": "Explore innovative approaches to transform commerce for tomorrow.",
+    "DetailedDescription": "CommerceCraze Challenge is a platform for innovative commerce solutions. Share your revolutionary business approach, highlighting market disruptiveness, scalability, and futuristic vision in a detailed description of at least 60 words.",
+    "ContestPrice": "Free",
+    "PrizeMoney": "$18,000",
+    "TaskSubmissionInstructions": [
+      "Submit a detailed business strategy (PDF format).",
+      "Create a 6-minute video showcasing your innovative business concept."
+    ],
+    "ContestCategory": "Business",
+    "BusinessContestHashtags": ["#CommerceCraze", "#FutureCommerceSolutions", "#InnovateCommerce"],
+    "ContestDeadline": "2028-10-05",
+    "CreatorInfo": {
+      "CreatorName": "Amanda",
+      "CreatorImage": "https://i.postimg.cc/HnwffqBP/creator-1-Amanda-amanda@creator-com.jpg",
+      "Email": "amanda@creator.com"
+    }
+  },
+   {
+    "ContestName": "BizImpact Challenge",
+    "ShortDescription": "Make a lasting impact with your innovative business model.",
+    "DetailedDescription": "The BizImpact Challenge is calling for transformative business models that prioritize social impact. Detail your business plan, emphasizing sustainability, social responsibility, and scalability in a description of at least 60 words.",
+    "ContestPrice": "Free",
+    "PrizeMoney": "$25,000",
+    "TaskSubmissionInstructions": [
+      "Submit a comprehensive business plan (PDF format).",
+      "Prepare a 8-minute video presentation highlighting the social impact of your business model."
+    ],
+    "ContestCategory": "Business",
+    "BusinessContestHashtags": ["#BizImpact", "#SociallyResponsibleBusiness", "#SustainableBusinessModel"],
+    "ContestDeadline": "2028-11-18",
+    "CreatorInfo": {
+      "CreatorName": "Julie",
+      "CreatorImage": "https://i.postimg.cc/2jnRbWrF/creator-2-Julie-julie@creator-com.jpg",
+      "Email": "julie@creator.com"
+    }
+  },
+  {
+    "ContestName": "StartupInnovate Challenge",
+    "ShortDescription": "Foster innovation and entrepreneurship with your startup vision.",
+    "DetailedDescription": "The StartupInnovate Challenge is open to startups with groundbreaking ideas. Describe your startup vision, outlining its uniqueness, market potential, and scalability in a detailed description of 60 words or more.",
+    "ContestPrice": "$30 Entry Fee",
+    "PrizeMoney": "$14,000",
+    "TaskSubmissionInstructions": [
+      "Submit a comprehensive business proposal (PDF format).",
+      "Create a 5-minute video pitch showcasing your startup's potential."
+    ],
+    "ContestCategory": "Business",
+    "BusinessContestHashtags": ["#StartupInnovate", "#StartupVisionaries", "#EntrepreneurialIdeas"],
+    "ContestDeadline": "2028-12-03",
+    "CreatorInfo": {
+      "CreatorName": "Boby",
+      "CreatorImage": "https://i.postimg.cc/ZRdkLB3m/creator-3-Boby-boby@creator-com.jpg",
+      "Email": "boby@creator.com"
+    }
+  },
+  {
+    "ContestName": "EntrePreneurial Vision Challenge",
+    "ShortDescription": "Unleash your entrepreneurial vision for a transformative future.",
+    "DetailedDescription": "The EntrePreneurial Vision Challenge seeks visionary entrepreneurs ready to redefine industries. Present your groundbreaking business concept, emphasizing innovation, scalability, and societal impact in a detailed description of at least 60 words.",
+    "ContestPrice": "Free",
+    "PrizeMoney": "$20,000",
+    "TaskSubmissionInstructions": [
+      "Develop a comprehensive business proposal in PDF format.",
+      "Create a 6-minute video presentation showcasing your entrepreneurial vision."
+    ],
+    "ContestCategory": "Business",
+    "BusinessContestHashtags": ["#EntrePreneurialVision", "#FutureEntrepreneurship", "#InnovativeBusinessIdeas"],
+    "ContestDeadline": "2028-12-20",
+    "CreatorInfo": {
+      "CreatorName": "Amanda",
+      "CreatorImage": "https://i.postimg.cc/HnwffqBP/creator-1-Amanda-amanda@creator-com.jpg",
+      "Email": "amanda@creator.com"
+    }
+  },
+  {
+    "ContestName": "SustainBiz Challenge",
+    "ShortDescription": "Elevate sustainability in business for a greener future.",
+    "DetailedDescription": "SustainBiz Challenge invites sustainable business solutions. Describe your eco-friendly business model, highlighting its environmental impact, scalability, and profitability in a description of at least 60 words.",
+    "ContestPrice": "Free",
+    "PrizeMoney": "$17,500",
+    "TaskSubmissionInstructions": [
+      "Submit a detailed sustainable business plan (PDF format).",
+      "Create a 5-minute video presentation focusing on the environmental impact of your business model."
+    ],
+    "ContestCategory": "Business",
+    "BusinessContestHashtags": ["#SustainBiz", "#GreenBusinessIdeas", "#SustainableFuture"],
+    "ContestDeadline": "2028-11-25",
+    "CreatorInfo": {
+      "CreatorName": "Julie",
+      "CreatorImage": "https://i.postimg.cc/2jnRbWrF/creator-2-Julie-julie@creator-com.jpg",
+      "Email": "julie@creator.com"
+    }
+  },
+  {
+    "ContestName": "Futurepreneur Challenge",
+    "ShortDescription": "Shape the future of entrepreneurship with your innovative ideas.",
+    "DetailedDescription": "Futurepreneur Challenge is for aspiring entrepreneurs with futuristic visions. Share your innovative business concept, addressing market trends, scalability, and societal impact in a detailed description of 60 words or more.",
+    "ContestPrice": "Free",
+    "PrizeMoney": "$22,000",
+    "TaskSubmissionInstructions": [
+      "Submit a comprehensive business proposal (PDF format).",
+      "Create a 7-minute video showcasing your entrepreneurial idea's potential."
+    ],
+    "ContestCategory": "Business",
+    "BusinessContestHashtags": ["#Futurepreneur", "#InnovativeEntrepreneurship", "#FutureBusinessLeaders"],
+    "ContestDeadline": "2028-12-08",
+    "CreatorInfo": {
+      "CreatorName": "Boby",
+      "CreatorImage": "https://i.postimg.cc/ZRdkLB3m/creator-3-Boby-boby@creator-com.jpg",
+      "Email": "boby@creator.com"
+    }
+  },
+  {
+    "ContestName": "EcoBiz Innovate Challenge",
+    "ShortDescription": "Drive innovation for a sustainable and profitable business landscape.",
+    "DetailedDescription": "EcoBiz Innovate Challenge calls for innovative yet sustainable business models. Present your eco-conscious business plan, emphasizing innovation, environmental impact, and financial feasibility in a description of at least 60 words.",
+    "ContestPrice": "Free",
+    "PrizeMoney": "$19,500",
+    "TaskSubmissionInstructions": [
+      "Submit a detailed eco-friendly business plan (PDF format).",
+      "Create a 6-minute video presentation focusing on the innovation and sustainability of your business model."
+    ],
+    "ContestCategory": "Business",
+    "BusinessContestHashtags": ["#EcoBizInnovate", "#SustainableInnovation", "#GreenBusinessSolutions"],
+    "ContestDeadline": "2028-12-15",
+    "CreatorInfo": {
+      "CreatorName": "Amanda",
+      "CreatorImage": "https://i.postimg.cc/HnwffqBP/creator-1-Amanda-amanda@creator-com.jpg",
+      "Email": "amanda@creator.com"
+    }
+  }
+]
