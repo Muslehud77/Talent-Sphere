@@ -7,6 +7,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { Reoverlay } from "reoverlay";
 import Login from "../../Pages/Login/Login";
 import useContextInfo from "../../Hooks/useContextInfo";
+import User from "../User/User";
 
 const Navbar = () => {
   const {pathname} = useLocation()
@@ -31,7 +32,7 @@ const Navbar = () => {
        "relative text-white rounded text-black uppercase text-xs  py-1 px-2 hover:tracking-[0.25em] hover:text-black hover:bg-white  hover:shadow-[0_0_65px_white] duration-300 tracking-[0.1em]";
 
 
-       const navBg = pathname === '/' ? '' : 'bg-black'
+       const navBg = pathname === '/' ? 'bg-black lg:bg-transparent' : 'bg-black'
         const hiddenNav = pathname === '/register' ? 'hidden' : ''
 
      const links = (
@@ -80,6 +81,7 @@ const Navbar = () => {
         <motion.div
           animate={{ y: 0 }}
           transition={{ from: -100, type: "spring", duration: 1 }}
+           exit= {{y:-100}}
           className="flex w-full flex-wrap items-center justify-between px-3"
         >
           <div>
@@ -128,9 +130,7 @@ const Navbar = () => {
 
             <div className="flex  justify-center items-center w-40">
               {user ? (
-                <button onClick={logout} className="btn">
-                  Logout
-                </button>
+                <User></User>
               ) : (
                 <button
                   onClick={openLogin}
