@@ -28,6 +28,7 @@ const closeModal = () => {
         setErrMsg(null)
         social()
         .then(res=>{
+          closeModal()
             navigate(`${state ?  state : '/'}`)
             toast.success(`Welcome! ${res.user.displayName}`, {
               style: {
@@ -52,6 +53,7 @@ const closeModal = () => {
         login(email,password)
         .then(res=>{
             form.reset()
+            closeModal()
             navigate(`${state ? state : "/"}`)
             toast.success(`Welcome back! ${res.user.displayName}`, {
               style: {
@@ -110,7 +112,7 @@ const closeModal = () => {
                   </label>
                   <input
                     required
-                    id="LoggingEmailAddress"
+                   
                     name="email"
                     className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg    focus:border-blue-400 focus:ring-opacity-40 -300 focus:outline-none focus:ring focus:ring-blue-300"
                     type="email"
@@ -133,7 +135,7 @@ const closeModal = () => {
                   <div className="relative">
                     <input
                       required
-                      id="loggingPassword"
+                     
                       name="password"
                       className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg    focus:border-blue-400 focus:ring-opacity-40 -300 focus:outline-none focus:ring focus:ring-blue-300"
                       type={showPass ? "Text" : "password"}

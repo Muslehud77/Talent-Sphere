@@ -56,25 +56,25 @@ useEffect(()=>{
         const userEmail = currentUser?.email || user?.email;
         const userData = { email: userEmail };
         setUser(currentUser)
-      
+        console.log(currentUser);
 
-        if (currentUser) {
-          axios
-            .post("https://crystal-cup-server.vercel.app/jwt", userData, {
-              withCredentials: true,
-            })
-            .then((res) => {
-              console.log(res.data);
-            });
-        } else {
-          axios
-            .post("https://crystal-cup-server.vercel.app/logout", userData, {
-              withCredentials: true,
-            })
-            .then((res) => {
-              console.log(res.data);
-            });
-        }
+        // if (currentUser) {
+        //   axios
+        //     .post("https://crystal-cup-server.vercel.app/jwt", userData, {
+        //       withCredentials: true,
+        //     })
+        //     .then((res) => {
+        //       console.log(res.data);
+        //     });
+        // } else {
+        //   axios
+        //     .post("https://crystal-cup-server.vercel.app/logout", userData, {
+        //       withCredentials: true,
+        //     })
+        //     .then((res) => {
+        //       console.log(res.data);
+        //     });
+        // }
         setLoading(false)
 
         

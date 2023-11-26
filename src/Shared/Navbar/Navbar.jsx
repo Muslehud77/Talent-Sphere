@@ -12,7 +12,7 @@ const Navbar = () => {
   const {pathname} = useLocation()
   const {logout,user} = useContextInfo()
 
-  console.log(pathname);
+
 
      useEffect(() => {
        initTE({ Collapse, Dropdown });
@@ -32,7 +32,7 @@ const Navbar = () => {
 
 
        const navBg = pathname === '/' ? '' : 'bg-black'
-
+        const hiddenNav = pathname === '/register' ? 'hidden' : ''
 
      const links = (
        <>
@@ -74,7 +74,7 @@ const Navbar = () => {
     <div>
       {/* <!-- Main navigation container --> */}
       <nav
-        className={`${navBg} md:absolute lg:h-20  top-0 z-50 flex w-full flex-wrap items-center justify-between py-2 shadow-lg lg:py-4`}
+        className={`${navBg} ${hiddenNav} md:absolute lg:h-20  top-0 z-50 flex w-full flex-wrap items-center justify-between py-2 shadow-lg lg:py-4`}
         data-te-navbar-ref
       >
         <motion.div

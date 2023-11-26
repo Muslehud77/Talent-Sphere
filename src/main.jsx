@@ -1,13 +1,17 @@
 
 import ReactDOM from 'react-dom/client'
+import Alpine from "alpinejs";
+
 
 import './index.css'
 import {  RouterProvider } from "react-router-dom";
 import { router } from './Routes/Routes';
 import AuthProvider from './ContextProvider/AuthContext';
-import { ModalContainer } from 'reoverlay';
 
 
+window.Alpine = Alpine;
+
+Alpine.start();
 
 
 
