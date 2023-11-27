@@ -6,7 +6,7 @@ const Search = () => {
         <input
           type="text"
           placeholder="Search here"
-          className="input bg-transparent input-bordered text-white border-white border-2 w-96"
+          className="input bg-transparent  input-bordered text-white border-white border-2 w-60 md:w-96"
         />
       </div>
     );

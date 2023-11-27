@@ -27,9 +27,9 @@ const Card = ({ data }) => {
           duration: 0.3,
         },
       }}
-      style={{gridColumn:`span ${data?.span}`}}
+      style={{ gridColumn: `span ${data?.span}` }}
       whileTap={{ scale: 0.95 }}
-      className={`card w-96 h-96  cursor-pointer md:w-full bg-base-100 shadow-xl image-full`}
+      className={`card w-96 h-96 cursor-pointer container mx-auto md:w-full bg-base-100 shadow-xl image-full`}
     >
       <figure>
         <img
@@ -39,11 +39,21 @@ const Card = ({ data }) => {
         />
       </figure>
       <div className="card-body">
-        <h2 className="card-title font-nova">{data?.contestName}</h2>
-        <p className='font-bitter'>{data?.shortDescription}</p>
-        <div className="card-actions justify-end">
+        <h2 className="card-title tracking-[0.05em] font-nova">
+          {data?.contestName}
+        </h2>
+        <p className="font-bitter uppercase ">{data?.shortDescription}</p>
+
+        <div className="flex-grow"></div>
+        <div className="card-actions flex-col ">
+          <p className="bg-cyan-400/50 rounded-xl font-nova py-3 text-white shadow-xl p-1">
+            Participated so far <span className='bg-black text-white p-2'>{data?.attempt}</span>
+          </p>
           {data?.tags?.map((tag, i) => (
-            <span className="bg-black font-bitter p-1 px-2 rounded-xl text-xs" key={i}>
+            <span
+              className="bg-black font-bitter p-1 px-2 rounded-xl text-xs"
+              key={i}
+            >
               {tag}
             </span>
           ))}

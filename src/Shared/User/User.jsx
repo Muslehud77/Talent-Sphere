@@ -39,7 +39,7 @@ const User = () => {
           data-te-dropdown-menu-ref
         >
           <li>
-            <div className="px-2 py-2">
+            <div className="px-2 py-2 text-white lg:text-black ">
               <p>{user.displayName}</p>
               <p className="text-xs bg-black rounded text-white p-1">
                 {user.email}
