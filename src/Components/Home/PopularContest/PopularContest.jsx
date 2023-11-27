@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import usePopularContest from "../../../Hooks/usePopularContest";
 import Card from "./Card";
-import useSelected from './../../../Hooks/useSelected';
+
 
 
 const PopularContest = () => {
     const {popular,isFetching} = usePopularContest()
     const [pop,setPop] = useState([])
-    const [selected,setSelected] = useSelected()
+   
 
     const colSpan = [1,2,1,2,1,1]
   
@@ -22,7 +22,7 @@ const PopularContest = () => {
     
 
     return (
-        <div className="md:grid grid-cols-4 gap-5 mt-5">
+        <div className="md:grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 flex flex-col justify-center items-center gap-5 mt-5">
             {
                 pop.map(p=><Card key={p._id} data={p}></Card>)
             }

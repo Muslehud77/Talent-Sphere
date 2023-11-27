@@ -16,6 +16,7 @@ const Card = ({ data }) => {
     }
  }
 
+
   return (
     <motion.div
       layoutId={data._id}
@@ -26,8 +27,9 @@ const Card = ({ data }) => {
           duration: 0.3,
         },
       }}
+      style={{gridColumn:`span ${data?.span}`}}
       whileTap={{ scale: 0.95 }}
-      className={`card w-96 cursor-pointer md:w-full col-span-${data?.span} bg-base-100 shadow-xl image-full`}
+      className={`card w-96 h-96  cursor-pointer md:w-full bg-base-100 shadow-xl image-full`}
     >
       <figure>
         <img
@@ -37,11 +39,11 @@ const Card = ({ data }) => {
         />
       </figure>
       <div className="card-body">
-        <h2 className="card-title ">{data?.contestName}</h2>
-        <p>{data?.shortDescription}</p>
+        <h2 className="card-title font-nova">{data?.contestName}</h2>
+        <p className='font-bitter'>{data?.shortDescription}</p>
         <div className="card-actions justify-end">
           {data?.tags?.map((tag, i) => (
-            <span className="bg-black p-1 px-2 rounded-xl text-xs" key={i}>
+            <span className="bg-black font-bitter p-1 px-2 rounded-xl text-xs" key={i}>
               {tag}
             </span>
           ))}

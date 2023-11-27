@@ -17,6 +17,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto">
           <PopularContest></PopularContest>
         </div>
+      
         <Transition></Transition>
       </div>
     );

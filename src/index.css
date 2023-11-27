@@ -1,13 +1,15 @@
 /* *{
     color: #61e9fb
 } */
-
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;600&display=swap');
 ::-webkit-scrollbar {
     display: none;
     scrollbar-width: none;
     -ms-overflow-style: none;
    
 }
+
 
 .privacy-screen {
   position: fixed;

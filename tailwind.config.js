@@ -8,7 +8,10 @@ export default {
     "./node_modules/tw-elements/dist/js/**/*.js",
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      nova: ["Nova Square", "sans-serif"],
+      bitter: ["Bitter", "serif"],
+    },
   },
   plugins: [
     require("daisyui"),
