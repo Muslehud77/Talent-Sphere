@@ -12,6 +12,12 @@ export default {
       nova: ["Nova Square", "sans-serif"],
       bitter: ["Bitter", "serif"],
     },
+    extend: {
+      backgroundImage: {
+        pattern: "url('/src/Assets/Background/wave.png')",
+       
+      },
+    },
   },
   plugins: [
     require("daisyui"),
