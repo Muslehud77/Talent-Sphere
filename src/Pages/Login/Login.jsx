@@ -16,8 +16,7 @@ import Transition from '../../Transition/Transition';
 import PrivateRouteForLoginSignUp from './../../Routes/PrivateRoutes/PrivateRouteForLoginSignUp';
 
 const Login = () => {
-    const { state } = useLocation();
-    const navigate = useNavigate()
+    
 
     const [errMsg,setErrMsg] = useState(null) 
     const [showPass,setShowPass] = useState(false)
@@ -29,7 +28,7 @@ const Login = () => {
         social()
         .then(res=>{
           closeModal()
-            navigate(`${state ?  state : '/'}`)
+           
             toast.success(`Welcome! ${res.user.displayName}`, {
               style: {
                 borderRadius: "10px",
@@ -54,7 +53,7 @@ const Login = () => {
         .then(res=>{
             form.reset()
             closeModal()
-            navigate(`${state ? state : "/"}`)
+          
             toast.success(`Welcome back! ${res.user.displayName}`, {
               style: {
                 borderRadius: "10px",
