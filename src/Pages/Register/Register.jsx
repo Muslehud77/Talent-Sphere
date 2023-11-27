@@ -138,7 +138,7 @@ const Register =  () => {
 
 
   return (
-    <div className="mt-10">
+    <div className="pt-10 bg-white">
       <div className="pl-20 -pb-44">
         <button onClick={() => navigate(-1)} className="text-2xl">
           <FaCircleArrowLeft />

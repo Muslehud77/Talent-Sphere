@@ -34,20 +34,20 @@ const Card = ({ data }) => {
       <figure>
         <img
           src={data?.contestImg}
-          className="max-w-[500px]  object-fill"
-          alt="Shoes"
+          className="max-w-[500px] object-fill"
+          
         />
       </figure>
       <div className="card-body">
         <h2 className="card-title tracking-[0.05em] font-nova">
           {data?.contestName}
         </h2>
-        <p className="font-bitter uppercase ">{data?.shortDescription}</p>
+        <p className="text-sm uppercase ">{data?.shortDescription}</p>
 
         <div className="flex-grow"></div>
         <div className="card-actions flex-col ">
           <p className="bg-cyan-400/50 rounded-xl font-nova py-3 text-white shadow-xl p-1">
-            Participated so far <span className='bg-black text-white p-2'>{data?.attempt}</span>
+            Participated so far <span className='bg-black rounded text-white p-2'>{data?.attempt}</span>
           </p>
           {data?.tags?.map((tag, i) => (
             <span

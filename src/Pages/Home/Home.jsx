@@ -1,4 +1,5 @@
 
+import About from "../../Components/Home/About/About";
 import Banner from "../../Components/Home/Banner/Banner";
 import PopularContest from "../../Components/Home/PopularContest/PopularContest";
 
@@ -15,6 +16,7 @@ const Home = () => {
       <div>
         <Banner></Banner>
         <div className="max-w-7xl mx-auto">
+          <About></About>
           <PopularContest></PopularContest>
         </div>
       

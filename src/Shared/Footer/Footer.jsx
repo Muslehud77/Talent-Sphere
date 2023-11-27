@@ -1,8 +1,13 @@
+import { useLocation } from 'react-router-dom';
 import logo from '../../Assets/Logo/TS-white-2-removebg-preview.png'
 
 const Footer = () => {
+
+    const {pathname} = useLocation()
+
+
     return (
-      <footer className="text-white bg-black/50 body-font backdrop-blur-sm">
+      <footer className={`text-white ${pathname==='/register' && 'hidden'} bg-black/50 body-font backdrop-blur-sm`}>
         <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
           <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
             <img src={logo} className="w-20" alt="" />

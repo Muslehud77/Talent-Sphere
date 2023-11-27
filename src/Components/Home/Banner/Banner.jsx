@@ -19,14 +19,14 @@ const motionForce = (x, y) => {
 
 const Banner = () => {
   return (
-    <div className="w-full bg-black min-h-screen relative flex justify-center items-center">
+    <div className="w-full min-h-screen relative flex justify-center items-center">
       <Marquee
         autoFill={true}
         gradient
         gradientColor="rgba(0, 0, 0, 0.548)"
         gradientWidth={500}
       >
-        <div className="container mx-auto bg-gray-800">
+        <div className="container mx-auto ">
           <div className=" flex flex-wrap ">
             <div className="flex w-1/2 flex-wrap">
               <motion.div

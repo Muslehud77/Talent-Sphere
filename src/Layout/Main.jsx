@@ -9,9 +9,11 @@ import { Toaster } from "react-hot-toast";
 import ContestDetail from "../Shared/ContestDetail/ContestDetail";
 
 
+
+
 const Main = () => {
      const [preloader, setPreloader] = useState(true);
-
+   
      useEffect(() => {
        const preload = () => {
          setTimeout(() => {
@@ -29,9 +31,9 @@ const Main = () => {
           <Navbar></Navbar>
           <div className="flex-grow">
             <Outlet></Outlet>
-            <ContestDetail />
           </div>
-          <Footer></Footer>
+          <ContestDetail />
+          <Footer ></Footer>
           <ModalContainer />
 
           <div>
