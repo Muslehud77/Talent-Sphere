@@ -4,14 +4,13 @@ import logo from '../../Assets/Logo/TS-white-2-removebg-preview.png'
 import { Sling as Hamburger } from "hamburger-react";
 import { motion } from 'framer-motion';
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { Reoverlay } from "reoverlay";
-import Login from "../../Pages/Login/Login";
+
 import useContextInfo from "../../Hooks/useContextInfo";
 import User from "../User/User";
 
 const Navbar = () => {
   const {pathname} = useLocation()
-  const { logout, user, openLogin } = useContextInfo();
+  const {  user, openLogin } = useContextInfo();
 
 
 
@@ -47,9 +46,9 @@ const Navbar = () => {
            className={({ isActive, isPending }) =>
              isActive ? active : isPending ? pending : idle
            }
-           to={"/menu"}
+           to={"/contests"}
          >
-           Menu
+           On going Contests
          </NavLink>
          <NavLink
            className={({ isActive, isPending }) =>
@@ -74,7 +73,7 @@ const Navbar = () => {
     <div>
       {/* <!-- Main navigation container --> */}
       <nav
-        className={`${navBg} ${hiddenNav} md:absolute lg:h-20  top-0 z-50 flex w-full flex-wrap items-center justify-between py-2 shadow-lg lg:py-4`}
+        className={`${navBg} ${hiddenNav} transition-all duration-1000 md:absolute lg:h-20  top-0 z-50 flex w-full flex-wrap items-center justify-between py-2 shadow-lg lg:py-4`}
         data-te-navbar-ref
       >
         <motion.div

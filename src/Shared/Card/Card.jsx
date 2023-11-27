@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 
-import useContextInfo from '../../../Hooks/useContextInfo';
+import useContextInfo from '../../Hooks/useContextInfo';
 
 const Card = ({ data }) => {
 
@@ -42,7 +42,7 @@ const Card = ({ data }) => {
         <h2 className="card-title tracking-[0.05em] font-nova">
           {data?.contestName}
         </h2>
-        <p className="text-sm uppercase ">{data?.shortDescription}</p>
+        <p className="text-xs">{data?.shortDescription}</p>
 
         <div className="flex-grow"></div>
         <div className="card-actions flex-col ">

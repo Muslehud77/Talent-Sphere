@@ -107,7 +107,10 @@ useEffect(()=>{
 
 
     return (
-       <AuthContext.Provider value={info}>{children}</AuthContext.Provider>
+      
+       <AuthContext.Provider value={info}>
+        {children}
+        </AuthContext.Provider>
     );
 };
 

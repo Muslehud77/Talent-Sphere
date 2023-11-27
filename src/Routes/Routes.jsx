@@ -6,6 +6,7 @@ import Home from "../Pages/Home/Home";
 import Register from './../Pages/Register/Register';
 import PrivateRouteForLoginSignUp from './PrivateRoutes/PrivateRouteForLoginSignUp';
 import { AnimatePresence } from "framer-motion";
+import RunningContests from "../Pages/RunningContests/RunningContests";
 
 
 
@@ -24,10 +25,10 @@ export const router = createBrowserRouter([
         ),
       },
       {
-        path: "/menu",
+        path: "/contests",
         element: (
           <AnimatePresence mode="wait" initial={false}>
-            <h1 key={'/menu'}>hello</h1>
+            <RunningContests key={'/contests'}></RunningContests>
           </AnimatePresence>
         ),
       },

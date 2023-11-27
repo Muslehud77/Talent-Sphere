@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import usePopularContest from "../../../Hooks/usePopularContest";
-import Card from "./Card";
+import Card from "../../../Shared/Card/Card";
 
 
 

@@ -10,6 +10,7 @@ import "./index.css";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./Routes/Routes";
 import AuthProvider from "./ContextProvider/AuthContext";
+
 const queryClient = new QueryClient();
 window.Alpine = Alpine;
 

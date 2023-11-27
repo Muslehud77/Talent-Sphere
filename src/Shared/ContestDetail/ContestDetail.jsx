@@ -8,6 +8,7 @@ import ContestTagsAndParticipation from "./ContestTagsAndParticipation";
 import ContestSubmission from "./ContestSubmission";
 import PrizeMoney from "./PrizeMoney";
 import ContestHead from "./ContestHead";
+import { Scrollbar } from "smooth-scrollbar-react";
 
 
 
@@ -54,7 +55,6 @@ const ContestDetail = () => {
                 <img
                   src={contest?.contestImg}
                   className=" h-[600px] w-full blur-sm object-fill"
-                  
                 />
               </figure>
               <div className="card-body">
@@ -65,19 +65,20 @@ const ContestDetail = () => {
                 </div>
                 <h2 className="card-title font-nova">{contest?.contestName}</h2>
                 <div className=" md:flex  justify-center">
-                  <ContestHead contest={contest}/>
+                  <ContestHead contest={contest} />
 
                   <div className="flex flex-col items-center justify-center md:justify-between">
-                   <PrizeMoney contest={contest}/>
-                    <ContestSubmission contest={contest}/>
+                    <PrizeMoney contest={contest} />
+                    <ContestSubmission contest={contest} />
                   </div>
                 </div>
                 <div className="flex-grow"></div>
                 <div className="flex flex-col gap-5  md:flex-row-reverse justify-between">
-                 <ContestCountdownAndPayment contest={contest}/>
-                  <ContestTagsAndParticipation contest={contest}/>
+                  <ContestCountdownAndPayment contest={contest} />
+                  <ContestTagsAndParticipation contest={contest} />
                 </div>
               </div>
+              
             </motion.div>
           )}
         </div>

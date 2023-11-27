@@ -11,6 +11,7 @@ import Lottie from "react-lottie-player";
 
 import useContextInfo from "../../Hooks/useContextInfo";
 import axios from "axios";
+import { useEffect } from "react";
 
 
 const specialCharacter = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/;
@@ -23,10 +24,21 @@ const Register =  () => {
   const [err, setErr] = useState(null);
   const [img,setImg] = useState(null);
 
+
+
+useEffect(() => {
+
+    window.scrollTo({top: 0, behavior: 'smooth'});
+
+}, []);
+
+
+
   const handleSubmit =async (e) => {
     e.preventDefault();
     setErr(null);
 
+    
 
    const form = new FormData(e.currentTarget);
    const displayName = form.get("name");

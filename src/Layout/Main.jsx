@@ -1,4 +1,3 @@
-
 import { Outlet } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
 import Footer from "../Shared/Footer/Footer";
@@ -7,21 +6,20 @@ import PreLoader from "../Components/Preloader/PreLoader";
 import { ModalContainer } from "reoverlay";
 import { Toaster } from "react-hot-toast";
 import ContestDetail from "../Shared/ContestDetail/ContestDetail";
-
-
-
+import SmoothScroll from "../Components/SmoothScroll/SmoothScroll";
 
 const Main = () => {
-     const [preloader, setPreloader] = useState(true);
-   
-     useEffect(() => {
-       const preload = () => {
-         setTimeout(() => {
-           setPreloader(false);
-         }, 1000);
-       };
-       return preload();
-     }, []);
+  const [preloader, setPreloader] = useState(true);
+
+  useEffect(() => {
+    const preload = () => {
+      setTimeout(() => {
+        setPreloader(false);
+      }, 1000);
+    };
+    return preload();
+  }, []);
+
   return (
     <>
       {preloader ? (
@@ -33,12 +31,12 @@ const Main = () => {
             <Outlet></Outlet>
           </div>
           <ContestDetail />
-          <Footer ></Footer>
+          <Footer></Footer>
           <ModalContainer />
 
-          <div>
+        
             <Toaster />
-          </div>
+
         </div>
       )}
     </>
