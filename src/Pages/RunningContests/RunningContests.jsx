@@ -10,13 +10,18 @@ import useAllContest from '../../Api/useAllContest';
 import Search from '../../Shared/Search/Search';
 import useContextInfo from '../../Hooks/useContextInfo';
 import { useLocation } from 'react-router-dom';
+import Pagination from './Pagination';
 
 
 const RunningContests = () => {
 const [currentTab,setCurrentTab] = useState('All')
-const { allContests, isFetching } = useAllContest(currentTab);
+const { allContests, isFetching,count } = useAllContest(currentTab);
 const {setSearch} = useContextInfo()
 const {state} = useLocation()
+const [currentPage, setCurrentPage] = useState(1);
+ const [itemsPerPage, setItemsPerPage] = useState(10);
+const c = count || 40
+
 
 useEffect(() => {
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -64,7 +69,7 @@ const tabs = ['All','Business','Medical','Article','Gaming']
             ))}
           </div>
         )}
-
+        <Pagination itemsPerPage={itemsPerPage} setItemsPerPage={setItemsPerPage} currentPage={currentPage} setCurrentPage={setCurrentPage} count={c}></Pagination>
         <Transition></Transition>
       </div>
     );

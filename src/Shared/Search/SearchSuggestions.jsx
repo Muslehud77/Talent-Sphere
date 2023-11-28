@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+
+import {  useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import useContextInfo from '../../Hooks/useContextInfo';
 
 // eslint-disable-next-line react/prop-types
-const SearchSuggestions = ({ suggestions, setCurrentTab }) => {
+const SearchSuggestions = ({ suggestions }) => {
   const { pathname } = useLocation();
   const navigate = useNavigate()
 
