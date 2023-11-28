@@ -15,6 +15,8 @@ const Card = ({ data }) => {
         openLogin()
     }
  }
+ 
+ 
 
 
   return (
@@ -27,16 +29,13 @@ const Card = ({ data }) => {
           duration: 0.3,
         },
       }}
+   
       style={{ gridColumn: `span ${data?.span}` }}
       whileTap={{ scale: 0.95 }}
       className={`card w-96 h-96 cursor-pointer container mx-auto md:w-full bg-base-100 shadow-xl image-full`}
     >
       <figure>
-        <img
-          src={data?.contestImg}
-          className="max-w-[500px] object-fill"
-          
-        />
+        <img src={data?.contestImg} className="max-w-[500px] object-fill" />
       </figure>
       <div className="card-body">
         <h2 className="card-title tracking-[0.05em] font-nova">
@@ -47,7 +46,10 @@ const Card = ({ data }) => {
         <div className="flex-grow"></div>
         <div className="card-actions flex-col ">
           <p className="bg-cyan-400/50 rounded-xl font-nova py-3 text-white shadow-xl p-1">
-            Participated so far <span className='bg-black rounded text-white p-2'>{data?.attempt}</span>
+            Participated so far{" "}
+            <span className="bg-black rounded text-white p-2">
+              {data?.attempt}
+            </span>
           </p>
           {data?.tags?.map((tag, i) => (
             <span

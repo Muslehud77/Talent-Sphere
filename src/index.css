@@ -12,6 +12,11 @@
    
 }
 
+.skeleton { 
+    background-color: rgb(5, 5, 5) !important;
+    background-image: linear-gradient( 105deg, transparent 0%, transparent 10%, rgb(0, 109, 109) 50%, transparent 60%, transparent 100% ) !important;
+   
+}
 
 
 

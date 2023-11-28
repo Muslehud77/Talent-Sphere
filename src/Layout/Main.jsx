@@ -6,7 +6,7 @@ import PreLoader from "../Components/Preloader/PreLoader";
 import { ModalContainer } from "reoverlay";
 import { Toaster } from "react-hot-toast";
 import ContestDetail from "../Shared/ContestDetail/ContestDetail";
-import SmoothScroll from "../Components/SmoothScroll/SmoothScroll";
+
 
 const Main = () => {
   const [preloader, setPreloader] = useState(true);

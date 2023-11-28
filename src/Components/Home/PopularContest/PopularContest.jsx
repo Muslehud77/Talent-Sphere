@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import usePopularContest from "../../../Hooks/usePopularContest";
 import Card from "../../../Shared/Card/Card";
+import CardSkeleton from "../../../Shared/Card/CardSkeleton";
 
 
 
@@ -22,11 +23,17 @@ const PopularContest = () => {
     
 
     return (
-        <div className="md:grid  grid-cols-1 md:grid-cols-3 lg:grid-cols-4 flex flex-col justify-center items-center gap-5 mt-5">
-            {
-                pop.map(p=><Card key={p._id} data={p}></Card>)
-            }
-        </div>
+      <>
+        {isFetching ? (
+          <CardSkeleton></CardSkeleton>
+        ) : (
+          <div className="md:grid  grid-cols-1 md:grid-cols-3 lg:grid-cols-4 flex flex-col justify-center items-center gap-5 mt-5">
+            {pop.map((p) => (
+              <Card key={p._id} data={p}></Card>
+            ))}
+          </div>
+        )}
+      </>
     );
 };
 
