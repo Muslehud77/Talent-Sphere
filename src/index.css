@@ -28,6 +28,10 @@ body{
   
 }
 
+.menu{
+  flex-wrap: nowrap !important; 
+}
+
 
 .privacy-screen {
   position: fixed;

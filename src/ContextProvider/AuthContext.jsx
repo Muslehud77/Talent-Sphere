@@ -15,7 +15,7 @@ const AuthProvider = ({children}) => {
 const [user,setUser] = useState(null)
 const [loading,setLoading] = useState(true)
 const [selected,setSelected] = useState(null)
-const [search,setSearch] = useState(null)
+const [search,setSearch] = useState('')
 const [name,setName] = useState('')
 
 

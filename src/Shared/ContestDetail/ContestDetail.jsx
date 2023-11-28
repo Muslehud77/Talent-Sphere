@@ -64,10 +64,10 @@ const ContestDetail = () => {
                   </button>
                 </div>
                 <h2 className="card-title font-nova">{contest?.contestName}</h2>
-                <div className=" md:flex  justify-center">
+                <div className=" md:flex-col  justify-center">
                   <ContestHead contest={contest} />
 
-                  <div className="flex flex-col items-center justify-center md:justify-between">
+                  <div className="flex flex-col md:flex-row-reverse items-center justify-between md:justify-between">
                     <PrizeMoney contest={contest} />
                     <ContestSubmission contest={contest} />
                   </div>
