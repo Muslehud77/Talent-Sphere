@@ -1,7 +1,8 @@
 import React from 'react';
-import useAxiosPublic from './useAxiosPublic';
+
 import { useQuery } from '@tanstack/react-query';
 import { generateRandomArray } from '../utils/randomNubersOfArray';
+import useAxiosPublic from '../Hooks/useAxiosPublic';
 
 const useAllContest = () => {
 

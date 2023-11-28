@@ -2,7 +2,8 @@ import Marquee from "react-fast-marquee";
 import { motion } from 'framer-motion';
 import logo2 from '../../../Assets/Logo/TS-white-2-removebg-preview.png'
 import ParticleImage, { forces } from "react-particle-image";
-import Search from "./Search";
+
+import Search from './../../../Shared/Search/Search';
 
 const particleOptions = {
   filter: ({ x, y, image }) => {

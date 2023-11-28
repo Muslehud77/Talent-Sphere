@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import usePopularContest from "../../../Hooks/usePopularContest";
+
 import Card from "../../../Shared/Card/Card";
 import CardSkeleton from "../../../Shared/Card/CardSkeleton";
+import usePopularContest from "../../../Api/usePopularContest";
 
 
 
