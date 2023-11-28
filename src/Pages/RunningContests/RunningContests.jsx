@@ -12,7 +12,9 @@ import Search from '../../Shared/Search/Search';
 
 const RunningContests = () => {
 const [currentTab,setCurrentTab] = useState('All')
-const {allContests,isFetching} = useAllContest()
+const { allContests, isFetching } = useAllContest(currentTab);
+
+
 
 useEffect(() => {
   window.scrollTo({ top: 0, behavior: "smooth" });

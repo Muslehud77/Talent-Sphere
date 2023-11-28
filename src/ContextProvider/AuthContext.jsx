@@ -15,7 +15,7 @@ const AuthProvider = ({children}) => {
 const [user,setUser] = useState(null)
 const [loading,setLoading] = useState(true)
 const [selected,setSelected] = useState(null)
-
+const [search,setSearch] = useState(null)
 const [name,setName] = useState('')
 
 
@@ -90,7 +90,7 @@ useEffect(()=>{
     const info = {
        selected,setSelected,
       goToTop,
-  
+  search,setSearch,
       name,
       setName,
     openLogin,
