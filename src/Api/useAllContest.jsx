@@ -11,7 +11,6 @@ const useAllContest = (currentTab, currentPage, itemsPerPage) => {
 
   const axiosPublic = useAxiosPublic();
 
- 
 
 
   const {
@@ -22,7 +21,7 @@ const useAllContest = (currentTab, currentPage, itemsPerPage) => {
     queryKey: [currentTab, search, currentPage, itemsPerPage],
     queryFn: async () => {
       const res = await axiosPublic.get(
-        `/contest?search=${search || ''}&sort=${currentTab}&page=${currentPage||0}&size=${itemsPerPage||0}`
+        `/contest?search=${search || ''}&sort=${currentTab}&page=${currentPage||1}&size=${itemsPerPage||10}`
       );
       const randomSpans = generateRandomArray(res.data.contests.length);
       const contests = res.data.contests.map((contest, i) => {

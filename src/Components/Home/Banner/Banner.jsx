@@ -4,7 +4,7 @@ import logo2 from '../../../Assets/Logo/TS-white-2-removebg-preview.png'
 import ParticleImage, { forces } from "react-particle-image";
 import "react-tooltip/dist/react-tooltip.css";
 import Search from './../../../Shared/Search/Search';
-import { Tooltip } from "react-tooltip";
+
 const particleOptions = {
   filter: ({ x, y, image }) => {
     // Get pixel
