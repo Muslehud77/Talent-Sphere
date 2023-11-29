@@ -45,12 +45,12 @@ const Card = ({ data }) => {
 
         <div className="flex-grow"></div>
         <div className="card-actions flex-col ">
-          <p className="bg-cyan-400/50 rounded-xl font-nova py-3 text-white shadow-xl p-1">
+          <div className="bg-cyan-400/50 rounded-xl font-nova py-3 text-white shadow-xl p-1">
             Participated so far{" "}
-            <span className="bg-black rounded text-white p-2">
+            <p className="bg-black text-center rounded mt-1 text-white p-2">
               {data?.attempt}
-            </span>
-          </p>
+            </p>
+          </div>
           {data?.tags?.map((tag, i) => (
             <span
               className="bg-black font-bitter p-1 px-2 rounded-xl text-xs"

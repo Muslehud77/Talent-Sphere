@@ -10,53 +10,59 @@ import SearchSuggestions from "./SearchSuggestions";
 
 
 const Search = ({currentTab}) => {
-
-
-const { allContests } = useAllContest(currentTab || '');
-const [suggestions,setSuggestions] = useState([])
+const [suggestions, setSuggestions] = useState([]);
 const { search, setSearch } = useContextInfo();
 
+const { allContests } = useAllContest(currentTab || "All");
 
- const {
-   register,
-  
-   watch,
-   setValue,
-  
- } = useForm();
+console.log(allContests);
 
 
+ const { register, handleSubmit, watch, setValue } = useForm();
 
+  const onSubmit = (data) => {
+    setSearch(data.search)
+   
+    if(data.search){
+      setSuggestions(allContests);
+    }else{
+      setSuggestions([])
+    }
+  };
 
 
 useEffect(() => {
-  setSearch(watch("search"));
-  if (search) {
-   
+
+  
+  const update = () => {
+    if (watch("search") === '') {
+      return setSuggestions([]);
+    }
+    setSearch(watch("search"));
     setSuggestions(allContests);
-  }else{
-    setSuggestions([])
-  }
-  
-  
-}, [search]);
+  };
+
+  return update();
+}, [watch("search")]);
+
+
+
 
 
 // console.log(suggestions);
-
+console.log(search);
   
   const clear = ()=>{
    setValue('search','')
-setSuggestions([])
+   setSuggestions([])
   setSearch('')
   }
 
+  console.log(suggestions);
+
     return (
       <div className="relative">
-        <form
-          onChange={() => setSearch(watch("search"))}
-          
-        >
+        <form onSubmit={handleSubmit(onSubmit)}>
           <input
             autoComplete="off"
             type="text"
@@ -64,11 +70,11 @@ setSuggestions([])
             {...register("search")}
             className="input bg-transparent  input-bordered text-white border-white border-2 w-60 md:w-96"
           />
-          {suggestions.length ? (
+          {suggestions?.length ? (
             <button
               onClick={clear}
               type="button"
-              className="text-white text-2xl absolute right-2 top-2"
+              className="text-white cursor-pointer text-2xl absolute right-2 top-2"
             >
               <RxCross1 />
             </button>
@@ -81,10 +87,7 @@ setSuggestions([])
             </button>
           )}
         </form>
-        <SearchSuggestions
-         
-          suggestions={suggestions}
-        />
+        <SearchSuggestions suggestions={suggestions} />
       </div>
     );
 };

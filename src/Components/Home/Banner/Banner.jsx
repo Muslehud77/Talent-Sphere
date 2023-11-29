@@ -2,9 +2,9 @@ import Marquee from "react-fast-marquee";
 import { motion } from 'framer-motion';
 import logo2 from '../../../Assets/Logo/TS-white-2-removebg-preview.png'
 import ParticleImage, { forces } from "react-particle-image";
-
+import "react-tooltip/dist/react-tooltip.css";
 import Search from './../../../Shared/Search/Search';
-
+import { Tooltip } from "react-tooltip";
 const particleOptions = {
   filter: ({ x, y, image }) => {
     // Get pixel
@@ -102,7 +102,7 @@ const Banner = () => {
           </div>
         </div>
       </Marquee>
-      <div className="absolute h-full w-full flex flex-col justify-center items-center z-10 bg-black/70 pb-40 md:pb-0 lg:pb-40">
+      <div className="absolute h-full w-full flex flex-col justify-center items-center z-20 bg-black/70 pb-40 md:pb-0 pt-52  lg:pb-40">
         <ParticleImage
           src={logo2}
           scale={0.75}
@@ -113,8 +113,9 @@ const Banner = () => {
           touchMoveForce={motionForce}
           backgroundColor="transparent"
         />
-        <div>
-         <Search></Search>
+        <div className="h-full">
+          <Search></Search>
+          
         </div>
       </div>
     </div>

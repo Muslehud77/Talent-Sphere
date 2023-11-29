@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import useAllContest from '../../Api/useAllContest';
+import { motion } from 'framer-motion';
 
 const Pagination = ({
   count,
@@ -23,9 +24,11 @@ const Pagination = ({
 
   return (
     <div className="flex justify-center my-10">
-      <div className="join border-none">
+      <div data-theme="dark" className="join border-none">
         {currentPage !== 1 && (
           <button
+            
+            
             onClick={() => {
               setCurrentPage(currentPage !== 1 && currentPage - 1);
             }}
@@ -55,7 +58,7 @@ const Pagination = ({
           className="join-item outline-0 btn btn-md"
         >
           <option value="6">06</option>
-          <option value="9">09</option>
+          <option value="10">10</option>
           <option value="20">20</option>
           <option value="50">50</option>
         </select>

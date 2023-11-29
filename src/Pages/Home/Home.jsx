@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom";
 import About from "../../Components/Home/About/About";
 import Banner from "../../Components/Home/Banner/Banner";
 import PopularContest from "../../Components/Home/PopularContest/PopularContest";
@@ -19,7 +20,7 @@ const Home = () => {
           <About></About>
           <PopularContest></PopularContest>
         </div>
-      
+        
         <Transition></Transition>
       </div>
     );
