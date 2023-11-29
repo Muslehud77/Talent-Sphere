@@ -12,13 +12,13 @@ const HappyCreators = () => {
 
 
     return (
-      <div className="space-y-10">
+      <div className="">
         <SectionHeading
           margin={"5"}
           position={"end"}
           head={"our happy creators's"}
         />
-        <h1 className="text-white text-right  text-base md:text-xl font-nova">
+        <h1 className="text-white text-right  text-base md:text-xl font-nova mt-2 mb-10">
           Inspiring innovation, fostering talent, <br /> and celebrating
           creativity across diverse domains, <br /> creating impact through
           collaborative challenges and opportunities

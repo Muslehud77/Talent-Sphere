@@ -1,14 +1,25 @@
 /* eslint-disable react/prop-types */
 
 import useContextInfo from "../../../Hooks/useContextInfo";
+import { motion } from 'framer-motion';
+
 
 
 const Creator = ({creator}) => {
+ 
+  const {selected,setSelected,user,openLogin} = useContextInfo()
 
-  const {selected,setSelected} = useContextInfo()
-  console.log(selected);
 
-    console.log(creator);
+
+ const setContestDetails = (data) => {
+  console.log(data);
+   if (user) {
+     setSelected({_id:data});
+   } else {
+     openLogin();
+   }
+ };
+    
     return (
       <div className="p-10 bg-black/50 backdrop-blur-sm border rounded-md  w-80 md:w-full flex flex-col items-start">
         <a className="inline-flex items-center">
@@ -27,19 +38,42 @@ const Creator = ({creator}) => {
           </span>
         </a>
         <div className="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-100 mt-auto w-full"></div>
-        <span className="inline-block py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest">
-          CATEGORY
-        </span>
-        <h2 className="text-xl title-font font-medium text-gray-200 mt-4 mb-4">
-          Created {creator.totalContests} Contests so far
-        </h2>
-        <p className="leading-relaxed mb-8">
-          Live-edge letterpress cliche, salvia fanny pack humblebrag narwhal
-          portland. VHS man braid palo santo hoodie brunch trust fund. Bitters
-          hashtag waistcoat fashion axe chia unicorn. Plaid fixie chambray 90's,
-          slow-carb etsy tumeric. Cray pug you probably haven't heard of them
-          hexagon kickstarter craft beer pork chic.
-        </p>
+        <div className="text-white w-full">
+          <h4 className="text-center mb-5">
+            Some of {creator.creatorName}'s Best Contests
+          </h4>
+          <ul>
+            {creator?.contests.map((contest, i) => (
+              <motion.li
+                
+                onClick={()=>setContestDetails(contest.id)}
+                whileHover={{
+                  scale: 1.025,
+                  transition: {
+                    duration: 0.3,
+                  },
+                }}
+                key={i}
+                className="cursor-pointer w-full"
+              >
+                <div className="mb-4">
+                  <div>
+                    <div className="flex rounded-md overflow-hidden justify-between text-xs">
+                      <span className=" text-black uppercase p-1 bg-white">
+                        {contest.contestCategory}
+                      </span>
+                      <span className="bg-[#00BDD6] text-gray-100 font-bold p-1">
+                        {contest.attempt} Participation's
+                      </span>
+                    </div>
+                    <p className="font-nova">{contest.contestName}</p>
+                    <p className="text-xs">{contest.shortDescription}</p>
+                  </div>
+                </div>
+              </motion.li>
+            ))}
+          </ul>
+        </div>
       </div>
     );
 };

@@ -7,6 +7,7 @@ import PopularContest from "../../Components/Home/PopularContest/PopularContest"
 import Transition from "../../Transition/Transition";
 import TalentedContestants from "../../Components/Home/TalentedContestants/TalentedContestends";
 import HappyCreators from "../../Components/Home/HappyCreators/HappyCreators";
+import Testimonial from "../../Components/Home/Testimonial/Testimonial";
 
 
 
@@ -23,6 +24,7 @@ const Home = () => {
           <PopularContest/>
           <TalentedContestants/>
           <HappyCreators/>
+          <Testimonial/>
         </div>
         
         <Transition></Transition>
