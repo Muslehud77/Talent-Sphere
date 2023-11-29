@@ -23,18 +23,18 @@ const User = () => {
           data-te-ripple-color="light"
           id="dropdownMenuButton1s"
           data-te-dropdown-toggle-ref
-          className="flex justify-between items-center pr-2 w-36 bg-gray-600/50 rounded-full cursor-pointer"
+          className="flex justify-between items-center pr-2 gap-2 max-w-36 bg-gray-600/50 rounded-full cursor-pointer"
         >
           <div className=" avatar lg">
             <img alt="avatar" src={user?.photoURL} />
           </div>
-          <span className="text-xs rounded-full bg-black text-white p-1">
-            {user.displayName}
+          <span className="text-xs text-center rounded-full px-2 bg-black text-white p-1">
+            {user.displayName.split(' ')[0]}
           </span>
         </a>
 
         <ul
-          className="absolute z-[1000]  mt-2 mr-2 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
+          className="absolute z-[1000] lg:right-2 mt-2  hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
           aria-labelledby="dropdownMenuButton1s"
           data-te-dropdown-menu-ref
         >
@@ -51,7 +51,7 @@ const User = () => {
           <li>
             <Link
               className="block uppercase transition-all tracking-[0.1em] duration-500 w-full whitespace-nowrap bg-transparent px-4 py-2 hover:tracking-[0.20em] text-xs font-semibold text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
-              to={"/dashboard/home"}
+              to={"/dashboard"}
               data-te-dropdown-item-ref
             >
               Dashboard

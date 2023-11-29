@@ -4,20 +4,21 @@ import {  useState } from 'react';
 import {FcGoogle} from 'react-icons/fc'
 import {SiFacebook} from 'react-icons/si'
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import animation from '../../Assets/Lotties/hovering.json'
 import Lottie from 'react-lottie-player';
 import logo from '../../Assets/Logo/TS-black-removebg-preview.png'
-import { ModalWrapper, Reoverlay } from "reoverlay";
+import { ModalWrapper } from "reoverlay";
 import "reoverlay/lib/ModalWrapper.css";
 import useContextInfo from '../../Hooks/useContextInfo';
-import Transition from '../../Transition/Transition';
+
 import PrivateRouteForLoginSignUp from './../../Routes/PrivateRoutes/PrivateRouteForLoginSignUp';
+import useAxiosPublic from '../../Hooks/useAxiosPublic';
 
 const Login = () => {
     
-
+    const axiosPublic = useAxiosPublic()
     const [errMsg,setErrMsg] = useState(null) 
     const [showPass,setShowPass] = useState(false)
     const { googleLogin, facebookLogin, login, dark, closeModal } =
@@ -26,18 +27,46 @@ const Login = () => {
     const handleSocialLogin = (social) =>{
         setErrMsg(null)
         social()
-        .then(res=>{
-          closeModal()
+        .then(response=>{
+           closeModal();
+            const userInfo = {
+              name: response.user.displayName,
+              email: response.user.email,
+              contestWon: 0,
+              contestParticipated: 0,
+              lost: 0,
+              role: "user",
+              userImg: response.user.photoURL,
+              prizeMoney: 0,
+            };
            
-            toast.success(`Welcome! ${res.user.displayName}`, {
-              style: {
-                borderRadius: "10px",
-                background: `${dark ? "black" : "white"}`,
-                color: `${!dark ? "black" : "white"}`,
-              },
-            });
+          axiosPublic.post("/user", userInfo).then((res) => {
+            if (res.data.isExist) {
+              toast.success(`Welcome Back! ${response.user.displayName}`, {
+                style: {
+                  borderRadius: "10px",
+                  background: `${dark ? "black" : "white"}`,
+                  color: `${!dark ? "black" : "white"}`,
+                },
+              });
+            } else {
+              toast.success(`Welcome! ${response.user.displayName}`, {
+                style: {
+                  borderRadius: "10px",
+                  background: `${dark ? "black" : "white"}`,
+                  color: `${!dark ? "black" : "white"}`,
+                },
+              });
+            }
+          });
+          })
+             
+             
+        
+
+            
            
-        }).catch(err=>{
+        .catch(err=>{
             console.log(err)
         })
     }
@@ -53,6 +82,8 @@ const Login = () => {
         .then(res=>{
             form.reset()
             closeModal()
+         
+   
           
             toast.success(`Welcome back! ${res.user.displayName}`, {
               style: {

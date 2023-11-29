@@ -1,9 +1,8 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+
 
 const RankedCard = ({talent}) => {
 
-    console.log(talent);
 
     return (
       <div className="lg:w-72 bg-black/80 border rounded-xl border-[#03A9F4]">

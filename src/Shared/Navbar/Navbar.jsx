@@ -59,14 +59,7 @@ const Navbar = () => {
          >
            Leader Board
          </NavLink>
-         <NavLink
-           className={({ isActive, isPending }) =>
-             isActive ? active : isPending ? pending : idle
-           }
-           to={"/blog"}
-         >
-           Blog
-         </NavLink>
+        
        </>
      );
   return (

@@ -8,6 +8,8 @@ import PrivateRouteForLoginSignUp from './PrivateRoutes/PrivateRouteForLoginSign
 import { AnimatePresence } from "framer-motion";
 import RunningContests from "../Pages/RunningContests/RunningContests";
 import LeaderBoard from "../Pages/LeaderBoard/LeaderBoard";
+import ErrorPage from './../Pages/404/ErrorPage';
+import Dashboard from "../Layout/Dashboard";
 
 
 
@@ -16,6 +18,7 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <ErrorPage/>,
     children: [
       {
         path: "/",
@@ -61,4 +64,15 @@ export const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path:'/dashboard',
+    element: <Dashboard/>,
+    errorElement:<ErrorPage/>,
+    children:[
+      {
+        path: '/dashboard',
+        element: <h1>hello</h1>
+      }
+    ]
+  }
 ]);

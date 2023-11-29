@@ -12,12 +12,14 @@ import Lottie from "react-lottie-player";
 import useContextInfo from "../../Hooks/useContextInfo";
 import axios from "axios";
 import { useEffect } from "react";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
 
 
 const specialCharacter = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/;
 
 const Register =  () => {
 
+  const axiosPublic = useAxiosPublic()
   const navigate = useNavigate()
   const { register ,setName,goToTop } = useContextInfo()
   const [show, setShow] = useState(false);
@@ -119,15 +121,34 @@ useEffect(() => {
           photoURL,
         });
         setName(displayName)
-         toast.success(`Welcome! ${displayName}`, {
+
+        const userInfo = {
+          name: displayName,
+          email: email,
+          contestWon: 0,
+          contestParticipated: 0,
+          lost: 0,
+          role: "user",
+          userImg:photoURL,
+          prizeMoney:0
+        };
+
+        axiosPublic.post('/user',userInfo).then(res=>{
+          if(res.data.insertedId){
+            toast.success(`Welcome! ${displayName}`, {
            style: {
              borderRadius: "10px",
              background: `${"white"}`,
-             color:`${"black"}`,
+             color: `${"black"}`,
            },
+           
          });
-         goToTop()
-        navigate('/')
+         goToTop();
+         navigate("/");
+         
+          }
+        })
+
 
       })
       .catch((error) => {
@@ -190,7 +211,7 @@ useEffect(() => {
                 <p className="font-semibold">Your Photo</p>
                 <div className="flex gap-5 justify-center items-center">
                   <div className="flex  items-center justify-center">
-                    <label className="flex flex-col items-center justify-center w-20  h-20 border-2 border-gray-300 border-dashed rounded-[50px] cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                    <label className="flex flex-col items-center justify-center w-20 overflow-hidden h-20 border-2 border-gray-300 border-dashed rounded-[50px] cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
                       <div className="flex  items-center justify-center">
                         {img ? (
                           <img src={URL.createObjectURL(img)} alt="" />
@@ -248,7 +269,7 @@ useEffect(() => {
                     className="input input-bordered w-full bg-gray-100 text-black"
                   />
                   <div
-                    className="hover:cursor-pointer absolute right-3 bottom-3 text-black text-xl"
+                    className="hover:cursor-pointer absolute right-3 bottom-2 text-black text-xl"
                     onClick={() => {
                       setShow(!show);
                     }}
