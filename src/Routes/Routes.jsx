@@ -7,6 +7,7 @@ import Register from './../Pages/Register/Register';
 import PrivateRouteForLoginSignUp from './PrivateRoutes/PrivateRouteForLoginSignUp';
 import { AnimatePresence } from "framer-motion";
 import RunningContests from "../Pages/RunningContests/RunningContests";
+import LeaderBoard from "../Pages/LeaderBoard/LeaderBoard";
 
 
 
@@ -29,6 +30,14 @@ export const router = createBrowserRouter([
         element: (
           <AnimatePresence mode="wait" initial={false}>
             <RunningContests key={'/contests'}></RunningContests>
+          </AnimatePresence>
+        ),
+      },
+      {
+        path: "/leader-board",
+        element: (
+          <AnimatePresence mode="wait" initial={false}>
+            <LeaderBoard key={'/leader-board'}></LeaderBoard>
           </AnimatePresence>
         ),
       },

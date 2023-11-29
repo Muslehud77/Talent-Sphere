@@ -29,7 +29,8 @@ const Navbar = () => {
        "relative text-white rounded text-black uppercase text-xs  py-1 px-2 hover:tracking-[0.25em] hover:text-black hover:bg-white  hover:shadow-[0_0_65px_white] duration-300 tracking-[0.1em]";
 
 
-       const navBg = pathname === '/' ? 'bg-black lg:bg-transparent' : 'bg-black'
+       const navBg =
+         pathname === "/" ? "bg-black lg:bg-transparent  md:fixed" : "bg-black";
         const hiddenNav = pathname === '/register' ? 'hidden' : ''
 
      const links = (
@@ -48,22 +49,21 @@ const Navbar = () => {
            }
            to={"/contests"}
          >
-           On going Contests
+           <span className="hidden md:inline"> On going </span>Contests
          </NavLink>
          <NavLink
            className={({ isActive, isPending }) =>
              isActive ? active : isPending ? pending : idle
            }
-           to={"/contact"}
+           to={"/leader-board"}
          >
-           Contact
+           Leader Board
          </NavLink>
          <NavLink
            className={({ isActive, isPending }) =>
              isActive ? active : isPending ? pending : idle
            }
            to={"/blog"}
-         
          >
            Blog
          </NavLink>
@@ -73,7 +73,7 @@ const Navbar = () => {
     <div>
       {/* <!-- Main navigation container --> */}
       <nav
-        className={`${navBg} ${hiddenNav} transition-all duration-1000 md:absolute lg:h-20  top-0 z-50 flex w-full flex-wrap items-center justify-between py-2 shadow-lg lg:py-4`}
+        className={`${navBg} ${hiddenNav} transition-all md:backdrop-blur-sm duration-1000 lg:h-20  top-0 z-50 flex w-full flex-wrap items-center justify-between py-2 shadow-lg lg:py-4`}
         data-te-navbar-ref
       >
         <motion.div

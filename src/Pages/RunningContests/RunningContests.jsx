@@ -41,7 +41,7 @@ const tabs = ['All','Business','Medical','Article','Gaming']
 
     return (
       <div className="container mx-auto">
-        <SectionHeading hasLogo head="all contests" />
+        <SectionHeading margin={'10'} hasLogo head="all contests" />
         <div className="flex flex-col justify-center lg:flex-row lg:justify-between items-center my-5 gap-5">
           <div data-theme="dark" role="tablist" className="tabs tabs-boxed">
             {tabs.map((tab, i) => (

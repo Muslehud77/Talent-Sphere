@@ -21,7 +21,7 @@ const Creator = ({creator}) => {
  };
     
     return (
-      <div className="p-10 bg-black/50 backdrop-blur-sm border rounded-md  w-80 md:w-full flex flex-col items-start">
+      <div className="p-5 md:p-10 bg-black/50 backdrop-blur-sm border rounded-md  w-80 md:w-full flex flex-col items-start">
         <a className="inline-flex items-center">
           <img
             alt="blog"
