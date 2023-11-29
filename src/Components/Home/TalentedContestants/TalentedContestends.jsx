@@ -20,11 +20,13 @@ const TalentedContestants = () => {
             position={"start"}
             head={"our talented contestants"}
           ></SectionHeading>
+          <h1 className="text-white text-left  text-base md:text-xl font-nova">
+            The path to greatness begins with a single step. <br /> Take that
+            step today! Participate in our diverse contests at Talent-Sphere,{" "}
+            <br /> where your innovation is recognized and celebrated.
+          </h1>
           <div className=" text-white">
-            <Marquee
-              autoFill={true}
-            
-            >
+            <Marquee autoFill={true}>
               <div className="flex gap-5 mr-5">
                 {isFetching ? (
                   <>
@@ -47,13 +49,7 @@ const TalentedContestants = () => {
               </div>
             </Marquee>
           </div>
-          <div>
-            <h1 className="text-white text-center backdrop-blur-sm text-base md:text-xl font-nova">
-              The path to greatness begins with a single step. <br /> Take that
-              step today! Participate in our diverse contests at Talent-Sphere,{" "}
-              <br /> where your innovation is recognized and celebrated.
-            </h1>
-          </div>
+          <div></div>
         </section>
       </div>
     );

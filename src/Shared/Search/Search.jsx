@@ -15,7 +15,7 @@ const { search, setSearch } = useContextInfo();
 
 const { allContests } = useAllContest(currentTab || "All");
 
-console.log(allContests);
+
 
 
  const { register, handleSubmit, watch, setValue } = useForm();
@@ -49,8 +49,6 @@ useEffect(() => {
 
 
 
-// console.log(suggestions);
-console.log(search);
   
   const clear = ()=>{
    setValue('search','')
@@ -58,7 +56,7 @@ console.log(search);
   setSearch('')
   }
 
-  console.log(suggestions);
+
 
     return (
       <div className="relative">

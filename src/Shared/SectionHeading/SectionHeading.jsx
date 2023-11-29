@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 import logo from '../../Assets/Logo/TS-white-2-removebg-preview.png'
 
-const SectionHeading = ({head,hasLogo,position}) => {
+const SectionHeading = ({head,hasLogo,position,margin}) => {
     return (
       <div className={`flex justify-${position ? position : "center"}`}>
         <div
-          className={`md:mt-32 mt-10  flex flex-col justify-center items-center`}
+          className={`md:mt-${margin ? margin : '32'} mt-10  flex flex-col justify-center items-center`}
         >
           {hasLogo && <img src={logo} className="w-32" alt="" />}
           <div className="text-center text-white mt-3">

@@ -29,6 +29,7 @@
     "react-hook-form": "^7.48.2",
     "react-hot-toast": "^2.4.1",
     "react-icons": "^4.12.0",
+    "react-id-swiper": "^4.0.0",
     "react-lottie-player": "^1.5.5",
     "react-particle-image": "^1.0.2",
     "react-player": "^2.13.0",
@@ -39,6 +40,7 @@
     "smooth-scrollbar": "^8.8.4",
     "sort-by": "^1.2.0",
     "sweetalert2": "^11.10.1",
+    "swiper": "^11.0.5",
     "tw-elements": "^1.0.0"
   },
   "devDependencies": {

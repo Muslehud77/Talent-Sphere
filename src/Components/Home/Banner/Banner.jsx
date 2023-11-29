@@ -12,7 +12,7 @@ const particleOptions = {
     // Make a particle for this pixel if blue > 50 (range 0-255)
     return pixel.b > 50;
   },
-  color: ({ x, y, image }) => "#fff",
+  color: () => "#fff",
 };
 const motionForce = (x, y) => {
   return forces.disturbance(x, y, 5);
