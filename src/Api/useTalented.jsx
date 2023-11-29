@@ -5,18 +5,19 @@ import { useQuery } from '@tanstack/react-query';
 const useTalented = () => {
     const axiosPublic = useAxiosPublic()
 
-    const {data:talented=[],isFeching}= useQuery({
+    const {data:talented=[], isFetching}= useQuery({
         queryKey: ['talented'],
-        
+        queryFn:async ()=>{
+            const res = await axiosPublic.get("/talented-users");
+           
+            return res.data
+        }
     })
 
+    
 
 
-    return (
-        <div>
-            
-        </div>
-    );
+    return {talented,isFetching}
 };
 
 export default useTalented;
