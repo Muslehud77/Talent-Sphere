@@ -4,7 +4,7 @@ import {  useState } from 'react';
 import {FcGoogle} from 'react-icons/fc'
 import {SiFacebook} from 'react-icons/si'
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import animation from '../../Assets/Lotties/hovering.json'
 import Lottie from 'react-lottie-player';
@@ -17,7 +17,8 @@ import PrivateRouteForLoginSignUp from './../../Routes/PrivateRoutes/PrivateRout
 import useAxiosPublic from '../../Hooks/useAxiosPublic';
 
 const Login = () => {
-    
+    const navigate = useNavigate()
+    const {state} = useLocation()
     const axiosPublic = useAxiosPublic()
     const [errMsg,setErrMsg] = useState(null) 
     const [showPass,setShowPass] = useState(false)
@@ -112,13 +113,20 @@ const Login = () => {
     }
 
    
-
+const clearState = () => {
+   closeModal()
+  if(state){
+     closeModal();
+   console.log("hello");
+    navigate('/',{state:null})
+  }
+}
 
 
     return (
       <>
         <PrivateRouteForLoginSignUp>
-          <ModalWrapper animation="door">
+          <ModalWrapper  onClose={()=>clearState()} animation="door">
             <div className="w-full py-10">
               <img src={logo} className="w-32 mx-auto" alt="" />
               <div className="h-[0.5px] w-32 mx-auto mt-2 bg-black"></div>

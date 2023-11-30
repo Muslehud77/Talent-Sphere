@@ -8,13 +8,26 @@ import Transition from "../../Transition/Transition";
 import TalentedContestants from "../../Components/Home/TalentedContestants/TalentedContestends";
 import HappyCreators from "../../Components/Home/HappyCreators/HappyCreators";
 import Testimonial from "../../Components/Home/Testimonial/Testimonial";
+import useContextInfo from "../../Hooks/useContextInfo";
+import { useLocation } from "react-router-dom";
+import { useEffect } from 'react';
 
 
 
 const Home = () => {
-
+ const { openLogin } = useContextInfo();
+ const {pathname, state } = useLocation();
    
 
+
+useEffect(() => {
+if(pathname==='/'){
+ if (state) {
+   openLogin();
+ }
+}
+ 
+}, [state]);
 
     return (
       <div>

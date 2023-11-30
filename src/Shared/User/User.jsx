@@ -6,11 +6,12 @@ import {
   Ripple,
   initTE,
 } from "tw-elements";
+import useUser from "../../Api/useUser";
 
 initTE({ Dropdown, Ripple });
 
 const User = () => {
-
+    const {userData} = useUser()
     const {user,logout} = useContextInfo()
 
 
@@ -29,7 +30,7 @@ const User = () => {
             <img alt="avatar" src={user?.photoURL} />
           </div>
           <span className="text-xs text-center rounded-full px-2 bg-black text-white p-1">
-            {user.displayName.split(' ')[0]}
+            {user.displayName.split(" ")[0]}
           </span>
         </a>
 
@@ -51,7 +52,7 @@ const User = () => {
           <li>
             <Link
               className="block uppercase transition-all tracking-[0.1em] duration-500 w-full whitespace-nowrap bg-transparent px-4 py-2 hover:tracking-[0.20em] text-xs font-semibold text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
-              to={"/dashboard"}
+              to={`/dashboard/${userData.role}`}
               data-te-dropdown-item-ref
             >
               Dashboard

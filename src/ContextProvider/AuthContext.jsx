@@ -17,7 +17,7 @@ const [loading,setLoading] = useState(true)
 const [selected,setSelected] = useState(null)
 const [search,setSearch] = useState('')
 const [name,setName] = useState('')
-
+const [enable,setEnable] = useState(false)
 
 const goToTop = ()=>{
    window.scrollTo({
@@ -62,8 +62,12 @@ useEffect(()=>{
         const userEmail = currentUser?.email || user?.email;
         const userData = { email: userEmail };
         setUser(currentUser)
-        console.log(currentUser);
 
+        if(currentUser){
+            setEnable(true)
+        }else{
+            setEnable(false)
+        }
         // if (currentUser) {
         //   axios
         //     .post("https://crystal-cup-server.vercel.app/jwt", userData, {
@@ -88,6 +92,7 @@ useEffect(()=>{
     return ()=> unsubscribe()
 },[])
     const info = {
+        enable,
        selected,setSelected,
       goToTop,
   search,setSearch,

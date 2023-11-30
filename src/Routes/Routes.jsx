@@ -10,6 +10,8 @@ import RunningContests from "../Pages/RunningContests/RunningContests";
 import LeaderBoard from "../Pages/LeaderBoard/LeaderBoard";
 import ErrorPage from './../Pages/404/ErrorPage';
 import Dashboard from "../Layout/Dashboard";
+import PrivateRouteForOthers from './PrivateRoutes/PrivateRouteForOthers';
+import AdminRoute from "./PrivateRoutes/AdminRoute";
 
 
 
@@ -18,7 +20,7 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
-    errorElement: <ErrorPage/>,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -32,7 +34,7 @@ export const router = createBrowserRouter([
         path: "/contests",
         element: (
           <AnimatePresence mode="wait" initial={false}>
-            <RunningContests key={'/contests'}></RunningContests>
+            <RunningContests key={"/contests"}></RunningContests>
           </AnimatePresence>
         ),
       },
@@ -40,7 +42,7 @@ export const router = createBrowserRouter([
         path: "/leader-board",
         element: (
           <AnimatePresence mode="wait" initial={false}>
-            <LeaderBoard key={'/leader-board'}></LeaderBoard>
+            <LeaderBoard key={"/leader-board"}></LeaderBoard>
           </AnimatePresence>
         ),
       },
@@ -48,7 +50,7 @@ export const router = createBrowserRouter([
         path: "/contact",
         element: (
           <AnimatePresence mode="wait" initial={false}>
-            <h1 key={'/contact'}>hello</h1>
+            <h1 key={"/contact"}>hello</h1>
           </AnimatePresence>
         ),
       },
@@ -65,14 +67,31 @@ export const router = createBrowserRouter([
     ],
   },
   {
-    path:'/dashboard',
-    element: <Dashboard/>,
-    errorElement:<ErrorPage/>,
-    children:[
+    path: "/dashboard",
+    element: (
+      <PrivateRouteForOthers>
+        <Dashboard />
+      </PrivateRouteForOthers>
+    ),
+    errorElement: <ErrorPage />,
+    children: [
       {
-        path: '/dashboard',
-        element: <h1>hello</h1>
-      }
-    ]
-  }
+        path: "/dashboard/admin",
+        element: (
+          <AdminRoute>
+            
+            <h1>hello</h1>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "/dashboard/admin/manage-user",
+        element: <h1>hello</h1>,
+      },
+      {
+        path: "/dashboard/admin/manage-contests",
+        element: <h1>hello</h1>,
+      },
+    ],
+  },
 ]);
