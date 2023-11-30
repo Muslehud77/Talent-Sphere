@@ -7,6 +7,7 @@ import Login from "../Pages/Login/Login";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAxiosPublic from "../Hooks/useAxiosPublic";
+import ProfileUpdate from "../Components/Components/ProfileUpdate";
 
 export const AuthContext = createContext(null)
 
@@ -36,6 +37,10 @@ const closeModal = () => {
  const openLogin = () => {
    Reoverlay.showModal(Login);
  };
+
+ const openProfileUpdate = () =>{
+    Reoverlay.showModal(ProfileUpdate);
+ }
 
 
 
@@ -90,6 +95,7 @@ useEffect(()=>{
     return ()=> unsubscribe()
 },[])
     const info = {
+      openProfileUpdate,
         enable,
        selected,setSelected,
       goToTop,

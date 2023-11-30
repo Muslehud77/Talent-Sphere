@@ -32,6 +32,8 @@ const Login = () => {
            closeModal();
             const userInfo = {
               name: response.user.displayName,
+              
+
               email: response.user.email,
               contestWon: 0,
               contestParticipated: 0,

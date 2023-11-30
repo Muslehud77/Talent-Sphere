@@ -13,8 +13,8 @@ import { useEffect } from "react";
 
 const User = () => {
     const {userData} = useUser()
-    const {user,logout} = useContextInfo()
-
+    const { user, logout, openProfileUpdate } = useContextInfo();
+   
   useEffect(()=>{
     initTE({ Dropdown, Ripple });
   },[])
@@ -30,10 +30,12 @@ const User = () => {
           className="flex justify-between items-center pr-2 gap-2 max-w-36 bg-gray-600/50 rounded-full cursor-pointer"
         >
           <div className=" avatar lg">
-            <img alt="avatar" src={user?.photoURL} />
+            <img alt="avatar" src={userData?.userImg} />
           </div>
           <span className="text-xs text-center rounded-full px-2 bg-black text-white p-1">
-            {user.displayName.split(" ")[0]}
+            {user.displayName?.split(" ")?.length > 1
+              ? user.displayName?.split(" ")[1]
+              : user.displayName}
           </span>
         </a>
 
@@ -60,6 +62,15 @@ const User = () => {
             >
               Dashboard
             </Link>
+          </li>
+          <li>
+            <button
+              className="block uppercase transition-all tracking-[0.1em] duration-500 w-full whitespace-nowrap bg-transparent px-4 py-2 hover:tracking-[0.20em] text-xs font-semibold text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+              onClick={openProfileUpdate}
+              data-te-dropdown-item-ref
+            >
+              update profile
+            </button>
           </li>
           <li>
             <button

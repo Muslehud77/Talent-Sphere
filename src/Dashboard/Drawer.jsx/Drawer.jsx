@@ -74,7 +74,7 @@ const signOut = () =>{
         )}
 
         <div className="border-t flex p-3">
-          <img src={user.photoURL} alt="" className="w-10 h-10 rounded-md" />
+          <img src={userData.userImg} alt="" className="w-10 h-10 rounded-md" />
           <div
             className={`
               flex justify-between items-center

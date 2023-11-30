@@ -7,7 +7,7 @@ const useUser = () => {
     const {user,enable} = useContextInfo()
     const axiosSecure = useAxiosSecure()
 
-    const {data:userData={},isFetching} = useQuery({
+    const {data:userData={},isFetching,refetch} = useQuery({
         queryKey: ['userData'],
         enabled: enable,
         queryFn: async ()=> {
@@ -15,7 +15,7 @@ const useUser = () => {
             return res.data
         }
     })
-    return {userData,isFetching}
+    return {userData,isFetching,refetch}
 };
 
 export default useUser;
