@@ -5,7 +5,7 @@ import { AiOutlineMenuUnfold } from "react-icons/ai";
 import { NavLink, useLocation } from 'react-router-dom';
 
 
-const Admin = ({ isTrue, expanded }) => {
+const Admin = ({ expanded }) => {
 
     const { pathname} = useLocation()
 
@@ -34,7 +34,7 @@ const Admin = ({ isTrue, expanded }) => {
         ${
           pathname === link.pathname 
             ? "bg-gradient-to-tr from-indigo-200 to-indigo-100 text-indigo-800"
-            : "hover:bg-indigo-50 text-gray-600"
+            : "hover:bg-indigo-50 text-gray-300 hover:text-gray-600"
         }
     `}
             >

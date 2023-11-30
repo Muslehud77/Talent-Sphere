@@ -12,6 +12,19 @@ import ErrorPage from './../Pages/404/ErrorPage';
 import Dashboard from "../Layout/Dashboard";
 import PrivateRouteForOthers from './PrivateRoutes/PrivateRouteForOthers';
 import AdminRoute from "./PrivateRoutes/AdminRoute";
+import AdminHome from "../Dashboard/DashboardPages/AdminPages/AdminHome/AdminHome";
+import ManageContests from './../Dashboard/DashboardPages/AdminPages/ManageContests/ManageContests';
+import ManageUsers from "../Dashboard/DashboardPages/AdminPages/ManageUsers/ManageUsers";
+import UserHome from './../Dashboard/DashboardPages/UserPages/UserHome/UserHome';
+import UserRegisteredContest from './../Dashboard/DashboardPages/UserPages/UserRegisteredContests/UserRegisteredContest';
+import UserWinningContests from './../Dashboard/DashboardPages/UserPages/UserWinningContests/UserWinningContests';
+import CreatorRoute from "./PrivateRoutes/CreatorRoute";
+import CreatorHome from './../Dashboard/DashboardPages/CreatorPages/CreatorHome/CreatorHome';
+import AddContest from './../Creator/AddContest';
+import ContestSubmission from "../Shared/ContestDetail/ContestSubmission";
+import CreatedContest from './../Dashboard/DashboardPages/CreatorPages/CreatedContests/CreatedContest';
+import ContestSubmitted from './../Dashboard/DashboardPages/CreatorPages/ContestSubmitted/ContestSubmitted';
+import UserRoute from "./PrivateRoutes/UserRoute";
 
 
 
@@ -79,18 +92,81 @@ export const router = createBrowserRouter([
         path: "/dashboard/admin",
         element: (
           <AdminRoute>
-            
-            <h1>hello</h1>
+            <AdminHome />
           </AdminRoute>
         ),
       },
       {
         path: "/dashboard/admin/manage-user",
-        element: <h1>hello</h1>,
+        element: (
+          <AdminRoute>
+            <ManageContests />
+          </AdminRoute>
+        ),
       },
       {
         path: "/dashboard/admin/manage-contests",
-        element: <h1>hello</h1>,
+        element: (
+          <AdminRoute>
+            <ManageUsers />
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "/dashboard/creator",
+        element: (
+          <CreatorRoute>
+            <CreatorHome />
+          </CreatorRoute>
+        ),
+      },
+      {
+        path: "/dashboard/creator/created",
+        element: (
+          <CreatorRoute>
+            <CreatedContest />
+          </CreatorRoute>
+        ),
+      },
+      {
+        path: "/dashboard/creator/add-contest",
+        element: (
+          <CreatorRoute>
+            <AddContest />
+          </CreatorRoute>
+        ),
+      },
+      {
+        path: "/dashboard/creator/submissions",
+        element: (
+          <CreatorRoute>
+            <ContestSubmitted />
+          </CreatorRoute>
+        ),
+      },
+      {
+        path: "/dashboard/user",
+        element: (
+          <UserRoute>
+            <UserHome />
+          </UserRoute>
+        ),
+      },
+      {
+        path: "/dashboard/user/registered-contests",
+        element: (
+          <UserRoute>
+            <UserRegisteredContest />
+          </UserRoute>
+        ),
+      },
+      {
+        path: "/dashboard/user/winning-contests",
+        element: (
+          <UserRoute>
+            <UserWinningContests />
+          </UserRoute>
+        ),
       },
     ],
   },

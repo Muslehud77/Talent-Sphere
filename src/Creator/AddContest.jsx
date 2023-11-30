@@ -1,7 +1,9 @@
 import React from 'react';
 
 const AddContest = () => {
-    return <></>
+    return <>
+    add contest
+    </>
 };
 
 export default AddContest;

@@ -4,6 +4,7 @@ import auth from "../Firebase/firebase.config";
 
 import { Reoverlay } from "reoverlay";
 import Login from "../Pages/Login/Login";
+import { useNavigate } from "react-router-dom";
 
 export const AuthContext = createContext(null)
 
@@ -54,7 +55,9 @@ const facebookLogin = () => {
     return signInWithPopup(auth,facebookProvider)
 }
 const logout = ()=>{
-    return signOut(auth)
+    return signOut(auth).then(res=>{
+
+    })
 }
 
 useEffect(()=>{

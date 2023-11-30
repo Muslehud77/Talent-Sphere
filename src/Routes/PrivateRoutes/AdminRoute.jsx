@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+
 import useUser from '../../Api/useUser';
 import { Navigate } from 'react-router-dom';
 
@@ -7,7 +7,7 @@ const AdminRoute = ({children}) => {
 
     const {userData,isFetching} = useUser()
 
-    const role = userData.role === 'admin'
+    
 
     if (isFetching) {
       return (
@@ -20,6 +20,8 @@ const AdminRoute = ({children}) => {
         </>
       );
     }
+
+    const role = userData.role === "admin";
 
     if(role){
         return children

@@ -4,12 +4,11 @@ import Drawer from '../Dashboard/Drawer.jsx/Drawer';
 
 const Dashboard = () => {
 
-    const isAdmin = true
-    const isCreator = false
+  
    
 
     return (
-        <div className='backdrop-blur-sm flex'>
+        <div className='backdrop-blur-sm text-white flex'>
           <Drawer/>
 
             <Outlet/>
