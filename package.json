@@ -40,6 +40,7 @@
     "reoverlay": "^1.0.3",
     "smooth-scrollbar": "^8.8.4",
     "sort-by": "^1.2.0",
+    "stripe": "^14.5.0",
     "sweetalert2": "^11.10.1",
     "swiper": "^11.0.5",
     "tw-elements": "^1.0.0"

@@ -5,6 +5,8 @@ import auth from "../Firebase/firebase.config";
 import { Reoverlay } from "reoverlay";
 import Login from "../Pages/Login/Login";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
+import useAxiosPublic from "../Hooks/useAxiosPublic";
 
 export const AuthContext = createContext(null)
 
@@ -19,7 +21,7 @@ const [selected,setSelected] = useState(null)
 const [search,setSearch] = useState('')
 const [name,setName] = useState('')
 const [enable,setEnable] = useState(false)
-
+const axiosPublic = useAxiosPublic()
 const goToTop = ()=>{
    window.scrollTo({
      top: 0,
@@ -55,43 +57,36 @@ const facebookLogin = () => {
     return signInWithPopup(auth,facebookProvider)
 }
 const logout = ()=>{
-    return signOut(auth).then(res=>{
-
-    })
+    return signOut(auth).then(() => {
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: `Logged Out`,
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    });
 }
 
 useEffect(()=>{
-    const unsubscribe = onAuthStateChanged(auth,(currentUser)=>{
-        const userEmail = currentUser?.email || user?.email;
-        const userData = { email: userEmail };
-        setUser(currentUser)
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+    
+     
+      setUser(currentUser);
 
-        if(currentUser){
-            setEnable(true)
-        }else{
-            setEnable(false)
-        }
-        // if (currentUser) {
-        //   axios
-        //     .post("https://crystal-cup-server.vercel.app/jwt", userData, {
-        //       withCredentials: true,
-        //     })
-        //     .then((res) => {
-        //       console.log(res.data);
-        //     });
-        // } else {
-        //   axios
-        //     .post("https://crystal-cup-server.vercel.app/logout", userData, {
-        //       withCredentials: true,
-        //     })
-        //     .then((res) => {
-        //       console.log(res.data);
-        //     });
-        // }
-        setLoading(false)
-
-        
-    })
+      if (currentUser) {
+        const userInfo = { email: currentUser.email };
+        axiosPublic.post("/jwt", userInfo).then((res) => {
+          localStorage.setItem("token", res.data.token);
+          setLoading(false);
+          setEnable(true);
+        });
+      } else {
+        localStorage.removeItem("token");
+        setLoading(false);
+        setEnable(false);
+      }
+    });
     return ()=> unsubscribe()
 },[])
     const info = {
