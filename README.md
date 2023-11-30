@@ -1,6 +1,5 @@
 
-
-[Client Site Link Firebase]([Talent Sphere](https://talent-sphere.web.app/))
+Live Link ([Talent Sphere](https://talent-sphere.web.app/))
 
 
 
