@@ -71,10 +71,11 @@ const image = (e) => {
     return (
       <ModalWrapper className="overflow-hidden" animation="door">
         <form
+        data-theme='dark'
           onSubmit={handleSubmit}
-          className=" w-96 overflow-hidden bg-base-100 "
+          className=" w-96 overflow-hidden bg-black border border-[#37e8ff]"
         >
-          <div className="flex items-center justify-center w-full card-body">
+          <div className="flex items-center  justify-center w-full card-body">
             <label
               for="dropzone-file"
               className="flex flex-col overflow-hidden items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
@@ -92,7 +93,7 @@ const image = (e) => {
                 type="file"
                 className="hidden"
               />
-              Click Here to Update Image
+              <span className="text-black">Click Here to Update Image</span>
             </label>
           </div>
           <div>
@@ -106,7 +107,7 @@ const image = (e) => {
                   defaultValue={user.displayName}
                   type="text"
                   placeholder="Type here"
-                  className="input input-bordered w-full max-w-xs"
+                  className="input text-white input-bordered w-full max-w-xs"
                 />
               </label>
               <button className="btn w-full mt-5 btn-outline rounded-none">

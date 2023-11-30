@@ -34,7 +34,7 @@ const User = () => {
           </div>
           <span className="text-xs text-center rounded-full px-2 bg-black text-white p-1">
             {user.displayName?.split(" ")?.length > 1
-              ? user.displayName?.split(" ")[1]
+              ? user.displayName?.split(" ")[0]
               : user.displayName}
           </span>
         </a>

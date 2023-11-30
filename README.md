@@ -1,8 +1,16 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+[Client Site Link Firebase]([Talent Sphere](https://talent-sphere.web.app/))
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+
+## Useful 
+Admin email : admin.talent@sphere.com
+Admin password : 123456
+Creator email : creator.talent@sphere.com
+Creator password : 123456
+
+
+##  Features
+
+- Coming...

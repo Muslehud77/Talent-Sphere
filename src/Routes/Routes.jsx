@@ -21,11 +21,12 @@ import UserWinningContests from './../Dashboard/DashboardPages/UserPages/UserWin
 import CreatorRoute from "./PrivateRoutes/CreatorRoute";
 import CreatorHome from './../Dashboard/DashboardPages/CreatorPages/CreatorHome/CreatorHome';
 import AddContest from './../Creator/AddContest';
-import ContestSubmission from "../Shared/ContestDetail/ContestSubmission";
+
 import CreatedContest from './../Dashboard/DashboardPages/CreatorPages/CreatedContests/CreatedContest';
 import ContestSubmitted from './../Dashboard/DashboardPages/CreatorPages/ContestSubmitted/ContestSubmitted';
 import UserRoute from "./PrivateRoutes/UserRoute";
 import Checkout from "../Pages/Payment/Checkout";
+import PendingContests from './../Dashboard/DashboardPages/CreatorPages/PendingContests/PendingContests';
 
 
 
@@ -145,6 +146,14 @@ export const router = createBrowserRouter([
         element: (
           <CreatorRoute>
             <ContestSubmitted />
+          </CreatorRoute>
+        ),
+      },
+      {
+        path: "/dashboard/creator/pendings",
+        element: (
+          <CreatorRoute>
+            <PendingContests />
           </CreatorRoute>
         ),
       },

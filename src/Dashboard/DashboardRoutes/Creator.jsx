@@ -2,7 +2,7 @@ import { FaHome } from "react-icons/fa";
 
 import { AiOutlineMenuUnfold } from "react-icons/ai";
 import { NavLink, useLocation } from "react-router-dom";
-import { MdAddToPhotos, MdContentPaste } from "react-icons/md";
+import { MdAddToPhotos, MdContentPaste, MdOutlinePendingActions } from "react-icons/md";
 
 const Creator = ({ expanded }) => {
   const { pathname } = useLocation();
@@ -27,6 +27,11 @@ const Creator = ({ expanded }) => {
       path: "My Contests",
       pathname: "/dashboard/creator/created",
       icon: <AiOutlineMenuUnfold size={25} />,
+    },
+    {
+      path: "Requests",
+      pathname: "/dashboard/creator/pendings",
+      icon: <MdOutlinePendingActions size={25} />,
     },
   ];
 
