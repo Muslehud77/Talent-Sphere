@@ -4,7 +4,7 @@ import { motion, useIsPresent } from "framer-motion";
 
 const Transition = () => {
   
-     const isPresent = useIsPresent();
+    const isPresent = useIsPresent();
     return (
       <div>
         <motion.div

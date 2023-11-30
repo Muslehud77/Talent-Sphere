@@ -2,8 +2,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Counter from '../Counter/Counter';
+import { Link } from 'react-router-dom';
+import useContextInfo from '../../Hooks/useContextInfo';
 
 const ContestCountdownAndPayment = ({contest}) => {
+  const {setSelected} = useContextInfo()
+
     return (
       <motion.div
         animate={{ y: 0 }}
@@ -13,9 +17,13 @@ const ContestCountdownAndPayment = ({contest}) => {
       >
         <Counter date={contest?.contestDeadline} />
         <div className="flex justify-end">
-          <button className="btn">
+          <Link
+            onClick={() => setSelected(null)}
+            to={`/payment/${contest._id}`}
+            className="btn"
+          >
             Pay ${contest?.contestPrice} to Participate
-          </button>
+          </Link>
         </div>
       </motion.div>
     );

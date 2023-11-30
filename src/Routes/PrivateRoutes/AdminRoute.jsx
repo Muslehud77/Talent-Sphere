@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 
+import { AnimatePresence } from 'framer-motion';
 import useUser from '../../Api/useUser';
 import { Navigate } from 'react-router-dom';
 
@@ -24,11 +25,19 @@ const AdminRoute = ({children}) => {
     const role = userData.role === "admin";
 
     if(role){
-        return children
+        return (
+          <AnimatePresence mode="wait" initial={false}>
+           {children}
+          </AnimatePresence>
+        );
     }
 
 
-    return <Navigate to='/'></Navigate>
+    return (
+      <AnimatePresence mode="wait" initial={false}>
+        <Navigate key={'/'} to="/"></Navigate>
+      </AnimatePresence>
+    ); 
 };
 
 export default AdminRoute;

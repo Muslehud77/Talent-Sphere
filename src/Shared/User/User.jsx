@@ -7,14 +7,17 @@ import {
   initTE,
 } from "tw-elements";
 import useUser from "../../Api/useUser";
+import { useEffect } from "react";
 
-initTE({ Dropdown, Ripple });
+
 
 const User = () => {
     const {userData} = useUser()
     const {user,logout} = useContextInfo()
 
-
+  useEffect(()=>{
+    initTE({ Dropdown, Ripple });
+  },[])
 
     return (
       <div className="relative" data-te-dropdown-position="dropstart">

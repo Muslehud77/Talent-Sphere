@@ -4,6 +4,7 @@
 import { Navigate, useLocation } from "react-router-dom";
 
 import useContextInfo from "../../Hooks/useContextInfo";
+import { AnimatePresence } from "framer-motion";
 
 
 const PrivateRouteForLoginSignUp = ({children}) => {
@@ -13,7 +14,11 @@ const {state} = useLocation()
 
 
     if(!user){
-        return children
+        return (
+          <AnimatePresence mode="wait" initial={false}>
+           {children}
+          </AnimatePresence>
+        );
     }
 
     if(loading){
@@ -30,7 +35,11 @@ const {state} = useLocation()
 
     closeModal()
 
-    return <Navigate to={`${state? state : '/'}`}></Navigate>;
+    return (
+      <AnimatePresence mode="wait" initial={false}>
+        <Navigate key={'/'} to={`${state ? state : "/"}`}></Navigate>
+      </AnimatePresence>
+    );
 };
 
 export default PrivateRouteForLoginSignUp;

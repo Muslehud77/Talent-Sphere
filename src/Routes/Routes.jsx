@@ -25,6 +25,7 @@ import ContestSubmission from "../Shared/ContestDetail/ContestSubmission";
 import CreatedContest from './../Dashboard/DashboardPages/CreatorPages/CreatedContests/CreatedContest';
 import ContestSubmitted from './../Dashboard/DashboardPages/CreatorPages/ContestSubmitted/ContestSubmitted';
 import UserRoute from "./PrivateRoutes/UserRoute";
+import Checkout from "../Pages/Payment/Checkout";
 
 
 
@@ -59,12 +60,15 @@ export const router = createBrowserRouter([
           </AnimatePresence>
         ),
       },
+
       {
-        path: "/contact",
+        path: "/payment/:id",
         element: (
-          <AnimatePresence mode="wait" initial={false}>
-            <h1 key={"/contact"}>hello</h1>
-          </AnimatePresence>
+          <UserRoute>
+            <AnimatePresence mode="wait" initial={false}>
+              <Checkout key={"/payment/:id"}>hello</Checkout>
+            </AnimatePresence>
+          </UserRoute>
         ),
       },
       {
