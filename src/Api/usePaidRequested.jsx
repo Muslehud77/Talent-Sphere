@@ -7,7 +7,7 @@ const usePaidRequested = () => {
   const { enable } = useContextInfo();
   const axiosSecure = useAxiosSecure();
 
-  const { data: pendings = [], isFetching } = useQuery({
+  const { data: pendings = [], isFetching,refetch } = useQuery({
     queryKey: ["pendings"],
     enabled: enable,
     queryFn: async () => {
@@ -16,7 +16,7 @@ const usePaidRequested = () => {
     },
   });
 
-  return { pendings, isFetching };
+  return { pendings, isFetching,refetch };
 };
 
 export default usePaidRequested;

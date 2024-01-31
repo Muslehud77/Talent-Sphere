@@ -83,7 +83,7 @@ const image = (e) => {
               <div className="flex flex-col items-center justify-center pt-5 pb-6">
                 <img
                   src={img ? URL.createObjectURL(img) : userData.userImg}
-                  className="object-fill"
+                  className="object-contain w-full"
                   alt=""
                 />
               </div>

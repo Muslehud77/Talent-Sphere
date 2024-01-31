@@ -7,7 +7,8 @@ import Login from "../Pages/Login/Login";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAxiosPublic from "../Hooks/useAxiosPublic";
-import ProfileUpdate from "../Components/Components/ProfileUpdate";
+import ProfileUpdate from "../Components/ProfileUpdate/ProfileUpdate";
+import useUser from "../Api/useUser";
 
 export const AuthContext = createContext(null)
 
@@ -23,6 +24,7 @@ const [search,setSearch] = useState('')
 const [name,setName] = useState('')
 const [enable,setEnable] = useState(false)
 const axiosPublic = useAxiosPublic()
+
 const goToTop = ()=>{
    window.scrollTo({
      top: 0,
@@ -74,13 +76,13 @@ const logout = ()=>{
 }
 
 useEffect(()=>{
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+    const unsubscribe = onAuthStateChanged(auth, (currentTalented) => {
     
      
-      setUser(currentUser);
+      setUser(currentTalented);
 
-      if (currentUser) {
-        const userInfo = { email: currentUser.email };
+      if (currentTalented) {
+        const userInfo = { email: currentTalented.email };
         axiosPublic.post("/jwt", userInfo).then((res) => {
           localStorage.setItem("token", res.data.token);
           setLoading(false);

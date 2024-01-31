@@ -1,10 +1,12 @@
 import React from 'react';
 import useAxiosPublic from './../Hooks/useAxiosPublic';
 import { useQuery } from '@tanstack/react-query';
+import useContextInfo from '../Hooks/useContextInfo';
 
 const useTalented = () => {
     const axiosPublic = useAxiosPublic()
-
+    const {user} = useContextInfo()
+   
     const {data:talented=[], isFetching}= useQuery({
         queryKey: ['talented'],
         queryFn:async ()=>{
@@ -29,10 +31,13 @@ const useTalented = () => {
        ...user,
        rank: index + 1,
      }));
+
+     const currentTalented = rankedUsers.find(u=>u.email === user?.email) 
+     
     
 
 
-    return { talented, isFetching, rankedUsers };
+    return { talented, isFetching, rankedUsers, currentTalented };
 };
 
 export default useTalented;

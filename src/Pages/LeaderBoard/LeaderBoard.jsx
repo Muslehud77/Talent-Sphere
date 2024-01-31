@@ -16,7 +16,7 @@ const LeaderBoard = () => {
 
 
     return (
-      <div>
+      <div className="container mx-auto">
         <SectionHeading
           hasLogo
           margin={"10"}

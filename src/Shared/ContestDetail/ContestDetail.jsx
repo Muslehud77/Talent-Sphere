@@ -34,14 +34,14 @@ const ContestDetail = () => {
     <>
       <div
         onClick={() => setSelected(null)}
-        className="fixed flex overflow-x-hidden justify-center items-center inset-0 bg-black/70 h-screen z-50 cursor-pointer overflow-y-auto"
+        className="fixed flex rounded-3xl overflow-x-hidden justify-center items-center inset-0 bg-black/70 h-screen z-50 cursor-pointer overflow-y-auto"
       >
         <div className="cursor-default" onClick={(e) => e.stopPropagation()}>
           {!contest._id ? (
             <motion.div layoutId={selected._id}>
               <div
                 data-theme="dark"
-                className="flex flex-col justify-center gap-4 w-full md:w-[900px] h-[600px]"
+                className="flex flex-col justify-center gap-4 w-[100vw] h-[100vh]  md:w-[900px] md:h-[600px]"
               >
                 <div className="skeleton h-full w-full"></div>
               </div>
@@ -49,7 +49,7 @@ const ContestDetail = () => {
           ) : (
             <motion.div
               layoutId={selected._id}
-              className="card h-[75vh]  lg:h-auto lg:max-h-[90vh] overflow-y-auto md:h-9/12 w-full detail md:w-[900px] bg-black shadow-2xl  image-full"
+              className="card h-[100vh]  lg:h-auto lg:max-h-[90vh] overflow-y-auto md:h-9/12 w-full detail md:w-[900px] bg-black shadow-2xl  image-full"
             >
               <figure>
                 <img

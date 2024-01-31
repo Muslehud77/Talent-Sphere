@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import useContextInfo from './useContextInfo';
 
 const axiosSecure = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: "https://talent-sphere-pi.vercel.app",
 });
 
 const useAxiosSecure = () => {

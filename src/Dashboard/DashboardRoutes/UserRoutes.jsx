@@ -19,11 +19,7 @@ const UserRoutes = ({ expanded }) => {
       pathname: "/dashboard/user/registered-contests",
       icon: <AiOutlineMenuUnfold size={25} />,
     },
-    {
-      path: "Winnings",
-      pathname: "/dashboard/user/winning-contests",
-      icon: <MdOutlineCelebration size={25} />,
-    },
+   
   ];
 
   return (

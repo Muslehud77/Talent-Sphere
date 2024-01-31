@@ -10,7 +10,7 @@ import Transition from "../../Transition/Transition";
 import Lottie from "react-lottie-player";
 
 import useContextInfo from "../../Hooks/useContextInfo";
-import axios from "axios";
+
 import { useEffect } from "react";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 
@@ -65,53 +65,53 @@ useEffect(() => {
 
    //TODO: uncomment these regex
     
-    // if (password.length < 6) {
-    //   setErr("Password must be at least 6 characters!");
-    //   toast.error(`Password must be at least 6 characters!`, {
-    //     style: {
-    //       borderRadius: "10px",
-    //       background: `${"white"}`,
-    //       color: `${"black"}`,
-    //     },
-    //   });
-    //   return;
-    // }
+    if (password.length < 6) {
+      setErr("Password must be at least 6 characters!");
+      toast.error(`Password must be at least 6 characters!`, {
+        style: {
+          borderRadius: "10px",
+          background: `${"white"}`,
+          color: `${"black"}`,
+        },
+      });
+      return;
+    }
 
-    // if (!/[A-Z]/.test(password)) {
-    //   setErr("Password must contain at least 1 upper case letter!");
-    //   toast.error(`Password must contain at least 1 upper case letter!`, {
-    //     style: {
-    //       borderRadius: "10px",
-    //       background: `${"white"}`,
-    //       color: `${"black"}`,
-    //     },
-    //   });
-    //   return;
-    // }
+    if (!/[A-Z]/.test(password)) {
+      setErr("Password must contain at least 1 upper case letter!");
+      toast.error(`Password must contain at least 1 upper case letter!`, {
+        style: {
+          borderRadius: "10px",
+          background: `${"white"}`,
+          color: `${"black"}`,
+        },
+      });
+      return;
+    }
 
-    // if (!specialCharacter.test(password)) {
-    //   setErr("Password should have at least 1 special character!");
-    //   toast.error(`Password should have at least 1 special character!`, {
-    //     style: {
-    //       borderRadius: "10px",
-    //       background: `${"white"}`,
-    //       color: `${"black"}`,
-    //     },
-    //   });
-    //   return;
-    // }
+    if (!specialCharacter.test(password)) {
+      setErr("Password should have at least 1 special character!");
+      toast.error(`Password should have at least 1 special character!`, {
+        style: {
+          borderRadius: "10px",
+          background: `${"white"}`,
+          color: `${"black"}`,
+        },
+      });
+      return;
+    }
 
-    // if (!/\d/.test(password)) {
-    //   setErr("Password must contain at least 1 number!");
-    //   toast.error(`Password must contain at least 1 number!`, {
-    //     style: {
-    //       borderRadius: "10px",
-    //       background: `${"white"}`,
-    //       color: `${"black"}`,
-    //     },
-    //   });
-    //   return;
-    // }
+    if (!/\d/.test(password)) {
+      setErr("Password must contain at least 1 number!");
+      toast.error(`Password must contain at least 1 number!`, {
+        style: {
+          borderRadius: "10px",
+          background: `${"white"}`,
+          color: `${"black"}`,
+        },
+      });
+      return;
+    }
 
     
 

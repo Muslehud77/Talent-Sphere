@@ -6,13 +6,12 @@ import PreLoader from "../Components/Preloader/PreLoader";
 import { ModalContainer } from "reoverlay";
 import { Toaster } from "react-hot-toast";
 import ContestDetail from "../Shared/ContestDetail/ContestDetail";
-;
+
 
 
 const Main = () => {
   const [preloader, setPreloader] = useState(true);
- 
- 
+  
   useEffect(() => {
     const preload = () => {
       setTimeout(() => {
@@ -32,7 +31,7 @@ const Main = () => {
           <PreLoader />
         </>
       ) : (
-        <div className="flex  flex-col min-h-screen">
+        <div className="flex  flex-col min-h-screen overflow-hidden">
           <Navbar></Navbar>
           <div className="flex-grow">
             <Outlet></Outlet>

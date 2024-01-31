@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
-import { TbCurrencyTaka } from "react-icons/tb";
+
 import axios from "axios";
 
-
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import useContextInfo from "../../../../Hooks/useContextInfo";
 import SectionHeading from "../../../../Shared/SectionHeading/SectionHeading";
 
-import useAxiosSecure from "../../../../Hooks/useAxiosSecure";
+
 import Swal from "sweetalert2";
+import { useQuery } from "@tanstack/react-query";
+import useAxiosSecure from "../../../../Hooks/useAxiosSecure";
 
 
 const capitalize = (array) => {
@@ -19,14 +20,26 @@ const capitalize = (array) => {
   });
 };
 
-
-
-const AddContest = () => {
+const EditContest = () => {
   const [disable, setDisable] = useState(false);
   const { user } = useContextInfo();
   const [img, setImg] = useState(null);
-  const axiosSecure = useAxiosSecure()
+  const axiosSecure = useAxiosSecure();
   const navigate = useNavigate();
+const {id} = useParams() 
+
+
+const { data: contest = {} } = useQuery({
+    queryKey: [`contest_${id}`],
+    queryFn: async () => {
+      const data = await axiosSecure.get(`/contest/${id}`);
+      return data.data;
+    },
+  });
+
+
+
+
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -38,38 +51,36 @@ const AddContest = () => {
     setImg(file);
   };
 
-
   const addProduct = async (e) => {
-    setDisable(true)
+    setDisable(true);
     e.preventDefault();
     const form = e.target;
     const contestName = form.name.value;
     const shortDescription = form.shortDescription.value;
     const detailedDescription = form.detailedDescription.value;
-    const taskSubmissionInstructions = capitalize(form.taskSubmissionInstructions.value.split(","));
+    const taskSubmissionInstructions = capitalize(
+      form.taskSubmissionInstructions.value.split(",")
+    );
     const tags = capitalize(form.tags.value.split(","));
     const contestCategory = form.contestCategory.value;
-   
+
     const contestDeadline = form.contestDeadline.value;
-    let contestImg =  form.contestImg?.value;
+    let contestImg = form.contestImg?.value;
 
     const contestPrice = form.contestPrice.value;
     const prizeMoney = form.prizeMoney.value;
 
-      if(img){
+    if (img) {
       const imageFile = { image: img };
       await axios
         .post(import.meta.env.VITE_imgHosting, imageFile, {
-          headers: { "Content-Type": "multipart/form-data" },
+          
+ers: { "Content-Type": "multipart/form-data" },
         })
         .then((res) => {
-        
           contestImg = res.data.data.url;
         });
     }
-      
-
-
 
     const product = {
       contestName,
@@ -77,23 +88,19 @@ const AddContest = () => {
       shortDescription,
       taskSubmissionInstructions,
       prizeMoney,
-      attempt: 0,
-      isPending: true,
+      
+      
       tags,
       contestCategory,
-      winners: [],
-      creatorInfo: {
-        creatorName: user.displayName,
-        creatorImage: user.photoURL,
-        email: user.email,
-      },
+      
+      
       contestDeadline,
       contestImg,
       contestPrice,
     };
 
-     await axiosSecure.post("/add-contest", product).then((res) => {
-       if (res.data.insertedId) {
+    await axiosSecure.patch(`/edit-contest/${id}`, product).then((res) => { console.log(res.data);
+      if (res.data.modifiedCount>0) {
         Swal.fire({
           position: "center",
           icon: "success",
@@ -102,17 +109,16 @@ const AddContest = () => {
           timer: 1500,
         });
         setDisable(true);
-         navigate("/dashboard/creator/submissions");
-       }
-     });
+        navigate("/dashboard/creator/submissions");
+      }
+    });
 
     console.log(product);
-    
   };
 
   return (
     <div className="isolate px-6 lg:px-8">
-      <SectionHeading head={"add contest"} />
+      <SectionHeading head={"edit contest"} />
 
       <div
         className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
@@ -137,7 +143,10 @@ const AddContest = () => {
           <div className=" items-center justify-center md:w-96">
             <label className="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer overflow-hidden bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
               {img ? (
-                <img src={URL.createObjectURL(img)} className="h-64"></img>
+                <img
+                  src={img ? URL.createObjectURL(img) : contest.Img}
+                  className="h-64"
+                ></img>
               ) : (
                 <div className="flex flex-col items-center justify-center pt-5 pb-6">
                   <svg
@@ -188,6 +197,7 @@ const AddContest = () => {
               <div className=" mt-2.5">
                 <input
                   required
+                  defaultValue={contest.contestImg}
                   placeholder="URL"
                   type="photo"
                   name="contestImg"
@@ -205,7 +215,7 @@ const AddContest = () => {
             <div className="mt-2.5">
               <input
                 required
-                // required
+                defaultValue={contest.contestName}
                 placeholder="Contest Name"
                 type="text"
                 name="name"
@@ -239,6 +249,7 @@ const AddContest = () => {
               <input
                 required
                 placeholder="100"
+                defaultValue={contest.contestPrice}
                 // required
                 type="number"
                 name="contestPrice"
@@ -254,6 +265,7 @@ const AddContest = () => {
               <input
                 required
                 placeholder="prizeMoney"
+                defaultValue={contest.prizeMoney}
                 // required
                 type="number"
                 name="prizeMoney"
@@ -268,6 +280,7 @@ const AddContest = () => {
             <div className="relative mt-2.5">
               <input
                 required
+                defaultValue={contest.contestDeadline}
                 placeholder="contestDeadline"
                 // required
                 type="date"
@@ -283,6 +296,7 @@ const AddContest = () => {
             </label>
             <div className=" mt-2.5">
               <input
+                defaultValue={contest.tags}
                 required
                 // required
                 placeholder="Tags (put Comma ',' after each Tags)"
@@ -298,6 +312,7 @@ const AddContest = () => {
             <div className=" mt-2.5">
               <input
                 required
+                defaultValue={contest.taskSubmissionInstructions}
                 // required
                 placeholder="Instruction (put Comma ',' after each Instruction)"
                 name="taskSubmissionInstructions"
@@ -313,6 +328,7 @@ const AddContest = () => {
               <input
                 required
                 // required
+                defaultValue={contest.shortDescription}
                 placeholder="Short Description.."
                 name="shortDescription"
                 className="block w-full text-black rounded-md border-0 px-3.5 py-2   shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -325,6 +341,7 @@ const AddContest = () => {
             </label>
             <div className="mt-2.5">
               <textarea
+                defaultValue={contest.detailedDescription}
                 name="detailedDescription"
                 rows={4}
                 className="block w-full text-black rounded-md border-0 px-3.5 py-2  shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -341,7 +358,7 @@ const AddContest = () => {
               {disable && (
                 <span className="loading loading-spinner loading-sm"></span>
               )}{" "}
-              Add Contest
+              Edit Contest
             </button>
           </div>
         </div>
@@ -350,4 +367,4 @@ const AddContest = () => {
   );
 };
 
-export default AddContest;
+export default EditContest;

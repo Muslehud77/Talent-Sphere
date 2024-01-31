@@ -1,6 +1,6 @@
-import React from 'react';
+
 import useHappyCreators from '../../../Api/useHappyCreators';
-import Creator from './Creator';
+
 import CreatorSlider from './CreatorSlider';
 import SectionHeading from '../../../Shared/SectionHeading/SectionHeading';
 
@@ -8,7 +8,7 @@ const HappyCreators = () => {
 
     const {creators,isFetching} = useHappyCreators()
 
-    console.log(creators.length);
+   
 
 
     return (

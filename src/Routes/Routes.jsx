@@ -13,20 +13,24 @@ import Dashboard from "../Layout/Dashboard";
 import PrivateRouteForOthers from './PrivateRoutes/PrivateRouteForOthers';
 import AdminRoute from "./PrivateRoutes/AdminRoute";
 import AdminHome from "../Dashboard/DashboardPages/AdminPages/AdminHome/AdminHome";
-import ManageContests from './../Dashboard/DashboardPages/AdminPages/ManageContests/ManageContests';
+
 import ManageUsers from "../Dashboard/DashboardPages/AdminPages/ManageUsers/ManageUsers";
 import UserHome from './../Dashboard/DashboardPages/UserPages/UserHome/UserHome';
 import UserRegisteredContest from './../Dashboard/DashboardPages/UserPages/UserRegisteredContests/UserRegisteredContest';
-import UserWinningContests from './../Dashboard/DashboardPages/UserPages/UserWinningContests/UserWinningContests';
+
 import CreatorRoute from "./PrivateRoutes/CreatorRoute";
 import CreatorHome from './../Dashboard/DashboardPages/CreatorPages/CreatorHome/CreatorHome';
-import AddContest from './../Creator/AddContest';
+
 
 import CreatedContest from './../Dashboard/DashboardPages/CreatorPages/CreatedContests/CreatedContest';
 import ContestSubmitted from './../Dashboard/DashboardPages/CreatorPages/ContestSubmitted/ContestSubmitted';
 import UserRoute from "./PrivateRoutes/UserRoute";
 import Checkout from "../Pages/Payment/Checkout";
 import PendingContests from './../Dashboard/DashboardPages/CreatorPages/PendingContests/PendingContests';
+import AddContest from './../Dashboard/DashboardPages/CreatorPages/AddContest/AddContest';
+import EditContest from "../Dashboard/DashboardPages/CreatorPages/EditContest/EditContest";
+
+import ManageContest from "./../Dashboard/DashboardPages/AdminPages/ManageContests/ManageContests";
 
 
 
@@ -105,7 +109,7 @@ export const router = createBrowserRouter([
         path: "/dashboard/admin/manage-user",
         element: (
           <AdminRoute>
-            <ManageContests />
+            <ManageUsers />
           </AdminRoute>
         ),
       },
@@ -113,7 +117,7 @@ export const router = createBrowserRouter([
         path: "/dashboard/admin/manage-contests",
         element: (
           <AdminRoute>
-            <ManageUsers />
+            <ManageContest />
           </AdminRoute>
         ),
       },
@@ -130,6 +134,14 @@ export const router = createBrowserRouter([
         element: (
           <CreatorRoute>
             <CreatedContest />
+          </CreatorRoute>
+        ),
+      },
+      {
+        path: "/dashboard/edit/:id",
+        element: (
+          <CreatorRoute>
+            <EditContest />
           </CreatorRoute>
         ),
       },
@@ -173,14 +185,7 @@ export const router = createBrowserRouter([
           </UserRoute>
         ),
       },
-      {
-        path: "/dashboard/user/winning-contests",
-        element: (
-          <UserRoute>
-            <UserWinningContests />
-          </UserRoute>
-        ),
-      },
+      
     ],
   },
 ]);

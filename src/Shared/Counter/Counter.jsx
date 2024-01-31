@@ -56,40 +56,52 @@ const Counter = ({date}) => {
 
   return (
     <div>
-      <div>
-        <div className="grid grid-flow-col gap-5 text-center auto-cols-max">
-          <div className="flex flex-col p-2 backdrop-blur-sm bg-slate-800/50 md:w-16 justify-center items-center rounded-box text-neutral-content">
-            <span className="countdown font-mono text-3xl">
-              <span style={{ "--value": timeLeft.years }}></span>
-            </span>
-            <span className="font-nova bg-black px-1 mt-1 rounded-lg">years</span>
-          </div>
-          <div className="flex flex-col p-2 backdrop-blur-sm bg-slate-800/50 md:w-16 justify-center items-center rounded-box text-neutral-content">
-            <span className=" font-mono text-3xl">
-              <span >{timeLeft.days}</span>
-            </span>
-            <span className="font-nova bg-black px-1 mt-1 rounded-lg">days</span>
-          </div>
-          <div className="flex flex-col p-2 backdrop-blur-sm bg-slate-800/50 md:w-16 justify-center items-center rounded-box text-neutral-content">
-            <span className="countdown font-mono text-3xl">
-              <span style={{ "--value": timeLeft.hours }}></span>
-            </span>
-            <span className="font-nova bg-black px-1 mt-1 rounded-lg">hours</span>
-          </div>
-          <div className="flex flex-col p-2 backdrop-blur-sm bg-slate-800/50 md:w-16 justify-center items-center rounded-box text-neutral-content">
-            <span className="countdown font-mono text-3xl">
-              <span style={{ "--value": timeLeft.minutes }}></span>
-            </span>
-            <span className="font-nova bg-black px-1 mt-1 rounded-lg">min</span>
-          </div>
-          <div className="flex flex-col p-2 backdrop-blur-sm bg-slate-800/50 md:w-16 justify-center items-center rounded-box text-neutral-content">
-            <span className="countdown font-mono text-3xl">
-              <span style={{ "--value": timeLeft.seconds }}></span>
-            </span>
-            <span className="font-nova bg-black px-1 mt-1 rounded-lg">sec</span>
+      {timeLeft.seconds && (
+        <div>
+          <div className="grid grid-flow-col gap-5 text-center auto-cols-max">
+            <div className="flex flex-col p-2 backdrop-blur-sm bg-slate-800/50 md:w-16 justify-center items-center rounded-box text-neutral-content">
+              <span className="countdown font-mono text-3xl">
+                <span style={{ "--value": timeLeft.years }}></span>
+              </span>
+              <span className="font-nova bg-black px-1 mt-1 rounded-lg">
+                years
+              </span>
+            </div>
+            <div className="flex flex-col p-2 backdrop-blur-sm bg-slate-800/50 md:w-16 justify-center items-center rounded-box text-neutral-content">
+              <span className=" font-mono text-3xl">
+                <span>{timeLeft.days}</span>
+              </span>
+              <span className="font-nova bg-black px-1 mt-1 rounded-lg">
+                days
+              </span>
+            </div>
+            <div className="flex flex-col p-2 backdrop-blur-sm bg-slate-800/50 md:w-16 justify-center items-center rounded-box text-neutral-content">
+              <span className="countdown font-mono text-3xl">
+                <span style={{ "--value": timeLeft.hours }}></span>
+              </span>
+              <span className="font-nova bg-black px-1 mt-1 rounded-lg">
+                hours
+              </span>
+            </div>
+            <div className="flex flex-col p-2 backdrop-blur-sm bg-slate-800/50 md:w-16 justify-center items-center rounded-box text-neutral-content">
+              <span className="countdown font-mono text-3xl">
+                <span style={{ "--value": timeLeft.minutes }}></span>
+              </span>
+              <span className="font-nova bg-black px-1 mt-1 rounded-lg">
+                min
+              </span>
+            </div>
+            <div className="flex flex-col p-2 backdrop-blur-sm bg-slate-800/50 md:w-16 justify-center items-center rounded-box text-neutral-content">
+              <span className="countdown font-mono text-3xl">
+                <span style={{ "--value": timeLeft.seconds }}></span>
+              </span>
+              <span className="font-nova bg-black px-1 mt-1 rounded-lg">
+                sec
+              </span>
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

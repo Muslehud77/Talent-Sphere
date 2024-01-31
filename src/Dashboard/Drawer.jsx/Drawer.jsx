@@ -37,7 +37,9 @@ const signOut = () =>{
 
 
   return (
-    <aside className="h-screen">
+    <aside
+      className={`h-screen relative z-[50] left-0`}
+    >
       <nav className="h-full flex flex-col text-white bg-black border-r shadow-sm">
         <div className="p-4 pb-2 flex justify-between items-center">
           <Link to={"/"}>
@@ -74,7 +76,7 @@ const signOut = () =>{
         )}
 
         <div className="border-t flex p-3">
-          <img src={userData.userImg} alt="" className="w-10 h-10 rounded-md" />
+          <img src={userData.userImg} alt="" className="w-10 h-10 rounded-md object-cover" />
           <div
             className={`
               flex justify-between items-center

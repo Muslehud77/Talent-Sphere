@@ -1,4 +1,5 @@
 import usePayment from "../../../../Api/usePayment";
+import useUser from "../../../../Api/useUser";
 import SectionHeading from './../../../../Shared/SectionHeading/SectionHeading';
 
 const UserRegisteredContest = () => {

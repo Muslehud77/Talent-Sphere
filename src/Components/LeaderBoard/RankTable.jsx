@@ -37,7 +37,7 @@ const RankTable = ({ranked,isFetching}) => {
                         </div>
                       </div>
                       <div>
-                        <div className="font-bold text-white">Hart Hagerty</div>
+                        <div className="font-bold text-white">{talent.name}</div>
                         <div className="text-sm opacity-50 text-white">
                           United States
                         </div>
